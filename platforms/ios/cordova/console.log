@@ -1,0 +1,1334 @@
+2015-02-22 15:41:16.131 Меню Наама Бэй[58493:2086910] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Data/Application/B3FEF44D-60C7-4B06-986E-F1E50D9945BA/Library/Cookies/Cookies.binarycookies
+2015-02-22 15:41:17.374 Меню Наама Бэй[58493:2086910] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 15:41:17.374 Меню Наама Бэй[58493:2086910] Multi-tasking -> Device: YES, App: YES
+2015-02-22 15:41:17.401 Меню Наама Бэй[58493:2086910] Unlimited access to network resources
+2015-02-22 15:41:17.418 Меню Наама Бэй[58493:2086910] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 15:41:19.199 Меню Наама Бэй[58493:2086910] [CDVTimer][file] 387.970030ms
+2015-02-22 15:41:19.199 Меню Наама Бэй[58493:2086910] [CDVTimer][TotalPluginStartup] 388.163984ms
+2015-02-22 15:41:20.817 Меню Наама Бэй[58493:2086910] Resetting plugins due to page load.
+2015-02-22 15:41:21.535 Меню Наама Бэй[58493:2086910] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/97410B0A-683D-4D2F-B3DB-7E308445F554/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-02-22 15:41:23.661 Меню Наама Бэй[58493:2086910] THREAD WARNING: ['File'] took '15.172852' ms. Plugin should use a background thread.
+2015-02-22 15:41:23.889 Меню Наама Бэй[58493:2086910] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a6a9b70
+2015-02-22 15:41:24.058 Меню Наама Бэй[58493:2086910] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a6a9b70'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00252946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x02436a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0025a5c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x001a33e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x001a2fae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00028110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00055d96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000555b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x0244c771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x02038f20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x001761df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x0016bced __CFRunLoopDoSources0 + 253
+	12  CoreFoundation                      0x0016b248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x0016abcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x0016a9fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03a9f24f GSEventRunModal + 192
+	16  GraphicsServices                    0x03a9f08c GSEventRun + 104
+	17  UIKit                               0x006058b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0000d9ec main + 92
+	19  libdyld.dylib                       0x02b0cac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 15:50:05.979 Меню Наама Бэй[58870:2091266] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Data/Application/40EF2507-8B3F-42E6-8DA3-BA16D69B3900/Library/Cookies/Cookies.binarycookies
+2015-02-22 15:50:06.225 Меню Наама Бэй[58870:2091266] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 15:50:06.225 Меню Наама Бэй[58870:2091266] Multi-tasking -> Device: YES, App: YES
+2015-02-22 15:50:06.227 Меню Наама Бэй[58870:2091266] Unlimited access to network resources
+2015-02-22 15:50:06.235 Меню Наама Бэй[58870:2091266] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 15:50:06.524 Меню Наама Бэй[58870:2091266] [CDVTimer][file] 58.329999ms
+2015-02-22 15:50:06.524 Меню Наама Бэй[58870:2091266] [CDVTimer][TotalPluginStartup] 58.510005ms
+2015-02-22 15:50:07.197 Меню Наама Бэй[58870:2091266] Resetting plugins due to page load.
+2015-02-22 15:50:07.520 Меню Наама Бэй[58870:2091266] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/059E8246-33B2-4746-8DD4-04A9B0F83B60/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-02-22 16:30:27.177 Меню Наама Бэй[59400:2101082] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 16:30:27.184 Меню Наама Бэй[59400:2101082] Multi-tasking -> Device: YES, App: YES
+2015-02-22 16:30:27.210 Меню Наама Бэй[59400:2101082] Unlimited access to network resources
+2015-02-22 16:30:27.248 Меню Наама Бэй[59400:2101082] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 16:30:27.707 Меню Наама Бэй[59400:2101082] [CDVTimer][file] 37.663996ms
+2015-02-22 16:30:27.707 Меню Наама Бэй[59400:2101082] [CDVTimer][TotalPluginStartup] 37.840009ms
+2015-02-22 16:30:28.534 Меню Наама Бэй[59400:2101082] Resetting plugins due to page load.
+2015-02-22 16:30:29.009 Меню Наама Бэй[59400:2101082] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/C9F1C2D2-63B5-4663-979F-678D499738C7/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-02-22 16:33:32.777 Меню Наама Бэй[59815:2105478] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 16:33:32.778 Меню Наама Бэй[59815:2105478] Multi-tasking -> Device: YES, App: YES
+2015-02-22 16:33:32.779 Меню Наама Бэй[59815:2105478] Unlimited access to network resources
+2015-02-22 16:33:32.789 Меню Наама Бэй[59815:2105478] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 16:33:33.099 Меню Наама Бэй[59815:2105478] [CDVTimer][file] 73.980987ms
+2015-02-22 16:33:33.100 Меню Наама Бэй[59815:2105478] [CDVTimer][TotalPluginStartup] 74.159026ms
+2015-02-22 16:33:33.839 Меню Наама Бэй[59815:2105478] Resetting plugins due to page load.
+2015-02-22 16:33:34.170 Меню Наама Бэй[59815:2105478] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/8590C4BC-F53B-4EDE-8900-6B6AC20DB611/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-02-22 16:51:02.053 Меню Наама Бэй[60178:2110901] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 16:51:02.054 Меню Наама Бэй[60178:2110901] Multi-tasking -> Device: YES, App: YES
+2015-02-22 16:51:02.055 Меню Наама Бэй[60178:2110901] Unlimited access to network resources
+2015-02-22 16:51:02.073 Меню Наама Бэй[60178:2110901] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 16:51:02.373 Меню Наама Бэй[60178:2110901] [CDVTimer][file] 43.881953ms
+2015-02-22 16:51:02.373 Меню Наама Бэй[60178:2110901] [CDVTimer][TotalPluginStartup] 44.076025ms
+2015-02-22 16:51:03.197 Меню Наама Бэй[60178:2110901] Resetting plugins due to page load.
+2015-02-22 16:52:04.688 Меню Наама Бэй[60178:2111032] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 16:52:06.576 Меню Наама Бэй[60178:2110901] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/3F9DEAFA-DD17-4B19-BAB5-5F02612B58C7/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 16:54:06.054 Меню Наама Бэй[60523:2112445] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 16:54:06.055 Меню Наама Бэй[60523:2112445] Multi-tasking -> Device: YES, App: YES
+2015-02-22 16:54:06.056 Меню Наама Бэй[60523:2112445] Unlimited access to network resources
+2015-02-22 16:54:06.065 Меню Наама Бэй[60523:2112445] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 16:54:06.334 Меню Наама Бэй[60523:2112445] [CDVTimer][file] 32.582998ms
+2015-02-22 16:54:06.334 Меню Наама Бэй[60523:2112445] [CDVTimer][TotalPluginStartup] 32.773018ms
+2015-02-22 16:54:06.838 Меню Наама Бэй[60523:2112445] Resetting plugins due to page load.
+2015-02-22 16:54:13.880 Меню Наама Бэй[60523:2112445] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/10D0BB05-3FD6-4D23-A799-A0C035D6CE66/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:01:11.032 Меню Наама Бэй[61047:2116270] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:01:11.033 Меню Наама Бэй[61047:2116270] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:01:11.035 Меню Наама Бэй[61047:2116270] Unlimited access to network resources
+2015-02-22 17:01:11.044 Меню Наама Бэй[61047:2116270] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:01:11.343 Меню Наама Бэй[61047:2116270] [CDVTimer][file] 59.720993ms
+2015-02-22 17:01:11.343 Меню Наама Бэй[61047:2116270] [CDVTimer][TotalPluginStartup] 59.892952ms
+2015-02-22 17:01:12.082 Меню Наама Бэй[61047:2116270] Resetting plugins due to page load.
+2015-02-22 17:01:20.751 Меню Наама Бэй[61047:2116270] THREAD WARNING: ['File'] took '12.255859' ms. Plugin should use a background thread.
+2015-02-22 17:01:21.425 Меню Наама Бэй[61047:2116270] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/46BD3BA5-AE85-4B5D-A9CA-4A819EF08662/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:01:59.078 Меню Наама Бэй[61391:2117098] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:01:59.079 Меню Наама Бэй[61391:2117098] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:01:59.080 Меню Наама Бэй[61391:2117098] Unlimited access to network resources
+2015-02-22 17:01:59.103 Меню Наама Бэй[61391:2117098] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:01:59.331 Меню Наама Бэй[61391:2117098] [CDVTimer][file] 11.824012ms
+2015-02-22 17:01:59.332 Меню Наама Бэй[61391:2117098] [CDVTimer][TotalPluginStartup] 11.985004ms
+2015-02-22 17:01:59.725 Меню Наама Бэй[61391:2117098] Resetting plugins due to page load.
+2015-02-22 17:02:03.511 Меню Наама Бэй[61391:2117098] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/2627AD4D-A45F-4C84-A26A-C06D02CE449C/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:03:06.040 Меню Наама Бэй[61735:2118031] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:03:06.040 Меню Наама Бэй[61735:2118031] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:03:06.042 Меню Наама Бэй[61735:2118031] Unlimited access to network resources
+2015-02-22 17:03:06.054 Меню Наама Бэй[61735:2118031] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:03:06.271 Меню Наама Бэй[61735:2118031] [CDVTimer][file] 9.065986ms
+2015-02-22 17:03:06.272 Меню Наама Бэй[61735:2118031] [CDVTimer][TotalPluginStartup] 9.239972ms
+2015-02-22 17:03:06.621 Меню Наама Бэй[61735:2118031] Resetting plugins due to page load.
+2015-02-22 17:03:10.183 Меню Наама Бэй[61735:2118031] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/90B8E288-D6F1-423F-A283-369DB08EFE13/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:03:10.876 Меню Наама Бэй[61735:2118031] THREAD WARNING: ['FileTransfer'] took '44.588135' ms. Plugin should use a background thread.
+2015-02-22 17:03:13.051 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:13.614 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:13.630 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:13.655 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:13.668 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:13.776 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:13.789 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:14.072 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:14.096 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:14.288 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:14.424 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:14.466 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:14.482 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:14.555 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:14.861 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:15.019 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:15.021 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:15.063 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:15.156 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:15.191 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:15.346 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:15.579 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:15.709 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:15.734 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:15.915 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:15.921 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:16.021 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:16.071 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:16.177 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:16.492 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:16.503 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:16.522 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:16.556 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:16.744 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:16.846 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:16.973 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:16.993 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:17.040 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:17.124 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:17.205 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:17.345 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:17.655 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:17.752 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:17.893 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:17.894 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:18.026 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:18.028 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:18.272 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:18.371 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:18.412 Меню Наама Бэй[61735:2118103] File Transfer Finished with response code 200
+2015-02-22 17:03:18.475 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:18.480 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:18.620 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:18.974 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:19.074 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:19.113 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:19.222 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:19.237 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:19.374 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:19.458 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:19.606 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:19.662 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:19.861 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:19.966 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:20.015 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:20.182 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:20.214 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:20.269 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:20.577 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:20.719 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:20.809 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:20.922 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:20.925 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:21.163 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:21.275 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:21.416 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:21.486 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:21.549 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:21.610 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:21.809 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:22.015 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:22.133 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:22.188 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:22.236 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:22.443 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:22.511 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:22.597 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:22.673 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:22.824 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:22.835 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:23.118 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:23.191 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:23.312 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:23.588 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:23.623 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:24.141 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:24.166 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:24.208 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:24.217 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:24.370 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:24.576 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:24.853 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:25.022 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:25.022 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:25.137 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:25.213 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:25.293 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:25.434 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:25.502 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:25.594 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:25.770 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:25.783 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:26.058 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:26.087 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:26.192 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:26.437 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:26.456 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:26.457 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:26.537 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:26.568 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:26.723 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:26.903 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:26.918 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:27.169 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:27.172 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:27.184 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:27.321 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:27.382 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:27.517 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:27.663 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:27.771 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:27.790 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:27.955 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:28.027 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:28.173 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:28.197 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:28.226 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:28.407 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:28.409 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:28.677 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:28.709 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:28.875 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:28.875 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:29.017 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:29.100 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:29.132 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:29.455 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:29.459 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:29.509 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:29.512 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:29.716 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:29.730 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:29.914 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:29.948 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:29.964 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:29.965 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:30.275 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:30.411 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:30.421 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:30.489 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:30.492 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:30.494 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:30.776 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:30.837 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:30.871 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:30.963 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:30.976 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:31.071 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:31.115 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:31.317 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:31.319 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:31.333 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:31.456 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:31.526 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:31.537 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:31.804 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:31.806 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:31.810 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:31.818 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:32.003 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:32.091 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:32.153 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:32.310 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:32.358 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:32.408 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:32.460 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:32.639 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:32.655 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:32.798 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:32.997 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:32.997 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:33.129 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:33.132 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:33.245 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:33.321 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:33.491 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:33.491 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:33.599 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:33.916 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:33.949 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:34.034 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:34.137 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:34.409 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:34.570 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:34.650 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:34.700 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:34.763 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:34.763 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:35.099 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:35.198 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:35.215 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:35.282 Меню Наама Бэй[61735:2118266] File Transfer Finished with response code 200
+2015-02-22 17:03:35.337 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:35.434 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:35.748 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:35.751 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:35.750 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:35.882 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:35.910 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:35.913 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:36.205 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:36.313 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:36.390 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:36.398 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:36.524 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:36.729 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:36.807 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:36.871 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:36.976 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:37.127 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:37.268 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:37.339 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:37.418 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:37.439 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:37.451 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:37.578 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:37.722 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:37.808 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:37.893 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:37.997 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:38.013 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:38.033 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:38.441 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:38.457 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:38.522 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:38.639 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:38.644 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:38.724 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:39.044 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:39.085 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:39.100 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:39.111 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:39.216 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:39.543 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:39.558 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:03:39.601 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:39.681 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:39.683 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:39.817 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:40.095 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:40.225 Меню Наама Бэй[61735:2118119] File Transfer Finished with response code 200
+2015-02-22 17:03:40.333 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:40.489 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:40.553 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:40.554 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:40.822 Меню Наама Бэй[61735:2118111] File Transfer Finished with response code 200
+2015-02-22 17:03:40.867 Меню Наама Бэй[61735:2118067] File Transfer Finished with response code 200
+2015-02-22 17:03:41.064 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:41.101 Меню Наама Бэй[61735:2118102] File Transfer Finished with response code 200
+2015-02-22 17:03:41.205 Меню Наама Бэй[61735:2118068] File Transfer Finished with response code 200
+2015-02-22 17:03:41.504 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:41.538 Меню Наама Бэй[61735:2118069] File Transfer Finished with response code 200
+2015-02-22 17:03:41.685 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:41.752 Меню Наама Бэй[61735:2118074] File Transfer Finished with response code 200
+2015-02-22 17:03:41.812 Меню Наама Бэй[61735:2118066] File Transfer Finished with response code 200
+2015-02-22 17:04:34.347 Меню Наама Бэй[62079:2119058] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:04:34.348 Меню Наама Бэй[62079:2119058] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:04:34.350 Меню Наама Бэй[62079:2119058] Unlimited access to network resources
+2015-02-22 17:04:34.361 Меню Наама Бэй[62079:2119058] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:04:34.667 Меню Наама Бэй[62079:2119058] [CDVTimer][file] 18.114984ms
+2015-02-22 17:04:34.667 Меню Наама Бэй[62079:2119058] [CDVTimer][TotalPluginStartup] 18.342972ms
+2015-02-22 17:04:35.006 Меню Наама Бэй[62079:2119058] Resetting plugins due to page load.
+2015-02-22 17:04:58.532 Меню Наама Бэй[62079:2119058] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/FBF69E19-EBB2-4F16-8189-826994691766/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:07:16.417 Меню Наама Бэй[62427:2120555] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:07:16.418 Меню Наама Бэй[62427:2120555] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:07:16.420 Меню Наама Бэй[62427:2120555] Unlimited access to network resources
+2015-02-22 17:07:16.428 Меню Наама Бэй[62427:2120555] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:07:16.717 Меню Наама Бэй[62427:2120555] [CDVTimer][file] 51.253021ms
+2015-02-22 17:07:16.717 Меню Наама Бэй[62427:2120555] [CDVTimer][TotalPluginStartup] 51.428020ms
+2015-02-22 17:07:18.140 Меню Наама Бэй[62427:2120555] Resetting plugins due to page load.
+2015-02-22 17:08:09.461 Меню Наама Бэй[62427:2120615] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:08:10.310 Меню Наама Бэй[62427:2120555] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/CA27B14F-21CB-4B31-85C1-6B98B62C0715/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:11:16.627 Меню Наама Бэй[62777:2122305] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:11:16.628 Меню Наама Бэй[62777:2122305] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:11:16.630 Меню Наама Бэй[62777:2122305] Unlimited access to network resources
+2015-02-22 17:11:16.675 Меню Наама Бэй[62777:2122305] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:11:17.002 Меню Наама Бэй[62777:2122305] [CDVTimer][file] 63.209951ms
+2015-02-22 17:11:17.002 Меню Наама Бэй[62777:2122305] [CDVTimer][TotalPluginStartup] 63.439012ms
+2015-02-22 17:11:17.487 Меню Наама Бэй[62777:2122305] Resetting plugins due to page load.
+2015-02-22 17:11:22.172 Меню Наама Бэй[62777:2122305] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/A881A407-C4F7-4917-ADF0-0E23A744C446/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:13:33.822 Меню Наама Бэй[63168:2124014] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:13:33.823 Меню Наама Бэй[63168:2124014] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:13:33.853 Меню Наама Бэй[63168:2124014] Unlimited access to network resources
+2015-02-22 17:13:33.870 Меню Наама Бэй[63168:2124014] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:13:34.355 Меню Наама Бэй[63168:2124014] [CDVTimer][file] 27.150989ms
+2015-02-22 17:13:34.355 Меню Наама Бэй[63168:2124014] [CDVTimer][TotalPluginStartup] 27.347982ms
+2015-02-22 17:13:35.124 Меню Наама Бэй[63168:2124014] Resetting plugins due to page load.
+2015-02-22 17:13:48.032 Меню Наама Бэй[63168:2124192] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:13:48.514 Меню Наама Бэй[63168:2124014] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/37C93D89-DFAF-40D2-9F80-A125FB8CB577/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:16:43.974 Меню Наама Бэй[63521:2125908] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:16:43.975 Меню Наама Бэй[63521:2125908] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:16:43.977 Меню Наама Бэй[63521:2125908] Unlimited access to network resources
+2015-02-22 17:16:43.996 Меню Наама Бэй[63521:2125908] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:16:44.274 Меню Наама Бэй[63521:2125908] [CDVTimer][file] 45.960009ms
+2015-02-22 17:16:44.274 Меню Наама Бэй[63521:2125908] [CDVTimer][TotalPluginStartup] 46.141982ms
+2015-02-22 17:16:44.909 Меню Наама Бэй[63521:2125908] Resetting plugins due to page load.
+2015-02-22 17:16:48.303 Меню Наама Бэй[63521:2125908] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/DF1CEE8B-E712-4509-9493-6260BDFAD689/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:16:49.761 Меню Наама Бэй[63521:2125908] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a8dc750
+2015-02-22 17:16:49.950 Меню Наама Бэй[63521:2125908] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a8dc750'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00277946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0245ba97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0027f5c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x001c83e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x001c7fae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0004d110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0007ad96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0007a5b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x02471771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x0205df20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x0019b1df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x00190ced __CFRunLoopDoSources0 + 253
+	12  CoreFoundation                      0x00190248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x0018fbcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x0018f9fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03ac424f GSEventRunModal + 192
+	16  GraphicsServices                    0x03ac408c GSEventRun + 104
+	17  UIKit                               0x0062a8b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000329ec main + 92
+	19  libdyld.dylib                       0x02b31ac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 17:23:12.818 Меню Наама Бэй[63890:2128859] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:23:12.847 Меню Наама Бэй[63890:2128859] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:23:12.848 Меню Наама Бэй[63890:2128859] Unlimited access to network resources
+2015-02-22 17:23:12.891 Меню Наама Бэй[63890:2128859] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:23:13.272 Меню Наама Бэй[63890:2128859] [CDVTimer][file] 59.181035ms
+2015-02-22 17:23:13.272 Меню Наама Бэй[63890:2128859] [CDVTimer][TotalPluginStartup] 59.417009ms
+2015-02-22 17:23:13.804 Меню Наама Бэй[63890:2128859] Resetting plugins due to page load.
+2015-02-22 17:23:32.671 Меню Наама Бэй[63890:2128929] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:23:33.027 Меню Наама Бэй[63890:2128859] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/22907C82-B23F-436C-A99C-237581FE2505/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:23:34.737 Меню Наама Бэй[63890:2128859] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7c86e3d0
+2015-02-22 17:23:34.763 Меню Наама Бэй[63890:2128859] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7c86e3d0'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0030e946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x024f2a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x003165c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x0025f3e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x0025efae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000e4110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00111d96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x001115b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x02508771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x020f4f20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x002321df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x00227ced __CFRunLoopDoSources0 + 253
+	12  CoreFoundation                      0x00227248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x00226bcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x002269fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03b5b24f GSEventRunModal + 192
+	16  GraphicsServices                    0x03b5b08c GSEventRun + 104
+	17  UIKit                               0x006c18b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000c99ec main + 92
+	19  libdyld.dylib                       0x02bc8ac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 17:32:53.544 Меню Наама Бэй[64247:2133830] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:32:53.569 Меню Наама Бэй[64247:2133830] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:32:53.606 Меню Наама Бэй[64247:2133830] Unlimited access to network resources
+2015-02-22 17:32:53.644 Меню Наама Бэй[64247:2133830] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:32:55.307 Меню Наама Бэй[64247:2133830] [CDVTimer][file] 329.128027ms
+2015-02-22 17:32:55.307 Меню Наама Бэй[64247:2133830] [CDVTimer][TotalPluginStartup] 329.297960ms
+2015-02-22 17:32:56.123 Меню Наама Бэй[64247:2133830] Resetting plugins due to page load.
+2015-02-22 17:33:32.960 Меню Наама Бэй[64247:2133881] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:33:33.058 Меню Наама Бэй[64247:2133830] THREAD WARNING: ['File'] took '14.941895' ms. Plugin should use a background thread.
+2015-02-22 17:33:33.449 Меню Наама Бэй[64247:2133830] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/F3BDA44A-B9B1-42BB-8319-118213702DF1/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:33:34.995 Меню Наама Бэй[64247:2133830] THREAD WARNING: ['File'] took '21.109131' ms. Plugin should use a background thread.
+2015-02-22 17:33:35.074 Меню Наама Бэй[64247:2133830] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a09a180
+2015-02-22 17:33:35.100 Меню Наама Бэй[64247:2133830] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a09a180'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00258946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0243ca97 objc_exception_throw + 44
+	2   CoreFoundation                      0x002605c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x001a93e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x001a8fae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0002e110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0005bd96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0005b5b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x02452771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x0203ef20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x0017c1df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x00171ced __CFRunLoopDoSources0 + 253
+	12  CoreFoundation                      0x00171248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x00170bcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x001709fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03aa524f GSEventRunModal + 192
+	16  GraphicsServices                    0x03aa508c GSEventRun + 104
+	17  UIKit                               0x0060b8b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000139ec main + 92
+	19  libdyld.dylib                       0x02b12ac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 17:34:28.711 Меню Наама Бэй[64594:2135224] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:34:28.725 Меню Наама Бэй[64594:2135224] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:34:28.726 Меню Наама Бэй[64594:2135224] Unlimited access to network resources
+2015-02-22 17:34:28.737 Меню Наама Бэй[64594:2135224] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:34:28.977 Меню Наама Бэй[64594:2135224] [CDVTimer][file] 38.566947ms
+2015-02-22 17:34:28.977 Меню Наама Бэй[64594:2135224] [CDVTimer][TotalPluginStartup] 38.734019ms
+2015-02-22 17:34:29.453 Меню Наама Бэй[64594:2135224] Resetting plugins due to page load.
+2015-02-22 17:35:15.498 Меню Наама Бэй[64594:2135404] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:35:17.654 Меню Наама Бэй[64594:2135224] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x79ed2780
+2015-02-22 17:35:17.655 Меню Наама Бэй[64594:2135224] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x79ed2780'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00304946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x024e8a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0030c5c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x002553e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x00254fae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000da110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00107d96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x001075b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x024fe771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x020eaf20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x002281df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x0021dced __CFRunLoopDoSources0 + 253
+	12  CoreFoundation                      0x0021d248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x0021cbcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x0021c9fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03b5124f GSEventRunModal + 192
+	16  GraphicsServices                    0x03b5108c GSEventRun + 104
+	17  UIKit                               0x006b78b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000bf9ec main + 92
+	19  libdyld.dylib                       0x02bbeac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 17:36:39.984 Меню Наама Бэй[64941:2136893] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:36:40.012 Меню Наама Бэй[64941:2136893] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:36:40.014 Меню Наама Бэй[64941:2136893] Unlimited access to network resources
+2015-02-22 17:36:40.037 Меню Наама Бэй[64941:2136893] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:36:40.243 Меню Наама Бэй[64941:2136893] [CDVTimer][file] 17.885029ms
+2015-02-22 17:36:40.243 Меню Наама Бэй[64941:2136893] [CDVTimer][TotalPluginStartup] 18.059015ms
+2015-02-22 17:36:40.687 Меню Наама Бэй[64941:2136893] Resetting plugins due to page load.
+2015-02-22 17:36:44.327 Меню Наама Бэй[64941:2136893] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/6A614D3A-B5CA-4D22-9B4D-02B784B16E8E/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:36:48.468 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:48.841 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:48.871 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:48.894 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:48.909 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:48.912 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:49.024 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:49.383 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:49.392 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:36:49.530 Меню Наама Бэй[64941:2136938] File Transfer Finished with response code 200
+2015-02-22 17:36:49.530 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:49.554 Меню Наама Бэй[64941:2136938] File Transfer Finished with response code 200
+2015-02-22 17:36:49.658 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:50.045 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:50.066 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:50.198 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:50.204 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:50.416 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:36:50.669 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:50.795 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:50.860 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:50.950 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:51.066 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:51.314 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:51.373 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:51.391 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:51.521 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:51.567 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:52.055 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:52.061 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:52.075 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:52.077 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:52.148 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:52.543 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:52.550 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:52.610 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:52.615 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:52.738 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:52.783 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:53.200 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:53.244 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:53.476 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:53.477 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:53.477 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:36:53.477 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:53.827 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:53.988 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:54.007 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:54.035 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:54.035 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:36:54.061 Меню Наама Бэй[64941:2136946] File Transfer Finished with response code 200
+2015-02-22 17:36:54.579 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:54.580 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:54.769 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:54.786 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:54.786 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:54.999 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:55.238 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:55.362 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:55.365 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:55.366 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:55.366 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:55.446 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:55.814 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:55.965 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:56.078 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:56.213 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:56.302 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:56.415 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:56.592 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:56.782 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:56.861 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:56.870 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:57.165 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:57.173 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:57.235 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:57.397 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:57.430 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:57.539 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:57.850 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:57.851 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:58.026 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:58.216 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:58.247 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:58.248 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:58.370 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:36:58.597 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:58.718 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:58.758 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:58.869 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:58.870 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:36:58.875 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:59.212 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:36:59.218 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:36:59.427 Меню Наама Бэй[64941:2136992] File Transfer Finished with response code 200
+2015-02-22 17:36:59.465 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:36:59.523 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:36:59.530 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:36:59.684 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:36:59.715 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:37:00.036 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:37:00.095 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:37:00.184 Меню Наама Бэй[64941:2136940] File Transfer Finished with response code 200
+2015-02-22 17:37:00.317 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:37:00.338 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:37:00.352 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:37:00.513 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:37:00.617 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:37:00.740 Меню Наама Бэй[64941:2136939] File Transfer Finished with response code 200
+2015-02-22 17:37:00.898 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:37:01.024 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:37:01.161 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:37:01.327 Меню Наама Бэй[64941:2137041] File Transfer Finished with response code 200
+2015-02-22 17:37:01.333 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:37:01.462 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:37:01.518 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:37:06.135 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:37:06.535 Меню Наама Бэй[64941:2137002] File Transfer Finished with response code 200
+2015-02-22 17:37:06.858 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:37:07.080 Меню Наама Бэй[64941:2137001] File Transfer Finished with response code 200
+2015-02-22 17:37:07.273 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:37:07.948 Меню Наама Бэй[64941:2136947] File Transfer Finished with response code 200
+2015-02-22 17:37:08.480 Меню Наама Бэй[64941:2136999] File Transfer Finished with response code 200
+2015-02-22 17:37:49.407 Меню Наама Бэй[65285:2137906] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:37:49.412 Меню Наама Бэй[65285:2137906] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:37:49.413 Меню Наама Бэй[65285:2137906] Unlimited access to network resources
+2015-02-22 17:37:49.431 Меню Наама Бэй[65285:2137906] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:37:49.678 Меню Наама Бэй[65285:2137906] [CDVTimer][file] 42.450011ms
+2015-02-22 17:37:49.678 Меню Наама Бэй[65285:2137906] [CDVTimer][TotalPluginStartup] 42.621970ms
+2015-02-22 17:37:50.137 Меню Наама Бэй[65285:2137906] Resetting plugins due to page load.
+2015-02-22 17:37:54.011 Меню Наама Бэй[65285:2137906] THREAD WARNING: ['File'] took '31.805176' ms. Plugin should use a background thread.
+2015-02-22 17:37:54.073 Меню Наама Бэй[65285:2137906] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7c806a30
+2015-02-22 17:37:54.089 Меню Наама Бэй[65285:2137906] *** WebKit discarded an uncaught exception in the webView:decidePolicyForNavigationAction:request:frame:decisionListener: delegate: <NSInvalidArgumentException> -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7c806a30
+2015-02-22 17:37:54.089 Меню Наама Бэй[65285:2137906] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7c823300
+2015-02-22 17:37:54.099 Меню Наама Бэй[65285:2137906] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7c823300'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00273946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x02457a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0027b5c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x001c43e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x001c3fae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00049110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00076d96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000765b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x0246d771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x02059f20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x001971df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x0018cdbe __CFRunLoopDoSources0 + 462
+	12  CoreFoundation                      0x0018c248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x0018bbcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x0018b9fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03ac024f GSEventRunModal + 192
+	16  GraphicsServices                    0x03ac008c GSEventRun + 104
+	17  UIKit                               0x006268b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x0002e9ec main + 92
+	19  libdyld.dylib                       0x02b2dac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 17:40:20.165 Меню Наама Бэй[65632:2139452] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:40:20.191 Меню Наама Бэй[65632:2139452] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:40:20.192 Меню Наама Бэй[65632:2139452] Unlimited access to network resources
+2015-02-22 17:40:20.221 Меню Наама Бэй[65632:2139452] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:40:20.532 Меню Наама Бэй[65632:2139452] [CDVTimer][file] 64.471006ms
+2015-02-22 17:40:20.532 Меню Наама Бэй[65632:2139452] [CDVTimer][TotalPluginStartup] 64.645052ms
+2015-02-22 17:40:21.115 Меню Наама Бэй[65632:2139452] Resetting plugins due to page load.
+2015-02-22 17:40:27.193 Меню Наама Бэй[65632:2139452] THREAD WARNING: ['File'] took '31.637695' ms. Plugin should use a background thread.
+2015-02-22 17:40:27.288 Меню Наама Бэй[65632:2139452] -[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a75a3f0
+2015-02-22 17:40:27.289 Меню Наама Бэй[65632:2139452] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM boolValue]: unrecognized selector sent to instance 0x7a75a3f0'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0032e946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x02512a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x003365c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x0027f3e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x0027efae _CF_forwarding_prep_0 + 14
+	5   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00104110 -[CDVFileTransfer download:] + 480
+	6   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x00131d96 -[CDVCommandQueue execute:] + 902
+	7   –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x001315b0 -[CDVCommandQueue executePending] + 848
+	8   libobjc.A.dylib                     0x02528771 -[NSObject performSelector:withObject:] + 70
+	9   Foundation                          0x02114f20 __NSThreadPerformPerform + 330
+	10  CoreFoundation                      0x002521df __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	11  CoreFoundation                      0x00247ced __CFRunLoopDoSources0 + 253
+	12  CoreFoundation                      0x00247248 __CFRunLoopRun + 952
+	13  CoreFoundation                      0x00246bcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x002469fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03b7b24f GSEventRunModal + 192
+	16  GraphicsServices                    0x03b7b08c GSEventRun + 104
+	17  UIKit                               0x006e18b6 UIApplicationMain + 1526
+	18  –ú–µ–Ω—é –ù–∞–∞–º–∞ –ë—ç–∏ÃÜ        0x000e99ec main + 92
+	19  libdyld.dylib                       0x02be8ac9 start + 1
+	20  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-02-22 17:41:12.290 Меню Наама Бэй[65977:2140551] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:41:12.295 Меню Наама Бэй[65977:2140551] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:41:12.297 Меню Наама Бэй[65977:2140551] Unlimited access to network resources
+2015-02-22 17:41:12.314 Меню Наама Бэй[65977:2140551] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:41:12.554 Меню Наама Бэй[65977:2140551] [CDVTimer][file] 44.355989ms
+2015-02-22 17:41:12.554 Меню Наама Бэй[65977:2140551] [CDVTimer][TotalPluginStartup] 44.526994ms
+2015-02-22 17:41:12.965 Меню Наама Бэй[65977:2140551] Resetting plugins due to page load.
+2015-02-22 17:41:16.726 Меню Наама Бэй[65977:2140551] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/C1FA3720-917E-408C-B880-E205F5A18F55/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:41:17.177 Меню Наама Бэй[65977:2140551] THREAD WARNING: ['File'] took '33.176758' ms. Plugin should use a background thread.
+2015-02-22 17:41:20.319 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:20.391 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:20.395 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:20.493 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:20.535 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:20.548 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:20.770 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:20.940 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:20.969 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:21.102 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:21.118 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:21.184 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:21.342 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:21.396 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:21.634 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:21.650 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:21.680 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:21.698 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:21.933 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:22.005 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:22.211 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:22.284 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:22.310 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:22.332 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:22.545 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:22.586 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:22.733 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:22.804 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:22.913 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:22.932 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:23.133 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:23.194 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:23.259 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:23.351 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:23.391 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:23.641 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:23.700 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:23.755 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:23.810 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:23.928 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:24.119 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:24.121 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:24.205 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:24.290 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:24.560 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:24.601 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:24.676 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:24.874 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:24.975 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:25.095 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:25.131 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:25.323 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:25.420 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:25.473 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:25.771 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:25.833 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:25.865 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:25.966 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:25.973 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:26.104 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:26.330 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:26.410 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:26.418 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:26.430 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:26.515 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:26.650 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:26.883 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:26.925 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:26.966 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:27.004 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:27.113 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:27.144 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:27.426 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:27.434 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:27.456 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:27.732 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:27.868 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:27.965 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:28.433 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:28.573 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:29.031 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:29.048 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:29.076 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:29.116 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:29.328 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:29.477 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:29.498 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:29.523 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:29.616 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:29.713 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:29.823 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:30.042 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.095 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.160 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.207 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.210 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.287 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:30.610 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.665 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:30.680 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.708 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:30.726 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:30.838 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:31.159 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:31.283 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:31.295 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:31.348 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:31.406 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:31.420 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:31.732 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:31.851 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:31.869 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:31.870 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:31.884 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:32.025 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:32.152 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:32.213 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:32.332 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:32.335 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:32.474 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:32.562 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:32.612 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:32.913 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:32.941 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:33.000 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:33.083 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:33.183 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:33.217 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:33.508 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:33.524 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:33.547 Меню Наама Бэй[65977:2140600] File Transfer Finished with response code 200
+2015-02-22 17:41:33.612 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:33.622 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:33.673 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:33.951 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:33.971 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:34.020 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:34.028 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:34.109 Меню Наама Бэй[65977:2140651] File Transfer Finished with response code 200
+2015-02-22 17:41:34.266 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:34.437 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:34.554 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:34.726 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:34.766 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:34.802 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:34.936 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:35.028 Меню Наама Бэй[65977:2140618] File Transfer Finished with response code 200
+2015-02-22 17:41:35.132 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:35.261 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:35.315 Меню Наама Бэй[65977:2140617] File Transfer Finished with response code 200
+2015-02-22 17:41:35.456 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:35.524 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:41:35.609 Меню Наама Бэй[65977:2140656] File Transfer Finished with response code 200
+2015-02-22 17:41:35.793 Меню Наама Бэй[65977:2140601] File Transfer Finished with response code 200
+2015-02-22 17:41:35.890 Меню Наама Бэй[65977:2140599] File Transfer Finished with response code 200
+2015-02-22 17:44:02.304 Меню Наама Бэй[66321:2142000] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:44:02.320 Меню Наама Бэй[66321:2142000] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:44:02.322 Меню Наама Бэй[66321:2142000] Unlimited access to network resources
+2015-02-22 17:44:02.339 Меню Наама Бэй[66321:2142000] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:44:02.605 Меню Наама Бэй[66321:2142000] [CDVTimer][file] 35.072982ms
+2015-02-22 17:44:02.605 Меню Наама Бэй[66321:2142000] [CDVTimer][TotalPluginStartup] 35.314023ms
+2015-02-22 17:44:03.023 Меню Наама Бэй[66321:2142000] Resetting plugins due to page load.
+2015-02-22 17:44:58.562 Меню Наама Бэй[66665:2142894] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:44:58.569 Меню Наама Бэй[66665:2142894] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:44:58.570 Меню Наама Бэй[66665:2142894] Unlimited access to network resources
+2015-02-22 17:44:58.588 Меню Наама Бэй[66665:2142894] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:44:58.832 Меню Наама Бэй[66665:2142894] [CDVTimer][file] 40.792048ms
+2015-02-22 17:44:58.832 Меню Наама Бэй[66665:2142894] [CDVTimer][TotalPluginStartup] 40.962994ms
+2015-02-22 17:44:59.271 Меню Наама Бэй[66665:2142894] Resetting plugins due to page load.
+2015-02-22 17:45:24.781 Меню Наама Бэй[66665:2142947] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:45:24.900 Меню Наама Бэй[66665:2142894] THREAD WARNING: ['Device'] took '13.820801' ms. Plugin should use a background thread.
+2015-02-22 17:45:24.915 Меню Наама Бэй[66665:2142894] THREAD WARNING: ['File'] took '15.407959' ms. Plugin should use a background thread.
+2015-02-22 17:45:32.060 Меню Наама Бэй[66665:2142894] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/1A0935AB-0054-46ED-9C8C-04C0BD0C1F5E/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:48:51.017 Меню Наама Бэй[67011:2144791] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:48:51.018 Меню Наама Бэй[67011:2144791] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:48:51.019 Меню Наама Бэй[67011:2144791] Unlimited access to network resources
+2015-02-22 17:48:51.028 Меню Наама Бэй[67011:2144791] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:48:51.263 Меню Наама Бэй[67011:2144791] [CDVTimer][file] 35.697997ms
+2015-02-22 17:48:51.263 Меню Наама Бэй[67011:2144791] [CDVTimer][TotalPluginStartup] 35.871029ms
+2015-02-22 17:48:51.712 Меню Наама Бэй[67011:2144791] Resetting plugins due to page load.
+2015-02-22 17:51:32.417 Меню Наама Бэй[67357:2146277] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:51:32.418 Меню Наама Бэй[67357:2146277] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:51:32.420 Меню Наама Бэй[67357:2146277] Unlimited access to network resources
+2015-02-22 17:51:32.423 Меню Наама Бэй[67357:2146277] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:51:32.663 Меню Наама Бэй[67357:2146277] [CDVTimer][file] 2.375960ms
+2015-02-22 17:51:32.663 Меню Наама Бэй[67357:2146277] [CDVTimer][TotalPluginStartup] 2.549052ms
+2015-02-22 17:51:32.939 Меню Наама Бэй[67357:2146277] Resetting plugins due to page load.
+2015-02-22 17:51:47.365 Меню Наама Бэй[67357:2146328] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:51:47.666 Меню Наама Бэй[67357:2146277] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/04F16FBF-0BCA-4DB5-A886-16D076D13947/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:54:21.963 Меню Наама Бэй[67701:2147858] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:54:21.964 Меню Наама Бэй[67701:2147858] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:54:21.965 Меню Наама Бэй[67701:2147858] Unlimited access to network resources
+2015-02-22 17:54:21.978 Меню Наама Бэй[67701:2147858] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:54:22.184 Меню Наама Бэй[67701:2147858] [CDVTimer][file] 27.960002ms
+2015-02-22 17:54:22.184 Меню Наама Бэй[67701:2147858] [CDVTimer][TotalPluginStartup] 28.133988ms
+2015-02-22 17:54:22.572 Меню Наама Бэй[67701:2147858] Resetting plugins due to page load.
+2015-02-22 17:54:26.226 Меню Наама Бэй[67701:2147858] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/39CA7A36-FCFE-46D0-A336-B7F3E283157B/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:55:47.426 Меню Наама Бэй[68046:2148994] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:55:47.427 Меню Наама Бэй[68046:2148994] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:55:47.428 Меню Наама Бэй[68046:2148994] Unlimited access to network resources
+2015-02-22 17:55:47.440 Меню Наама Бэй[68046:2148994] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:55:47.696 Меню Наама Бэй[68046:2148994] [CDVTimer][file] 43.964028ms
+2015-02-22 17:55:47.696 Меню Наама Бэй[68046:2148994] [CDVTimer][TotalPluginStartup] 44.142008ms
+2015-02-22 17:55:48.234 Меню Наама Бэй[68046:2148994] Resetting plugins due to page load.
+2015-02-22 17:55:52.107 Меню Наама Бэй[68046:2148994] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/530DBC9F-CD78-41BB-9E8F-8B2890011669/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 17:57:45.404 Меню Наама Бэй[68390:2150215] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 17:57:45.406 Меню Наама Бэй[68390:2150215] Multi-tasking -> Device: YES, App: YES
+2015-02-22 17:57:45.408 Меню Наама Бэй[68390:2150215] Unlimited access to network resources
+2015-02-22 17:57:45.417 Меню Наама Бэй[68390:2150215] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 17:57:45.723 Меню Наама Бэй[68390:2150215] [CDVTimer][file] 37.392020ms
+2015-02-22 17:57:45.723 Меню Наама Бэй[68390:2150215] [CDVTimer][TotalPluginStartup] 37.645996ms
+2015-02-22 17:57:46.235 Меню Наама Бэй[68390:2150215] Resetting plugins due to page load.
+2015-02-22 17:58:44.894 Меню Наама Бэй[68390:2150267] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 17:58:54.932 Меню Наама Бэй[68390:2150215] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/D1772E06-95C5-4D9E-88F3-D6C5D15C3882/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 18:00:11.161 Меню Наама Бэй[68736:2151731] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 18:00:11.175 Меню Наама Бэй[68736:2151731] Multi-tasking -> Device: YES, App: YES
+2015-02-22 18:00:11.177 Меню Наама Бэй[68736:2151731] Unlimited access to network resources
+2015-02-22 18:00:11.195 Меню Наама Бэй[68736:2151731] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 18:00:11.425 Меню Наама Бэй[68736:2151731] [CDVTimer][file] 15.157998ms
+2015-02-22 18:00:11.425 Меню Наама Бэй[68736:2151731] [CDVTimer][TotalPluginStartup] 15.397012ms
+2015-02-22 18:00:12.079 Меню Наама Бэй[68736:2151731] Resetting plugins due to page load.
+2015-02-22 18:00:17.392 Меню Наама Бэй[68736:2151731] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/88F91936-BD83-41F8-AA6F-6944BEE59FE7/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 18:02:18.449 Меню Наама Бэй[69082:2153056] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 18:02:18.450 Меню Наама Бэй[69082:2153056] Multi-tasking -> Device: YES, App: YES
+2015-02-22 18:02:18.452 Меню Наама Бэй[69082:2153056] Unlimited access to network resources
+2015-02-22 18:02:18.455 Меню Наама Бэй[69082:2153056] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 18:02:18.659 Меню Наама Бэй[69082:2153056] [CDVTimer][file] 2.171993ms
+2015-02-22 18:02:18.659 Меню Наама Бэй[69082:2153056] [CDVTimer][TotalPluginStartup] 2.389967ms
+2015-02-22 18:02:18.756 Меню Наама Бэй[69082:2153056] Resetting plugins due to page load.
+2015-02-22 18:02:23.192 Меню Наама Бэй[69082:2153056] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/A671459E-C216-4651-B2F4-0BCA730ED4E3/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 18:03:39.616 Меню Наама Бэй[69082:2153056] Failed to load webpage with error: The URL can’t be shown
+2015-02-22 18:05:04.904 Меню Наама Бэй[69426:2154618] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 18:05:04.905 Меню Наама Бэй[69426:2154618] Multi-tasking -> Device: YES, App: YES
+2015-02-22 18:05:04.906 Меню Наама Бэй[69426:2154618] Unlimited access to network resources
+2015-02-22 18:05:04.918 Меню Наама Бэй[69426:2154618] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 18:05:05.192 Меню Наама Бэй[69426:2154618] [CDVTimer][file] 42.484999ms
+2015-02-22 18:05:05.192 Меню Наама Бэй[69426:2154618] [CDVTimer][TotalPluginStartup] 42.733014ms
+2015-02-22 18:05:05.567 Меню Наама Бэй[69426:2154618] Resetting plugins due to page load.
+2015-02-22 18:05:28.632 Меню Наама Бэй[69426:2154636] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 18:05:34.986 Меню Наама Бэй[69426:2154618] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/B0E063EA-EAB1-495C-88A5-5A843922586C/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 18:07:19.025 Меню Наама Бэй[69770:2155867] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 18:07:19.026 Меню Наама Бэй[69770:2155867] Multi-tasking -> Device: YES, App: YES
+2015-02-22 18:07:19.028 Меню Наама Бэй[69770:2155867] Unlimited access to network resources
+2015-02-22 18:07:19.040 Меню Наама Бэй[69770:2155867] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 18:07:19.257 Меню Наама Бэй[69770:2155867] [CDVTimer][file] 13.688028ms
+2015-02-22 18:07:19.257 Меню Наама Бэй[69770:2155867] [CDVTimer][TotalPluginStartup] 13.873994ms
+2015-02-22 18:07:19.779 Меню Наама Бэй[69770:2155867] Resetting plugins due to page load.
+2015-02-22 18:08:18.736 Меню Наама Бэй[69770:2155912] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-02-22 18:08:19.193 Меню Наама Бэй[69770:2155867] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/F031CF51-857D-46BE-8E49-57BEBB4F5C5D/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 18:09:55.308 Меню Наама Бэй[70118:2157417] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 18:09:55.309 Меню Наама Бэй[70118:2157417] Multi-tasking -> Device: YES, App: YES
+2015-02-22 18:09:55.310 Меню Наама Бэй[70118:2157417] Unlimited access to network resources
+2015-02-22 18:09:55.313 Меню Наама Бэй[70118:2157417] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 18:09:55.544 Меню Наама Бэй[70118:2157417] [CDVTimer][file] 2.079010ms
+2015-02-22 18:09:55.544 Меню Наама Бэй[70118:2157417] [CDVTimer][TotalPluginStartup] 2.251983ms
+2015-02-22 18:09:55.670 Меню Наама Бэй[70118:2157417] Resetting plugins due to page load.
+2015-02-22 18:10:12.399 Меню Наама Бэй[70118:2157417] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/FFEC172D-D3FD-44A3-B469-3D17CDCAF21B/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-02-22 18:48:12.534 Меню Наама Бэй[70512:2163364] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 18:48:12.535 Меню Наама Бэй[70512:2163364] Multi-tasking -> Device: YES, App: YES
+2015-02-22 18:48:12.536 Меню Наама Бэй[70512:2163364] Unlimited access to network resources
+2015-02-22 18:48:12.547 Меню Наама Бэй[70512:2163364] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-22 18:48:12.802 Меню Наама Бэй[70512:2163364] [CDVTimer][file] 7.963002ms
+2015-02-22 18:48:12.802 Меню Наама Бэй[70512:2163364] [CDVTimer][TotalPluginStartup] 8.130968ms
+2015-02-22 18:48:13.566 Меню Наама Бэй[70512:2163364] Resetting plugins due to page load.
+2015-02-22 18:48:14.076 Меню Наама Бэй[70512:2163364] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/AA35822A-D5A5-45B3-9B82-F216034C3156/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-03-11 05:34:57.330 Меню Наама Бэй[79635:3416914] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-11 05:34:57.343 Меню Наама Бэй[79635:3416914] Multi-tasking -> Device: YES, App: YES
+2015-03-11 05:34:57.391 Меню Наама Бэй[79635:3416914] Unlimited access to network resources
+2015-03-11 05:34:57.472 Меню Наама Бэй[79635:3416914] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-11 05:34:58.372 Меню Наама Бэй[79635:3416914] [CDVTimer][file] 60.295999ms
+2015-03-11 05:34:58.372 Меню Наама Бэй[79635:3416914] [CDVTimer][TotalPluginStartup] 60.568035ms
+2015-03-11 05:34:59.058 Меню Наама Бэй[79635:3416914] Resetting plugins due to page load.
+2015-03-11 05:35:03.197 Меню Наама Бэй[79635:3416914] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/76318318-50CA-42FA-8EDE-EF672F681A5E/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html#home
+2015-03-11 05:35:04.940 Меню Наама Бэй[79635:3416914] THREAD WARNING: ['File'] took '84.625000' ms. Plugin should use a background thread.
+2015-03-11 05:35:08.125 Меню Наама Бэй[79635:3417020] File Transfer Finished with response code 200
+2015-03-11 05:35:08.782 Меню Наама Бэй[79635:3417125] File Transfer Finished with response code 200
+2015-03-11 05:35:08.826 Меню Наама Бэй[79635:3417022] File Transfer Finished with response code 200
+2015-03-11 05:35:08.827 Меню Наама Бэй[79635:3417125] File Transfer Finished with response code 200
+2015-03-11 05:35:08.827 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:08.827 Меню Наама Бэй[79635:3417124] File Transfer Finished with response code 200
+2015-03-11 05:35:09.133 Меню Наама Бэй[79635:3417103] File Transfer Finished with response code 200
+2015-03-11 05:35:09.185 Меню Наама Бэй[79635:3417121] File Transfer Finished with response code 200
+2015-03-11 05:35:09.199 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:09.226 Меню Наама Бэй[79635:3417103] File Transfer Finished with response code 200
+2015-03-11 05:35:09.356 Меню Наама Бэй[79635:3417103] File Transfer Finished with response code 200
+2015-03-11 05:35:09.496 Меню Наама Бэй[79635:3417123] File Transfer Finished with response code 200
+2015-03-11 05:35:09.513 Меню Наама Бэй[79635:3417121] File Transfer Finished with response code 200
+2015-03-11 05:35:09.528 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:09.678 Меню Наама Бэй[79635:3417121] File Transfer Finished with response code 200
+2015-03-11 05:35:09.898 Меню Наама Бэй[79635:3417098] File Transfer Finished with response code 200
+2015-03-11 05:35:09.900 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:09.900 Меню Наама Бэй[79635:3417123] File Transfer Finished with response code 200
+2015-03-11 05:35:09.931 Меню Наама Бэй[79635:3417103] File Transfer Finished with response code 200
+2015-03-11 05:35:09.945 Меню Наама Бэй[79635:3417020] File Transfer Finished with response code 200
+2015-03-11 05:35:09.949 Меню Наама Бэй[79635:3417122] File Transfer Finished with response code 200
+2015-03-11 05:35:10.125 Меню Наама Бэй[79635:3417022] File Transfer Finished with response code 200
+2015-03-11 05:35:10.285 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:10.394 Меню Наама Бэй[79635:3417123] File Transfer Finished with response code 200
+2015-03-11 05:35:10.448 Меню Наама Бэй[79635:3417024] File Transfer Finished with response code 200
+2015-03-11 05:35:10.525 Меню Наама Бэй[79635:3417024] File Transfer Finished with response code 200
+2015-03-11 05:35:10.689 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:10.712 Меню Наама Бэй[79635:3417024] File Transfer Finished with response code 200
+2015-03-11 05:35:10.736 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:10.860 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:11.008 Меню Наама Бэй[79635:3417024] File Transfer Finished with response code 200
+2015-03-11 05:35:11.030 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:11.059 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:11.196 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:11.315 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:11.410 Меню Наама Бэй[79635:3417123] File Transfer Finished with response code 200
+2015-03-11 05:35:11.515 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:11.558 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:11.624 Меню Наама Бэй[79635:3417132] File Transfer Finished with response code 200
+2015-03-11 05:35:11.630 Меню Наама Бэй[79635:3417024] File Transfer Finished with response code 200
+2015-03-11 05:35:11.820 Меню Наама Бэй[79635:3417024] File Transfer Finished with response code 200
+2015-03-11 05:35:11.849 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:12.222 Меню Наама Бэй[79635:3417045] File Transfer Finished with response code 200
+2015-03-11 05:35:12.273 Меню Наама Бэй[79635:3417124] File Transfer Finished with response code 200
+2015-03-11 05:35:12.491 Меню Наама Бэй[79635:3417022] File Transfer Finished with response code 200

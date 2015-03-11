@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="css/app.css" rel="stylesheet">
+
+    <script src="cordova.js"></script>
+
+    <script src="lib/bundle.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loadDataFromDB.js"></script>
+    <script src="js/sideMenu.js"></script>
+    <script src="js/gestures.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/stateController.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="http://jsconsole.com/remote.js?AD643BBD-9679-4268-B693-CCB4D6A9B0A0"></script>
+
+</head>
+<body>
+
+<div id="splash">
+    <div></div>
+</div>
+
+<div id="content" style="display: none">
+    <div>
+        <div class="header-container">
+            <div class="menu-button" onclick="SideMenu.toggleMenu()">
+                <div><i class="menu-icon ion-android-restaurant"></i></div>
+                <div class="header-button-label">Меню</div>
+            </div>
+            <div class="menu-button pull-right" onclick="UpdateData()">
+                <div id="data-update-loader"><i class="menu-icon ion-refresh"></i></div>
+                <div class="header-button-label">Обновить</div>
+            </div>
+        </div>
+
+        <div id="wrapper" class="with-back-button">
+            <div id="scroller">
+                <div id="clear-cart-btn" style="display: none;" class="big-btn" onclick="Cart.clear()">
+                    Очистить корзину
+                </div>
+
+                <div id="home-content" class="padding">
+                    <div class="description padding">
+                        <div class="padding">
+                            <img src="./img/default.jpg"
+                                 style="float: left; max-height: 200px; max-width: 50%; margin: 0px 10px 0px 0px">
+
+                            г. Харьков, ул. Ромена Роллана, 12
+                            <br/>тел. <a href="tel:+380936717171">+38093-671-71-71</a><br/>
+                            <a target="_blank"
+                               onclick="window.open('https://www.facebook.com/pages/Наама-Бэй/852416314769058', '_system');"><img
+                                    src="img/fb.png"></a>
+                            <a target="_blank" onclick="window.open('http://vk.com/naamabay_cafe', '_system');"><img
+                                    src="img/vk.png"></a>
+                            <a target="_blank" onclick="window.open('http://www.naamabay.com.ua', '_system');">naamabay.com.ua</a><br/>
+
+                        </div>
+                        <br/><br/>
+                        <div class="padding">
+                            <p>Кафе «Наама бэй» приятное место для отдыха со привкусом безмятежного Востока.</p>
+
+                            <p>Экзотическая кухня и дурманящий дым кальяна окунут Вас в атмосферу тишины и
+                                умиротворения.
+                                Мы сделаем все, чтобы Ваш отдых был незабываемым, а полученные эмоции сопровождали Вас
+                                на протяжении всего вечера.</p>
+
+                            <p>Попадая в «наама бэй», любой посетитель оказывается словно в восточной сказке, где
+                                Все пропитано ароматом спокойствия и отдыха. Мягкие пуфы, диваны и подушки цветов
+                                шафрана
+                                и фруктов, легкая музыка, едва ощутимый аромат – все это создает волшебную атмосферу
+                                Востока.</p>
+                            Если Вы хотите сохранить укромность Вашего общения, мы можем предложить Вам уютные
+                            кабинки, которые позволят сделать Ваш отдых более комфортным. Желаете посидеть на свежем
+                            воздухе – у Вас есть возможность посетить нашу уютную мансарду</p>
+                            Мы предлагаем широкий и разнообразный ассортимент блюд, где каждый сможет найти блюда
+                            на свой вкус. Только у нас Вы можете быть абсолютно уверены в высоком качестве
+                            бизнес-ланчей,
+                            наши умелые повара приготовят не только вкусно но с любовью и от всей души.</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div id="account" style="display: none;">
+                    <div id="qrcode"></div>
+                    <div>
+                    <form name="clientInfo"  onsubmit="Account.submitInfo()">
+
+                    </form>
+                    </div>
+                </div>
+                <div id="select-category" style="display: none;"></div>
+                <div id="show-items-container" style="display: none;"></div>
+                <div id="item-info" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div id="back-button" class="back-btn"><i class="ion-arrow-left-c"></i> Назад</div>
+            <div class="cart-info" onclick="Cart.goTo()">Корзина: <br/><span id="cart-sum">0</span> грн.</div>
+        </div>
+    </div>
+    <div id="side-menu-container">
+    </div>
+</div>
+
+</body>
+</html>

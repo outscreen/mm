@@ -1,0 +1,11 @@
+{
+  "name": "Pemenu",
+  "private": true,
+  "dependencies": {
+    "parse-js-sdk": "latest",
+    "jquery": "latest",
+    "ionicons": "latest",
+    "iscroll": "latest",
+    "underscore": "latest"
+  }
+}
