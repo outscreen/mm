@@ -7222,15 +7222,15 @@ body {
   .cart-icon.active {
     color: antiquewhite; }
   .cart-icon.dark {
-    color: #6a4c2f; }
+    color: #A89C78; }
     .cart-icon.dark.active {
-      color: #4a3525; }
+      color: #706850; }
   .cart-icon.item-info {
     font-size: 60px;
     text-align: center; }
 
 .manage-cart {
-  color: #6a4c2f;
+  color: #A89C78;
   position: absolute;
   right: 0; }
   .manage-cart div {
