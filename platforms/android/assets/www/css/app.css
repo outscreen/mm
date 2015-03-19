@@ -7095,11 +7095,20 @@ body {
     overflow: hidden;
     line-height: 17px;
     text-align: left; }
-  .course-small.course-list .price {
+  .course-small.course-list .below-info {
     position: absolute;
     left: 80px;
     margin: 5px;
     bottom: 0; }
+    .course-small.course-list .below-info .weight {
+      display: inline-block;
+      left: 0px;
+      width: 100px;
+      min-width: 100px;
+      text-align: left; }
+    .course-small.course-list .below-info .price {
+      right: 170px;
+      display: inline; }
   .course-small.course-list .cart {
     position: absolute;
     right: 40px;
@@ -7222,14 +7231,15 @@ body {
   .cart-icon.active {
     color: antiquewhite; }
   .cart-icon.dark {
-    color: #222; }
+    color: #A89C78; }
     .cart-icon.dark.active {
-      color: #111; }
+      color: #706850; }
   .cart-icon.item-info {
     font-size: 60px;
     text-align: center; }
 
 .manage-cart {
+  color: #A89C78;
   position: absolute;
   right: 0; }
   .manage-cart div {

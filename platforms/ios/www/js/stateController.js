@@ -6,7 +6,7 @@ var StateController = {
             case '#select-category':
                 var action = PEMenu.selectedMenu;
                 if (!action) {
-                    Router.go('home');
+                    SideMenu.toggleMenu();
                     return;
                 }
                 html = Router.getCache();
@@ -32,7 +32,7 @@ var StateController = {
                 Dom.homeContent.style.display = 'none';
                 Dom.clearCartBtn.style.display = 'none';
                 Dom.account.style.display = 'none';
-                Dom.hideBackButton();
+                Dom.showBackButton();
                 Dom.reloadCategories(html);
 
                 if (window.isBack && PEMenu.selectedCategory) {

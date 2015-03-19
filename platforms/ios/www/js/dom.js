@@ -102,6 +102,8 @@ var Dom = (function () {
                 self.sideMenu.removeChild(self.sideMenu.firstChild);
             }
             self.sideMenu.appendChild(container);
+            //SideMenu.toggleMenu();
+            //SideMenu.toggleMenu();
         },
         generateCategories: function (items) {
             var self = this,
@@ -141,7 +143,7 @@ var Dom = (function () {
             self.itemInfo.appendChild(container);
         },
         drawImages: function () {
-            var canvasEls = document.getElementsByTagName('canvas'),
+            /*var canvasEls = document.getElementsByTagName('canvas'),
                 canvasId,
                 course,
                 draw = function (course) {
@@ -187,7 +189,7 @@ var Dom = (function () {
                     }
 
                 }
-            }
+            }*/
         }
     }
 })();

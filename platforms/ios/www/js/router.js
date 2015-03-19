@@ -51,7 +51,7 @@ var Router = (function () {
             var self = this;
             switch (window.location.hash) {
                 case '#select-category':
-                    self.go('home', true);
+                    SideMenu.toggleMenu();
                     break;
                 case '#show-items':
                     self.go('select-category', true);

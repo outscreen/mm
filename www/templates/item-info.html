@@ -1,6 +1,9 @@
 <div class="description">
         <span style="font-size: 25px"><%if(item.name){%><%=item.name%><%}%></span><br/>
-        <span style="font-size: 20px"><%if(item.price){%><%=item.price%> грн.<%}%></span><br/>
+        <span style="font-size: 20px">
+            <%if(item.price){%><%=item.price%> грн.<%}%>
+            <%if(item.weight){%><span style="font-size: 16px">(<%=item.weight%>)</span><%}%>
+        </span><br/>
         <span><%if(item.description){%><%=item.description%><%}%></span>
         <br/><br/>
 <img src="<%=item.imgHybrid%>">
