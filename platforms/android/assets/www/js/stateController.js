@@ -30,7 +30,7 @@ var StateController = {
                 Dom.categoryList.style.display = 'block';
                 Dom.itemInfo.style.display = 'none';
                 Dom.homeContent.style.display = 'none';
-                Dom.clearCartBtn.style.display = 'none';
+                Dom.cartInfo.style.display = 'none';
                 Dom.account.style.display = 'none';
                 Dom.showBackButton();
                 Dom.reloadCategories(html);
@@ -60,7 +60,7 @@ var StateController = {
 
                 if (action === 'cart') {
                     buildHtml(Cart.getCart());
-                    Dom.clearCartBtn.style.display = 'block';
+                    Dom.cartInfo.style.display = 'block';
                 } else {
                     html = Router.getCache();
                     if (!html) {
@@ -75,7 +75,7 @@ var StateController = {
                         buildHtml(showItems);
                         Router.cacheData(html);
                     }
-                    Dom.clearCartBtn.style.display = 'none';
+                    Dom.cartInfo.style.display = 'none';
                 }
 
                 Dom.showItems.style.display = 'block';
@@ -108,7 +108,7 @@ var StateController = {
                 Dom.categoryList.style.display = 'none';
                 Dom.itemInfo.style.display = 'block';
                 Dom.homeContent.style.display = 'none';
-                Dom.clearCartBtn.style.display = 'none';
+                Dom.cartInfo.style.display = 'none';
                 Dom.account.style.display = 'none';
                 Dom.showBackButton();
                 Dom.reloadItemInfo(item);
@@ -119,7 +119,7 @@ var StateController = {
                 Dom.categoryList.style.display = 'none';
                 Dom.itemInfo.style.display = 'none';
                 Dom.homeContent.style.display = 'block';
-                Dom.clearCartBtn.style.display = 'none';
+                Dom.cartInfo.style.display = 'none';
                 Dom.account.style.display = 'none';
                 Dom.hideBackButton();
                 break;

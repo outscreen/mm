@@ -6959,7 +6959,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 11;
+  z-index: 0;
   overflow: scroll;
   min-height: 100%;
   max-height: 100%;
@@ -7220,7 +7220,7 @@ body {
     height: 100%;
     padding: 10px 5px; }
   .bottom-bar .cart-info {
-    float: right;
+    width: 80px;
     padding: 5px;
     text-align: center; }
 
@@ -7246,5 +7246,17 @@ body {
     font-size: 39px;
     line-height: 30px;
     padding: 0px 10px; }
+
+.margin {
+  margin: 5px; }
+
+.table {
+  display: table; }
+  .table div {
+    display: table-cell;
+    vertical-align: middle; }
+
+.text-center {
+  text-align: center; }
 
 /*# sourceMappingURL=app.css.map */

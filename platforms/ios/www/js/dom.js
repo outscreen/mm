@@ -19,37 +19,37 @@ var Dom = (function () {
             self.backButton = document.getElementById('back-button');
             self.body = document.body;
             self.wrapper = document.getElementById('wrapper');
-            self.clearCartBtn = document.getElementById('clear-cart-btn');
+            self.cartInfo = document.getElementById('cart-info');
 
             if (window.defaultScroll) {
                 self.scroller.classList.add('default-scroll');
             }
 
             self.sideMenu.addEventListener('click', function (e) {
-                PEMenu.menuAction(e);
-            });
+                    PEMenu.menuAction(e);
+            }, false);
 
             self.categoryList.addEventListener('click', function (e) {
                 PEMenu.showItems(e);
-            });
+            }, false);
 
             self.showItems.addEventListener('click', function (e) {
                 PEMenu.showItemInfo(e);
-            });
+            }, false);
 
             self.backButton.addEventListener('click', function (e) {
                 Router.goBack();
-            });
+            }, false);
         },
         hideSplash: function () {
             document.getElementById('splash').style.display = 'none';
             document.getElementById('content').style.display = 'block';
         },
         showBackButton: function () {
-            Dom.backButton.style.display = 'inline-block';
+            Dom.backButton.style.visibility = 'visible';
         },
         hideBackButton: function () {
-            Dom.backButton.style.display = 'none';
+            Dom.backButton.style.visibility = 'hidden';
         },
         itemInfoTemplate: (function () {
             jQuery.get('templates/item-info.html', function (html) {
@@ -102,8 +102,11 @@ var Dom = (function () {
                 self.sideMenu.removeChild(self.sideMenu.firstChild);
             }
             self.sideMenu.appendChild(container);
-            //SideMenu.toggleMenu();
-            //SideMenu.toggleMenu();
+
+            if (!isAndroid) {
+                SideMenu.toggleMenu();
+                SideMenu.toggleMenu();
+            }
         },
         generateCategories: function (items) {
             var self = this,

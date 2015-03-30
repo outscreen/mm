@@ -7220,7 +7220,7 @@ body {
     height: 100%;
     padding: 10px 5px; }
   .bottom-bar .cart-info {
-    float: right;
+    width: 80px;
     padding: 5px;
     text-align: center; }
 
@@ -7246,5 +7246,17 @@ body {
     font-size: 39px;
     line-height: 30px;
     padding: 0px 10px; }
+
+.margin {
+  margin: 5px; }
+
+.table {
+  display: table; }
+  .table div {
+    display: table-cell;
+    vertical-align: middle; }
+
+.text-center {
+  text-align: center; }
 
 /*# sourceMappingURL=app.css.map */

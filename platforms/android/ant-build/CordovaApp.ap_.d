@@ -289,7 +289,7 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.statusbar \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
@@ -320,9 +320,8 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/Connection.js \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/category.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-icons.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-list.html \

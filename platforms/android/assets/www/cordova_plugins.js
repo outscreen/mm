@@ -161,21 +161,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.network-information/www/network.js",
-        "id": "org.apache.cordova.network-information.network",
-        "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
-        "id": "org.apache.cordova.network-information.Connection",
-        "clobbers": [
-            "Connection"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "clobbers": [
@@ -200,11 +185,10 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.file": "1.3.2",
-    "org.apache.cordova.file-transfer": "0.4.8",
-    "org.apache.cordova.network-information": "0.2.14",
-    "org.apache.cordova.device": "0.2.13",
-    "org.apache.cordova.inappbrowser": "0.5.4",
+    "org.apache.cordova.file": "1.3.3",
+    "org.apache.cordova.file-transfer": "0.5.0",
+    "org.apache.cordova.device": "0.3.0",
+    "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.statusbar": "0.1.10"
 }
 // BOTTOM OF METADATA

@@ -31,3 +31,92 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-03-19 00:22:12.201 Меню Наама Бэй[95865:3589531] [CDVTimer][TotalPluginStartup] 425.816000ms
 2015-03-19 00:22:12.862 Меню Наама Бэй[95865:3589531] Resetting plugins due to page load.
 2015-03-19 00:22:13.593 Меню Наама Бэй[95865:3589531] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/8AFD8620-C9B1-41F0-98C9-DA40B1530306/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-03-19 22:33:55.250 Меню Наама Бэй[3048:3621526] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-19 22:33:55.251 Меню Наама Бэй[3048:3621526] Multi-tasking -> Device: YES, App: YES
+2015-03-19 22:33:55.267 Меню Наама Бэй[3048:3621526] Unlimited access to network resources
+2015-03-19 22:33:55.273 Меню Наама Бэй[3048:3621526] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-19 22:33:55.617 Меню Наама Бэй[3048:3621526] [CDVTimer][file] 56.641042ms
+2015-03-19 22:33:55.936 Меню Наама Бэй[3048:3621526] [CDVTimer][statusbar] 318.902969ms
+2015-03-19 22:33:55.936 Меню Наама Бэй[3048:3621526] [CDVTimer][TotalPluginStartup] 375.983953ms
+2015-03-19 22:33:56.545 Меню Наама Бэй[3048:3621526] Resetting plugins due to page load.
+2015-03-19 22:33:57.012 Меню Наама Бэй[3048:3621526] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/6B6A06BD-1860-40DE-95F5-32DCDBFDC811/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-03-19 22:56:07.878 Меню Наама Бэй[4105:3630134] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-19 22:56:07.879 Меню Наама Бэй[4105:3630134] Multi-tasking -> Device: YES, App: YES
+2015-03-19 22:56:07.881 Меню Наама Бэй[4105:3630134] Unlimited access to network resources
+2015-03-19 22:56:07.911 Меню Наама Бэй[4105:3630134] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-19 22:56:08.667 Меню Наама Бэй[4105:3630134] [CDVTimer][file] 261.430979ms
+2015-03-19 22:56:09.753 Меню Наама Бэй[4105:3630134] [CDVTimer][statusbar] 1086.490035ms
+2015-03-19 22:56:09.753 Меню Наама Бэй[4105:3630134] [CDVTimer][TotalPluginStartup] 1348.420978ms
+2015-03-19 22:56:11.096 Меню Наама Бэй[4105:3630134] Resetting plugins due to page load.
+2015-03-19 22:56:11.888 Меню Наама Бэй[4105:3630134] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/F23ACF6D-98A6-4969-BBA4-B5C595413C15/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-03-19 22:58:21.988 Меню Наама Бэй[4461:3631569] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-19 22:58:22.004 Меню Наама Бэй[4461:3631569] Multi-tasking -> Device: YES, App: YES
+2015-03-19 22:58:22.006 Меню Наама Бэй[4461:3631569] Unlimited access to network resources
+2015-03-19 22:58:22.020 Меню Наама Бэй[4461:3631569] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-19 22:58:22.353 Меню Наама Бэй[4461:3631569] [CDVTimer][file] 81.207991ms
+2015-03-19 22:58:23.140 Меню Наама Бэй[4461:3631569] [CDVTimer][statusbar] 787.546992ms
+2015-03-19 22:58:23.140 Меню Наама Бэй[4461:3631569] [CDVTimer][TotalPluginStartup] 869.126022ms
+2015-03-19 22:58:24.126 Меню Наама Бэй[4461:3631569] Resetting plugins due to page load.
+2015-03-19 22:58:24.591 Меню Наама Бэй[4461:3631569] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/71698D14-AFB5-4AE5-A93E-A13407779883/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-03-19 22:58:24.681 Меню Наама Бэй[4461:3631569] ERROR: Plugin 'SplashScreen' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-03-19 22:58:24.682 Меню Наама Бэй[4461:3631569] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "SplashScreen",
+  "hide",
+  [
+
+  ]
+]
+2015-03-19 23:13:01.452 Меню Наама Бэй[5494:3638255] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-19 23:13:01.467 Меню Наама Бэй[5494:3638255] Multi-tasking -> Device: YES, App: YES
+2015-03-19 23:13:01.469 Меню Наама Бэй[5494:3638255] Unlimited access to network resources
+2015-03-19 23:13:01.482 Меню Наама Бэй[5494:3638255] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-19 23:13:01.826 Меню Наама Бэй[5494:3638255] [CDVTimer][file] 69.751024ms
+2015-03-19 23:13:02.144 Меню Наама Бэй[5494:3638255] [CDVTimer][statusbar] 317.757010ms
+2015-03-19 23:13:02.144 Меню Наама Бэй[5494:3638255] [CDVTimer][TotalPluginStartup] 387.984991ms
+2015-03-19 23:13:02.655 Меню Наама Бэй[5494:3638255] Resetting plugins due to page load.
+2015-03-19 23:13:03.033 Меню Наама Бэй[5494:3638255] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/BF75D2E0-A95C-4C79-8891-0D049F551424/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html
+2015-03-20 00:13:47.083 Меню Наама Бэй[5897:3650510] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-20 00:13:47.084 Меню Наама Бэй[5897:3650510] Multi-tasking -> Device: YES, App: YES
+2015-03-20 00:13:47.085 Меню Наама Бэй[5897:3650510] Unlimited access to network resources
+2015-03-20 00:13:47.103 Меню Наама Бэй[5897:3650510] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-20 00:13:47.481 Меню Наама Бэй[5897:3650510] [CDVTimer][file] 110.401034ms
+2015-03-20 00:13:47.878 Меню Наама Бэй[5897:3650510] [CDVTimer][statusbar] 396.897018ms
+2015-03-20 00:13:47.878 Меню Наама Бэй[5897:3650510] [CDVTimer][TotalPluginStartup] 507.694006ms
+2015-03-20 00:13:48.542 Меню Наама Бэй[5897:3650510] Resetting plugins due to page load.
+2015-03-20 00:13:48.970 Меню Наама Бэй[5897:3650510] Finished load of: file:///Users/noname/Library/Developer/CoreSimulator/Devices/F32E7F94-64F7-4B50-A94A-348F50E68C16/data/Containers/Bundle/Application/A06ACBBA-8A5E-4E39-B3A5-9DC921942115/%D0%9C%D0%B5%D0%BD%D1%8E%20%D0%9D%D0%B0%D0%B0%D0%BC%D0%B0%20%D0%91%D1%8D%D0%B8%CC%86.app/www/index.html

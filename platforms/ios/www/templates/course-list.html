@@ -7,9 +7,7 @@
     <div class="name"><%=item.name%></div>
 
     <div class="below-info">
-        <%if(item.weight){%>
-        <div class="weight"><%=item.weight%> гр.</div>
-        <%}%>
+        <div class="weight"><%if(item.weight){%><%=item.weight%><%}%></div>
         <%if(item.price){%>
         <div class="price"><%=item.price%> грн.</div>
         <%}%>

@@ -76,7 +76,7 @@ if (!isHybrid) {
 } else {
     window.onload = function () {
         (function waitDeviceReady() {
-            if (!navigator || !navigator.app || !navigator.app.exitApp) {
+            if (!navigator || !navigator.app || !navigator.app.exitApp || !PEMenu || !Dom) {
                 setTimeout(waitDeviceReady, 300);
             } else {
                 try {
