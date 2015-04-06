@@ -1,4 +1,11 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes.dex : \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/BuildConfig.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/CordovaApp.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$attr.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$drawable.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$string.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$xml.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafenaamabaykh/BuildConfig.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafenaamabaykh/CordovaApp.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafenaamabaykh/R$attr.class \

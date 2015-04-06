@@ -13,8 +13,8 @@ $selected-background: #666;
 $invalid-dirty-background: maroon;
 $menu-font: antiquewhite;
 $font-on-main-background: #222;
-$course-bg: rgba(255, 253, 250, 0.95);
-$description-bg: rgba(255, 253, 250, 0.95);
+$course-bg: rgba(255, 253, 250, 0.91);
+$description-bg: rgba(255, 253, 250, 0.91);
 $cart-icons: #726E5D;
 $cart-icons-active: #595648;
 
@@ -68,7 +68,7 @@ body {
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    background: url('../img/defaultcbus.png');
+    background: url('../img/cbussplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -348,7 +348,7 @@ body {
   color: $main-background;
   font-weight: bold;
   text-align: center;
-  background: url("../img/categorybgcbus.jpg");
+  background: url("../img/categorybgcbus.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;

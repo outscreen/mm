@@ -6877,10 +6877,10 @@ body {
   overflow: hidden;
   /* this is important to prevent the whole page to bounce */
   left: 0;
-  background: url("../img/bg2.png"); }
+  background: url("../img/bgcbus.jpg"); }
 
 #splash {
-  background: url("../img/bg2.png");
+  background: url("../img/bgcbus.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -6891,7 +6891,7 @@ body {
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    background: url("../img/default.jpg");
+    background: url("../img/cbussplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
@@ -6948,7 +6948,7 @@ body {
   z-index: 10; }
 
 #side-menu-container {
-  background: url("../img/menubg.jpg");
+  background: url("../img/menubgcbus.jpg");
   background-repeat: repeat;
   color: antiquewhite;
   line-height: 20px;
@@ -7050,7 +7050,7 @@ body {
     padding: 0px 10px 2px 10px; }
 .course-small.course-list {
   width: 100%;
-  background: rgba(255, 253, 250, 0.8);
+  background: rgba(255, 253, 250, 0.91);
   height: 80px;
   position: relative;
   margin: 5px 0;
@@ -7121,7 +7121,7 @@ body {
   color: #333;
   font-weight: bold;
   text-align: center;
-  background: url("../img/categorybg.png");
+  background: url("../img/categorybgcbus.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;
@@ -7162,7 +7162,7 @@ body {
   border-color: $main-background;
 }*/
 .description {
-  background-color: rgba(255, 253, 250, 0.8);
+  background-color: rgba(255, 253, 250, 0.91);
   color: #222;
   margin: 0px 0px 10px 0px;
   border: solid 1px #333;
@@ -7231,15 +7231,15 @@ body {
   .cart-icon.active {
     color: antiquewhite; }
   .cart-icon.dark {
-    color: #A89C78; }
+    color: #726E5D; }
     .cart-icon.dark.active {
-      color: #706850; }
+      color: #595648; }
   .cart-icon.item-info {
     font-size: 60px;
     text-align: center; }
 
 .manage-cart {
-  color: #A89C78;
+  color: #726E5D;
   position: absolute;
   right: 0; }
   .manage-cart div {
