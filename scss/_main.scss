@@ -494,9 +494,11 @@ body {
 
 .manage-cart {
   color: $cart-icons;
-  position: absolute;
-  right: 0;
-  div {
+  &.in-course-list {
+    position: absolute;
+    right: 0;
+  }
+  div, span {
     font-size: 39px;
     line-height: 30px;
     padding: 0px 10px;
@@ -517,4 +519,8 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
 }
