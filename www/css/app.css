@@ -7245,8 +7245,11 @@ body {
     right: 0; }
   .manage-cart div, .manage-cart span {
     font-size: 39px;
-    line-height: 30px;
+    line-height: 30px; }
+  .manage-cart div {
     padding: 0px 10px; }
+  .manage-cart span {
+    padding: 0px 10px 0px 15px; }
 
 .margin {
   margin: 5px; }

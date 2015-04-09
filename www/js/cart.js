@@ -25,17 +25,14 @@ var Cart = (function () {
                 Router.go('cart');
                 return;
             }
-            document.getElementById('cart-' + item.objectId).classList.add('ion-ios-cart-outline');
-            document.getElementById('cart-' + item.objectId).classList.remove('ion-ios-cart');
-            document.getElementById('cart-' + item.objectId).classList.remove('active');
+            $("[name = cart-" + item.objectId + "]").addClass('ion-ios-cart-outline').removeClass('ion-ios-cart').removeClass('active');
         },
         cart = {},
         amounts = {},
         price = 0;
     return {
         toggle: function (id, type) {
-            var item = PEMenu.itemList[PEMenu.itemObjectIds[id]],
-                amountEl;
+            var item = PEMenu.itemList[PEMenu.itemObjectIds[id]];
             switch (type) {
                 case 'toggle':
                     if (amounts[item.objectId]) {
@@ -51,10 +48,7 @@ var Cart = (function () {
                     removeOne(item);
                     break;
             }
-            amountEls = document.getElementsByName('cart-amount-' + item.objectId);
-            for (var i = 0, l = amountEls.length; i < l; i++) {
-                amountEls[i].innerHTML = amounts[item.objectId] || '';
-            }
+            $("[name = cart-amount-" + item.objectId + "]").html(amounts[item.objectId] || '');
             document.getElementById('cart-sum').innerHTML = price;
             Router.cacheData();
         },
