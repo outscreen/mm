@@ -29,6 +29,7 @@ module.exports = function (grunt) {
                     'external/**/*.js',
                     //'bower_components/ionicons/lib/parse.min.js',
                     'bower_components/underscore/underscore.js',
+                    'bower_components/hammerjs/hammer.min.js',
                     'bower_components/parse-js-sdk/lib/parse.min.js'
                 ],
                 dest: 'www/lib/bundle.js'

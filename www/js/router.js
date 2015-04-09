@@ -15,7 +15,7 @@ var Router = (function () {
                 StateController.handleCurrentState(window.location.hash, window.location.hash);
                 return;
             }
-            window.location.hash = where;
+            Router.state = window.location.hash = where;
         },
         getCache: function () {
             if (window.updateInProgress) {

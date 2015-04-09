@@ -4,9 +4,7 @@ var Cart = (function () {
             amounts[item.objectId]++;
             price += parseInt(item.price);
             cart[item.objectId] = item;
-            document.getElementById('cart-' + item.objectId).classList.add('ion-ios-cart');
-            document.getElementById('cart-' + item.objectId).classList.add('active');
-            document.getElementById('cart-' + item.objectId).classList.remove('ion-ios-cart-outline');
+            $("[name = cart-" + item.objectId + "]").addClass('ion-ios-cart').addClass('active').removeClass('ion-ios-cart-outline');
         },
         removeOne = function (item) {
             if (!amounts[item.objectId]) {
@@ -53,9 +51,9 @@ var Cart = (function () {
                     removeOne(item);
                     break;
             }
-            amountEl = document.getElementById('cart-amount-' + item.objectId);
-            if (amountEl) {
-                amountEl.innerHTML = amounts[item.objectId] || '';
+            amountEls = document.getElementsByName('cart-amount-' + item.objectId);
+            for (var i = 0, l = amountEls.length; i < l; i++) {
+                amountEls[i].innerHTML = amounts[item.objectId] || '';
             }
             document.getElementById('cart-sum').innerHTML = price;
             Router.cacheData();

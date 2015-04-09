@@ -7239,10 +7239,11 @@ body {
     text-align: center; }
 
 .manage-cart {
-  color: #A89C78;
-  position: absolute;
-  right: 0; }
-  .manage-cart div {
+  color: #A89C78; }
+  .manage-cart.in-course-list {
+    position: absolute;
+    right: 0; }
+  .manage-cart div, .manage-cart span {
     font-size: 39px;
     line-height: 30px;
     padding: 0px 10px; }
@@ -7258,5 +7259,8 @@ body {
 
 .text-center {
   text-align: center; }
+
+.inline-block {
+  display: inline-block; }
 
 /*# sourceMappingURL=app.css.map */

@@ -12,6 +12,35 @@ var PEMenu = (function () {
             Dom.init();
             StateController.handleCurrentState();
             UpdateData();
+            var Gesture = new Hammer(Dom.wrapper);
+            Gesture.on('swipe', function (event) {
+                switch (event.direction) {
+                    case 4:
+                        swipeRight();
+                        break;
+                    case 2:
+                        swipeLeft();
+                        break;
+                }
+
+                function swipeRight() {
+                    switch (Router.state) {
+                        //show info about previous item
+                        case 'item-info':
+                            PEMenu.showPreviousItem();
+                            break;
+                    }
+                }
+
+                function swipeLeft() {
+                    switch (Router.state) {
+                        //show info about next item
+                        case 'item-info':
+                            PEMenu.showNextItem();
+                            break;
+                    }
+                }
+            });
         },
         menuAction: function (e) {
             var self = this;
@@ -61,13 +90,29 @@ var PEMenu = (function () {
             action = action.action;
             self.selectedItem = action;
             if (tryToToggleCart(e, action)) {
-                return
+                return;
             }
             Router.go('item-info');
         },
         toggleCart: function (e) {
             var self = this;
             tryToToggleCart(e, self.selectedItem);
+        },
+        showNextItem: function () {
+            var self = this;
+            if (!self.nextItem) {
+                return;
+            }
+            self.selectedItem = self.nextItem;
+            Router.go('item-info');
+        },
+        showPreviousItem: function () {
+            var self = this;
+            if (!self.previousItem) {
+                return;
+            }
+            self.selectedItem = self.previousItem;
+            Router.go('item-info');
         }
     }
 })();

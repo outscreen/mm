@@ -1,10 +1,22 @@
 <div class="description">
-        <span style="font-size: 25px"><%if(item.name){%><%=item.name%><%}%></span><br/>
+    <span style="font-size: 25px"><%if(item.name){%><%=item.name%><%}%></span><br/>
+    <%if(item.price){%>
+    <div onclick="PEMenu.toggleCart(event)">
+        <span class="manage-cart"><span class="ion-android-add-circle" iscart="true" type="plus"></span></span>
+        <div class="inline-block">
+        <span class="cart-icon dark <%if(Cart.getItemAmount(item.objectId)){%>ion-ios-cart <%} else {%>ion-ios-cart-outline<%}%>"
+              iscart="true" type="toggle" name="cart-<%=item.objectId%>"></span>
+            <br/>
+            <span name="cart-amount-<%=item.objectId%>"><%if(true || Cart.getItemAmount(item.objectId)){%><%=Cart.getItemAmount(item.objectId)%><%}%></span>
+        </div>
+        <span class="manage-cart"><span class="ion-android-remove-circle" iscart="true" type="minus"></span></span>
+    </div>
+    <%}%>
         <span style="font-size: 20px">
             <%if(item.price){%><%=item.price%> грн.<%}%>
             <%if(item.weight){%><span style="font-size: 16px">(<%=item.weight%>)</span><%}%>
         </span><br/>
-        <span><%if(item.description){%><%=item.description%><%}%></span>
-        <br/><br/>
-<img src="<%=item.imgHybrid%>">
+    <span><%if(item.description){%><%=item.description%><%}%></span>
+    <br/><br/>
+    <img src="<%=item.imgHybrid%>">
 </div>

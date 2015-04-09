@@ -104,6 +104,12 @@ var StateController = {
                     return;
                 }
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
+                //previous item in the list or the last one
+                PEMenu.previousItem = PEMenu.itemList[PEMenu.itemObjectIds[action] - 1] || PEMenu.itemList[PEMenu.itemList.length -1];
+                PEMenu.previousItem = PEMenu.previousItem.objectId;
+                //next item in the list or the first one
+                PEMenu.nextItem = PEMenu.itemList[PEMenu.itemObjectIds[action] + 1] || PEMenu.itemList[0];
+                PEMenu.nextItem = PEMenu.nextItem.objectId;
                 Dom.showItems.style.display = 'none';
                 Dom.categoryList.style.display = 'none';
                 Dom.itemInfo.style.display = 'block';
