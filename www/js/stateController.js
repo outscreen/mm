@@ -1,7 +1,9 @@
 var StateController = {
     handleCurrentState: function (from, to, isBack) {
         var items = [],
-            html;
+            html,
+            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg],
+            componentsLength = components.length;
         switch (to) {
             case '#select-category':
                 var action = PEMenu.selectedMenu;
@@ -118,6 +120,21 @@ var StateController = {
                 Dom.account.style.display = 'none';
                 Dom.showBackButton();
                 Dom.reloadItemInfo(item);
+                break;
+
+            case '#item-img':
+                var action = PEMenu.selectedItem;
+                if (!action) {
+                    Router.go('home');
+                    return;
+                }
+                var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
+                for (var i = 0; i < componentsLength; i++) {
+                    components[i].style.display = 'none';
+                }
+                Dom.itemImg.style.display = 'block';
+                Dom.showBackButton();
+                Dom.reloadItemImg(item);
                 break;
 
             case '#home':

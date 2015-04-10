@@ -11,6 +11,7 @@ var Dom = (function () {
             self.categoryList = document.getElementById('select-category');
             self.showItems = document.getElementById('show-items-container');
             self.itemInfo = document.getElementById('item-info');
+            self.itemImg = document.getElementById('item-img');
             self.homeContent = document.getElementById('home-content');
             self.account = document.getElementById('account');
             self.width = document.body.clientWidth;
@@ -54,6 +55,11 @@ var Dom = (function () {
         itemInfoTemplate: (function () {
             jQuery.get('templates/item-info.html', function (html) {
                 Dom.itemInfoTemplate = _.template(html);
+            });
+        })(),
+        itemImgTemplate: (function () {
+            jQuery.get('templates/item-img.html', function (html) {
+                Dom.itemImgTemplate = _.template(html);
             });
         })(),
         courseTemplate: (function () {
@@ -144,6 +150,15 @@ var Dom = (function () {
             }
             container.innerHTML = self.itemInfoTemplate({item: params});
             self.itemInfo.appendChild(container);
+        },
+        reloadItemImg: function (params) {
+            var self = this,
+                container = document.createElement('div');
+            if (self.itemImg.firstChild) {
+                self.itemImg.removeChild(self.itemImg.firstChild);
+            }
+            container.innerHTML = self.itemImgTemplate({item: params});
+            self.itemImg.appendChild(container);
         },
         drawImages: function () {
             /*var canvasEls = document.getElementsByTagName('canvas'),

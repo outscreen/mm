@@ -63,6 +63,9 @@ var Router = (function () {
                         self.go('show-items', true);
                     }
                     break;
+                case '#item-img':
+                    self.go('#item-info', true);
+                    break;
                 case '#cart':
                     self.go('show-items', true);
                     break;
