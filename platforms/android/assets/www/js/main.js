@@ -1,19 +1,55 @@
 var PEMenu = (function () {
 
-    function tryToToggleCart (e, action) {
-        if (e.target.attributes && e.target.attributes.isCart) {
+    function tryToToggleCart(e, action) {
+        if (e.target.attributes && e.target.attributes.iscart) {
             Cart.toggle(action, e.target.attributes.type.value);
             return true;
         }
     }
 
+    function scale (scale) {
+        $('#scale-container').css('max-height', $('#scale-container')[0].clientHeight);
+        $('#scale').css('max-width', '');
+        $('#scale').css('height', Math.floor($('#scale')[0].height * scale));
+        $('#scale').css('width', Math.floor($('#scale')[0].width * scale));
+    }
+
+    window.scale = scale;
+
+    function tryToScale (e) {
+        if (e.target.attributes && e.target.attributes.scale) {
+            switch (e.target.attributes.type.value) {
+                case 'plus':
+                    scale(scaleInterval);
+                    break;
+                case 'minus':
+                    scale(1 / scaleInterval);
+                    break;
+            }
+            return true;
+        }
+    }
+
     return {
+        startScale: 1,
+        startX: 0,
+        startY: 0,
+        panStarted: 0,
+        panEnded: 0,
         init: function () {
             Dom.init();
             StateController.handleCurrentState();
             UpdateData();
-            var Gesture = new Hammer(Dom.wrapper);
+
+            var Gesture = new Hammer(Dom.wrapper),
+                scale = 2;
+
             Gesture.on('swipe', function (event) {
+                console.log(event);
+                if (event.target && event.target.attributes && event.target.attributes.id &&
+                    event.target.attributes.id.nodeValue === 'scale' && scale > 1) {
+                    return;
+                }
                 switch (event.direction) {
                     case 4:
                         swipeRight();
@@ -39,6 +75,70 @@ var PEMenu = (function () {
                             PEMenu.showNextItem();
                             break;
                     }
+                }
+            });
+
+            //Gesture.get('pinch').set({enable: true});
+
+
+            Gesture.on('pinch', function (event) {
+                switch (Router.state) {
+                    //show info about next item
+                    case 'item-info':
+                        scale = (1 + ((event.scale - 1) / 2)) * PEMenu.startScale;
+                        scale = scale < 1 ? 1 : scale;
+                        $('#scale').css('height', Math.floor($('#scale')[0].height * scale));
+                        $('#scale').css('width', Math.floor($('#scale')[0].width * scale));
+                        //$('#scale').css('transform', 'scale(' + scale + ')');
+                        PEMenu.temp = Hammer($('#scale')[0]);
+
+                        var maximumX = Math.floor(($('#scale')[0].width * scale - $('#scale')[0].width) / scale / 2),
+                            maximumY = Math.floor(($('#scale')[0].height * scale - $('#scale')[0].height) / scale / 2),
+                            x = 1,
+                            y = 1;
+                        PEMenu.temp.on('pan', function (event) {
+                            PEMenu.panStarted++;
+                            var maximumX = Math.floor(($('#scale')[0].width * scale - $('#scale')[0].width) / scale / 2),
+                                maximumY = Math.floor(($('#scale')[0].height * scale - $('#scale')[0].height) / scale / 2);
+                            x = Math.floor(event.deltaX / 2);
+                            y = Math.floor(event.deltaY / 2);
+                            x += PEMenu.startX;
+                            y += PEMenu.startY;
+                            if (x > maximumX) {
+                                x = maximumX;
+                            }
+                            if (x < -maximumX) {
+                                x = -maximumX;
+                            }
+                            if (y > maximumY) {
+                                y = maximumY;
+                            }
+                            if (y < -maximumY) {
+                                y = -maximumY;
+                            }
+                            console.log(x, y)
+                            $('#scale').css('transform', 'scale(' + scale + ') translateX(' + x + 'px) translateY(' + y + 'px)');
+                        });
+                        PEMenu.temp.on('panend', function () {
+                            if (!PEMenu.panEnded) {
+                                setTimeout(function () {
+                                    PEMenu.startX = x;
+                                    PEMenu.startY = y;
+                                    PEMenu.panEnding = false;
+                                }, 1000)
+                            }
+                            PEMenu.panEnding = true;
+                        });
+                        break;
+                }
+            });
+
+            Gesture.on('pinchend', function (event) {
+                switch (Router.state) {
+                    //show info about next item
+                    case 'item-info':
+                        PEMenu.startScale = scale;
+                        break;
                 }
             });
         },
@@ -94,9 +194,12 @@ var PEMenu = (function () {
             }
             Router.go('item-info');
         },
-        toggleCart: function (e) {
+        clickOnInfo: function (e) {
             var self = this;
-            tryToToggleCart(e, self.selectedItem);
+            if (tryToToggleCart(e, self.selectedItem)) {
+                return;
+            }
+            tryToScale(e)
         },
         showNextItem: function () {
             var self = this;

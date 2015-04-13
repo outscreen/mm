@@ -7143,8 +7143,19 @@ body {
 #item-info, #home-content, #show-items-container, #select-category {
   padding: 10px 10px 45px 10px; }
 
-#item-info img {
-  max-width: 100%; }
+#item-info .item-img {
+  max-width: 100%;
+  min-width: 100%; }
+
+.img-scale {
+  position: absolute;
+  z-index: 10;
+  margin: 5px 5px;
+  font-size: 40px;
+  opacity: 0.7;
+  bottom: 0;
+  right: 0;
+  height: 60px; }
 
 #show-items-container, #select-category {
   text-align: center; }
