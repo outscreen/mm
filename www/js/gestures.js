@@ -1,133 +1,105 @@
-var Scroll = {
-    startX: null,
-    startY: null,
-    curX: null,
-    curY: null,
-    maxXMove: null,
-    maxYMove: null,
-    scrollY: 0,
-    scrollX: 0,
-    scrollType: null,
-    veryBeginY: null,
-    defineSwipeType: function () {
-        var self = this;
-        if (self.scrollType) {
-            return self.scrollType;
-        }
-        if (Math.abs(self.startX - self.curX) > Math.abs(self.startY - self.curY)) {
-            self.scrollType = 'horizontal';
-        } else {
-            self.scrollType = 'vertical';
-        }
-    },
-    handleSwipeProcess: function () {
-        var self = this;
-        if (!self.maxXMove) {
-            self.maxXMove = Dom.sideMenu.clientWidth;
-        }
-        switch (self.defineSwipeType()) {
-            /*case 'horizontal':
-                if (self.curX === self.startX) {
+var Gestures = (function () {
+    return {
+        startScale: 1,
+        startX: 0,
+        startY: 0,
+        panStarted: 0,
+        panEnded: 0,
+        init: function () {
+            var Gesture = new Hammer(Dom.wrapper),
+                scale = 1;
+
+            Gesture.on('swipe', function (event) {
+                console.log(event);
+                if (event.target && event.target.attributes && event.target.attributes.id &&
+                    event.target.attributes.id.nodeValue === 'scale') {
                     return;
                 }
-                var move = self.curX - self.startX;
-                self.startX = self.curX;
-                self.scrollX += move;
-                if (self.scrollX < 0) {
-                    if (!SideMenu.isOpen) {
-                        return;
-                    }
-                    self.scrollX = 0;
-                }
-                if (self.scrollX > self.maxXMove) {
-                    if (SideMenu.isOpen) {
-                        return;
-                    }
-                    self.scrollX = self.maxXMove;
-                }
-                Dom.sideMenu.style['-webkit-transition-duration'] = '';
-                Dom.contentWindow.style['-webkit-transform'] = 'translate3d(' + self.scrollX + 'px, 0px, 0px)';
-                break;*/
-            case 'vertical':
-                if (self.curY === self.startY) {
-                    return;
-                }
-                self.maxYMove = self.maxYMove || Dom.homeContent.clientHeight - window.innerHeight;
-                if (self.maxYMove <= 0) {
-                    return;
-                }
-                var move = self.curY - self.startY;
-                self.startY = self.curY;
-                self.scrollY += move;
-                if (self.scrollY > 0) {
-                    self.scrollY = 0;
-                }
-                if (self.scrollY <= -self.maxYMove) {
-                    self.scrollY = -self.maxYMove;
-                }
-                //Dom.scrollable.style['transition'] = 'transform .' + 2 + 's ease-in-out'
-                //Dom.scrollable.style['transition-duration'] = '0;
-                Dom.scrollable.style['-webkit-transition-duration'] = '';
-                Dom.scrollable.style['-webkit-transform'] = 'translate3d(0px, ' + self.scrollY + 'px, 0px)';
-        }
-    },
-    handleSwipeEnd: function () {
-        var self = this,
-            time = self.endTime - self.startTime;
-        if (!self.maxXMove) {
-            self.maxXMove = Dom.sideMenu.clientWidth;
-        }
-        switch (self.defineSwipeType()) {
-            case 'horizontal':
-                /*var move = self.curX - self.startX;
-                self.scrollX += move;
-                if (self.scrollX >= self.maxXMove && SideMenu.isOpen) {
-                    break;
-                }
-                if (self.scrollX <= 0 && !SideMenu.isOpen) {
-                    break;
-                }
-                console.log(self.scrollX)
-                if (time < 300 ||
-                    ((self.scrollX > self.maxXMove / 2) && !SideMenu.isOpen) ||
-                    ((self.scrollX < self.maxXMove / 2) && SideMenu.isOpen)) {
-                    self.scrollX = !SideMenu.isOpen ? self.maxXMove : 0;
-                    SideMenu.toggleMenu();
-                } else {
-                    self.scrollX = SideMenu.isOpen ? self.maxXMove : 0;
-                    SideMenu.cancelToggleMenu();
-                }
-                break;*/
-            case 'vertical':
-                if (self.maxYMove <= 0) {
-                    return;
-                }
-                if (self.curY === self.veryBeginY) {
-                    return;
-                }
-                if (time > 300) {
-                    return;
-                }
-                var move = self.curY - self.veryBeginY,
-                    acselerate = Math.ceil(500 / time);
-                self.scrollY += move * acselerate;
-                if (self.scrollY > 0) {
-                    self.scrollY = 0;
-                }
-                if (self.scrollY <= -self.maxYMove) {
-                    self.scrollY = -self.maxYMove;
+                switch (event.direction) {
+                    case 4:
+                        swipeRight();
+                        break;
+                    case 2:
+                        swipeLeft();
+                        break;
                 }
 
-                Dom.scrollable.style['-webkit-transition-duration'] = (200 * acselerate) + 'ms';
-                Dom.scrollable.style['-webkit-transform'] = 'translate3d(0px, ' + self.scrollY + 'px, 0px)';
-                console.log(time, acselerate, move)
-                break;
+                function swipeRight() {
+                    switch (Router.state) {
+                        //show info about previous item
+                        case 'item-info':
+                            PEMenu.showPreviousItem();
+                            break;
+                    }
+                }
+
+                function swipeLeft() {
+                    switch (Router.state) {
+                        //show info about next item
+                        case 'item-info':
+                            PEMenu.showNextItem();
+                            break;
+                    }
+                }
+            });
+
+            /*Gesture.get('pinch').set({enable: true});
+
+
+            Gesture.on('pinch', function (event) {
+                switch (Router.state) {
+                    //show info about next item
+                    case 'item-info':
+                        scale = (1 + ((event.scale - 1) / 2)) * PEMenu.startScale;
+                        scale = scale < 1 ? 1 : scale;
+                        $('#scale').css('transform', 'scale(' + scale + ')');
+                        PEMenu.temp = Hammer($('#scale')[0]);
+
+                        var maximumX = Math.floor(($('#scale')[0].width * scale - $('#scale')[0].width) / scale / 2),
+                            maximumY = Math.floor(($('#scale')[0].height * scale - $('#scale')[0].height) / scale / 2),
+                            x = 1,
+                            y = 1;
+                        PEMenu.temp.on('pan', function (event) {
+                            PEMenu.panStarted++;
+                            var maximumX = Math.floor(($('#scale')[0].width * scale - $('#scale')[0].width) / scale / 2),
+                                maximumY = Math.floor(($('#scale')[0].height * scale - $('#scale')[0].height) / scale / 2);
+                            x = Math.floor(event.deltaX / 2);
+                            y = Math.floor(event.deltaY / 2);
+                            x += PEMenu.startX;
+                            y += PEMenu.startY;
+                            if (x > maximumX) {
+                                x = maximumX;
+                            }
+                            if (x < -maximumX) {
+                                x = -maximumX;
+                            }
+                            if (y > maximumY) {
+                                y = maximumY;
+                            }
+                            if (y < -maximumY) {
+                                y = -maximumY;
+                            }
+                            console.log(x, y)
+                            $('#scale').css('transform', 'scale(' + scale + ') translateX(' + x + 'px) translateY(' + y + 'px)');
+                        });
+                        PEMenu.temp.on('panend', function () {
+                            setTimeout(function () {
+                                PEMenu.startX = x;
+                                PEMenu.startY = y;
+                            }, 1000)
+                        });
+                        break;
+                }
+            });
+
+            Gesture.on('pinchend', function (event) {
+                switch (Router.state) {
+                    //show info about next item
+                    case 'item-info':
+                        PEMenu.startScale = scale;
+                        break;
+                }
+            });*/
         }
-        self.scrollType = null;
-    },
-    scrollTop: function () {
-        var self = this;
-        self.scrollY = 0;
-        Dom.scrollable.style['-webkit-transform'] = 'translate3d(0px, ' + self.scrollY + 'px, 0px)';
     }
-};
+})();

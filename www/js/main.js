@@ -1,8 +1,15 @@
 var PEMenu = (function () {
 
-    function tryToToggleCart (e, action) {
-        if (e.target.attributes && e.target.attributes.isCart) {
+    function tryToToggleCart(e, action) {
+        if (e.target.attributes && e.target.attributes.iscart) {
             Cart.toggle(action, e.target.attributes.type.value);
+            return true;
+        }
+    }
+
+    function tryToScale (e) {
+        if (e.target.attributes && e.target.attributes.scale) {
+            console.log('go to scaled');
             return true;
         }
     }
@@ -10,37 +17,9 @@ var PEMenu = (function () {
     return {
         init: function () {
             Dom.init();
+            Gestures.init();
             StateController.handleCurrentState();
             UpdateData();
-            var Gesture = new Hammer(Dom.wrapper);
-            Gesture.on('swipe', function (event) {
-                switch (event.direction) {
-                    case 4:
-                        swipeRight();
-                        break;
-                    case 2:
-                        swipeLeft();
-                        break;
-                }
-
-                function swipeRight() {
-                    switch (Router.state) {
-                        //show info about previous item
-                        case 'item-info':
-                            PEMenu.showPreviousItem();
-                            break;
-                    }
-                }
-
-                function swipeLeft() {
-                    switch (Router.state) {
-                        //show info about next item
-                        case 'item-info':
-                            PEMenu.showNextItem();
-                            break;
-                    }
-                }
-            });
         },
         menuAction: function (e) {
             var self = this;
@@ -94,9 +73,12 @@ var PEMenu = (function () {
             }
             Router.go('item-info');
         },
-        toggleCart: function (e) {
+        clickOnItemInfo: function (e) {
             var self = this;
-            tryToToggleCart(e, self.selectedItem);
+            if (tryToToggleCart(e, self.selectedItem)) {
+                return;
+            }
+            tryToScale(e);
         },
         showNextItem: function () {
             var self = this;

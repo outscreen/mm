@@ -1,10 +1,13 @@
 var Dom = (function () {
-    var imgEls = {},
+    var clickEvent,
+        imgEls = {},
         ctx = {};
 
     return {
         init: function () {
             var self = this;
+
+            clickEvent = isHybrid ? 'touchend' : 'click';
 
             self.sideMenu = document.getElementById('side-menu-container');
             self.contentWindow = document.getElementById('content-window');
@@ -15,6 +18,8 @@ var Dom = (function () {
             self.homeContent = document.getElementById('home-content');
             self.account = document.getElementById('account');
             self.width = document.body.clientWidth;
+            self.height = document.body.clientHeight - 88;
+            self.halfWidth = Math.floor(document.body.clientWidth / 2);
             self.dataUpdateLoader = document.getElementById('data-update-loader');
             self.scroller = document.getElementById('scroller');
             self.backButton = document.getElementById('back-button');
@@ -26,20 +31,24 @@ var Dom = (function () {
                 self.scroller.classList.add('default-scroll');
             }
 
-            self.sideMenu.addEventListener('click', function (e) {
+            self.sideMenu.addEventListener(clickEvent, function (e) {
                     PEMenu.menuAction(e);
             }, false);
 
-            self.categoryList.addEventListener('click', function (e) {
+            self.categoryList.addEventListener(clickEvent, function (e) {
                 PEMenu.showItems(e);
             }, false);
 
-            self.showItems.addEventListener('click', function (e) {
+            self.showItems.addEventListener(clickEvent, function (e) {
                 PEMenu.showItemInfo(e);
             }, false);
 
-            self.backButton.addEventListener('click', function (e) {
+            self.backButton.addEventListener(clickEvent, function (e) {
                 Router.goBack();
+            }, false);
+
+            self.itemInfo.addEventListener(clickEvent, function (e) {
+                PEMenu.clickOnItemInfo(e);
             }, false);
         },
         hideSplash: function () {

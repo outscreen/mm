@@ -375,9 +375,21 @@ body {
 }
 
 #item-info {
-  img {
+  .item-img {
     max-width: 100%;
+    min-width: 100%;
   }
+}
+
+.img-scale {
+  position: absolute;
+  z-index: 10;
+  margin: 5px 5px;
+  font-size: 40px;
+  opacity: 0.7;
+  bottom: 0;
+  right: 0;
+  height: 60px;
 }
 
 #show-items-container, #select-category {
@@ -501,7 +513,12 @@ body {
   div, span {
     font-size: 39px;
     line-height: 30px;
+  }
+  div {
     padding: 0px 10px;
+  }
+  span {
+    padding: 0px 10px 0px 15px;
   }
 }
 

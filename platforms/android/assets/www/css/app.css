@@ -7143,8 +7143,14 @@ body {
 #item-info, #home-content, #show-items-container, #select-category {
   padding: 10px 10px 45px 10px; }
 
-#item-info img {
-  max-width: 100%; }
+.img-scale {
+  position: absolute;
+  z-index: 10;
+  margin: 0 15px;
+  font-size: 40px;
+  opacity: 0.7; }
+  .img-scale.minus {
+    margin: 0 65px; }
 
 #show-items-container, #select-category {
   text-align: center; }
@@ -7245,8 +7251,11 @@ body {
     right: 0; }
   .manage-cart div, .manage-cart span {
     font-size: 39px;
-    line-height: 30px;
+    line-height: 30px; }
+  .manage-cart div {
     padding: 0px 10px; }
+  .manage-cart span {
+    padding: 0px 10px 0px 15px; }
 
 .margin {
   margin: 5px; }

@@ -1,4 +1,4 @@
-/home/alinal/Documents/pemenugit/mm/platforms/android/ant-build/CordovaApp-debug-unaligned.apk : \
-/home/alinal/Documents/pemenugit/mm/platforms/android/ant-build/CordovaApp.ap_ \
-/home/alinal/Documents/pemenugit/mm/platforms/android/ant-build/classes.dex \
-/home/alinal/Documents/pemenugit/mm/platforms/android/CordovaLib/ant-build/classes.jar \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/CordovaApp-debug-unaligned.apk : \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/CordovaApp.ap_ \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes.dex \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/CordovaLib/ant-build/classes.jar \
