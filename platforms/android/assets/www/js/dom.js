@@ -17,6 +17,8 @@ var Dom = (function () {
             self.homeContent = document.getElementById('home-content');
             self.account = document.getElementById('account');
             self.width = document.body.clientWidth;
+            self.height = document.body.clientHeight - 88;
+            self.halfWidth = Math.floor(document.body.clientWidth / 2);
             self.dataUpdateLoader = document.getElementById('data-update-loader');
             self.scroller = document.getElementById('scroller');
             self.backButton = document.getElementById('back-button');
@@ -45,7 +47,7 @@ var Dom = (function () {
             }, false);
 
             self.itemInfo.addEventListener(clickEvent, function (e) {
-                PEMenu.clickOnInfo(e);
+                PEMenu.clickOnItemInfo(e);
             }, false);
         },
         hideSplash: function () {

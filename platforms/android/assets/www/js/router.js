@@ -8,8 +8,6 @@ var Router = (function () {
     return {
         state: null,
         go: function (where, isBack) {
-            PEMenu.startScale = 1;
-            PEMenu.startX = PEMenu.startY = 0;
             history.push(window.location.hash);
             window.isBack = isBack;
             //if state is the same, handle it forcefully

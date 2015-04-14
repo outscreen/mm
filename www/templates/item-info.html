@@ -2,10 +2,10 @@
     <span style="font-size: 25px"><%if(item.name){%><%=item.name%><%}%></span><br/>
     <%if(item.price){%>
     <div>
-        <span class="manage-cart"><span class="ion-android-add-circle" iscart="true" type="plus"></span></span>
+        <span class="manage-cart"><span class="ion-android-remove-circle" iscart="true" type="minus"></span></span>
         <span class="cart-icon dark <%if(Cart.getItemAmount(item.objectId)){%>ion-ios-cart <%} else {%>ion-ios-cart-outline<%}%>"
               iscart="true" type="toggle" name="cart-<%=item.objectId%>"></span>
-        <span class="manage-cart"><span class="ion-android-remove-circle" iscart="true" type="minus"></span></span>
+        <span class="manage-cart"><span class="ion-android-add-circle" iscart="true" type="plus"></span></span>
         <span name="cart-amount-<%=item.objectId%>" style="margin: -60px;"><%if(Cart.getItemAmount(item.objectId)){%><%=Cart.getItemAmount(item.objectId)%><%}%></span>
     </div>
     <%}%>
@@ -18,8 +18,6 @@
     <%}%>
     <br/>
 
-    <!--<img src="<%=item.imgHybrid || item.img%>">-->
-
     <%if(item.img){%>
     <div style="overflow: scroll; position: relative">
         <img class="ion-android-add-circle img-scale" scale="true" type="plus" src="./img/makebigger.png">
@@ -29,10 +27,5 @@
 
 </div>
 
-<!--<div style="min-height: <%=Dom.height%>px"><img id="scale" style="
-        transform: rotate(90deg);
-        transform-origin: <%=Dom.halfWidth%>px <%=Dom.halfWidth%>px;
-        max-height: <%=Dom.width%>px";
-    " src="<%=item.imgHybrid || item.img%>"></div>-->
 
 

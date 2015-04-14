@@ -9,7 +9,7 @@ var PEMenu = (function () {
 
     function tryToScale (e) {
         if (e.target.attributes && e.target.attributes.scale) {
-            console.log('go to scaled');
+            Router.go('item-img');
             return true;
         }
     }

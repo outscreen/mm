@@ -46,10 +46,8 @@ var StateController = {
             case '#show-items':
             case '#cart':
                 var action = window.location.hash === '#cart' ? 'cart' : PEMenu.selectedCategory,
-                    buildHtml = function (showItems) {
-                        for (var i in showItems) {
-                            items.push(showItems[i]);
-                        }
+                    showItems,
+                    buildHtml = function (items) {
                         html = Dom.generateItems(items);
                     };
 
@@ -64,15 +62,18 @@ var StateController = {
                 } else {
                     html = Router.getCache();
                     if (!html) {
-                        var showItems,
-                            parentCatId;
+                        var parentCatId;
                         if (PEMenu.menu[action]) {
                             showItems = PEMenu.menu[action].items;
                         } else {
                             parentCatId = PEMenu.categories[PEMenu.categoryList[action]].parentCategory;
                             showItems = PEMenu.menu[parentCatId][action].items;
                         }
-                        buildHtml(showItems);
+                        PEMenu.showItemsArr = [];
+                        for (var i in showItems) {
+                            PEMenu.showItemsArr.push(showItems[i]);
+                        }
+                        buildHtml(PEMenu.showItemsArr);
                         Router.cacheData(html);
                     }
                     Dom.cartInfo.style.display = 'none';
@@ -104,12 +105,18 @@ var StateController = {
                     return;
                 }
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
-                //previous item in the list or the last one
-                PEMenu.previousItem = PEMenu.itemList[PEMenu.itemObjectIds[action] - 1] || PEMenu.itemList[PEMenu.itemList.length -1];
-                PEMenu.previousItem = PEMenu.previousItem.objectId;
-                //next item in the list or the first one
-                PEMenu.nextItem = PEMenu.itemList[PEMenu.itemObjectIds[action] + 1] || PEMenu.itemList[0];
-                PEMenu.nextItem = PEMenu.nextItem.objectId;
+
+                for (var i = 0, l = PEMenu.showItemsArr.length; i < l; i++) {
+                    if (PEMenu.showItemsArr[i].objectId === action) {
+                        //previous item in the list or the last one
+                        PEMenu.previousItem = PEMenu.showItemsArr[i - 1] || PEMenu.showItemsArr[l - 1];
+                        PEMenu.previousItem = PEMenu.previousItem.objectId;
+                        //next item in the list or the first one
+                        PEMenu.nextItem = PEMenu.showItemsArr[i + 1] || PEMenu.showItemsArr[0];
+                        PEMenu.nextItem = PEMenu.nextItem.objectId;
+                    }
+                }
+
                 Dom.showItems.style.display = 'none';
                 Dom.categoryList.style.display = 'none';
                 Dom.itemInfo.style.display = 'block';

@@ -3,7 +3,12 @@ var StateController = {
         var items = [],
             html,
             components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg],
-            componentsLength = components.length;
+            componentsLength = components.length,
+            hideAll = function () {
+                for (var i = 0; i < componentsLength; i++) {
+                    components[i].style.display = 'none';
+                }
+            };
         switch (to) {
             case '#select-category':
                 var action = PEMenu.selectedMenu;
@@ -28,12 +33,8 @@ var StateController = {
                     html = Dom.generateCategories(items);
                     Router.cacheData(html);
                 }
-                Dom.showItems.style.display = 'none';
+                hideAll();
                 Dom.categoryList.style.display = 'block';
-                Dom.itemInfo.style.display = 'none';
-                Dom.homeContent.style.display = 'none';
-                Dom.cartInfo.style.display = 'none';
-                Dom.account.style.display = 'none';
                 Dom.showBackButton();
                 Dom.reloadCategories(html);
 
@@ -57,6 +58,8 @@ var StateController = {
                     Router.go('home');
                     return;
                 }
+
+                hideAll();
 
                 if (action === 'cart') {
                     buildHtml(Cart.getCart());
@@ -82,10 +85,6 @@ var StateController = {
                 }
 
                 Dom.showItems.style.display = 'block';
-                Dom.categoryList.style.display = 'none';
-                Dom.itemInfo.style.display = 'none';
-                Dom.homeContent.style.display = 'none';
-                Dom.account.style.display = 'none';
                 Dom.showBackButton();
                 Dom.reloadItems(html);
 
@@ -119,12 +118,8 @@ var StateController = {
                     }
                 }
 
-                Dom.showItems.style.display = 'none';
-                Dom.categoryList.style.display = 'none';
+                hideAll();
                 Dom.itemInfo.style.display = 'block';
-                Dom.homeContent.style.display = 'none';
-                Dom.cartInfo.style.display = 'none';
-                Dom.account.style.display = 'none';
                 Dom.showBackButton();
                 Dom.reloadItemInfo(item);
                 break;
@@ -136,21 +131,15 @@ var StateController = {
                     return;
                 }
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
-                for (var i = 0; i < componentsLength; i++) {
-                    components[i].style.display = 'none';
-                }
+                hideAll();
                 Dom.itemImg.style.display = 'block';
                 Dom.showBackButton();
                 Dom.reloadItemImg(item);
                 break;
 
             case '#home':
-                Dom.showItems.style.display = 'none';
-                Dom.categoryList.style.display = 'none';
-                Dom.itemInfo.style.display = 'none';
+                hideAll();
                 Dom.homeContent.style.display = 'block';
-                Dom.cartInfo.style.display = 'none';
-                Dom.account.style.display = 'none';
                 Dom.hideBackButton();
                 break;
 

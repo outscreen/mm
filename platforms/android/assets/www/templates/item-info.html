@@ -13,19 +13,26 @@
             <%if(item.price){%><%=item.price%> грн.<%}%>
             <%if(item.weight){%><span style="font-size: 16px">(<%=item.weight%>)</span><%}%>
         </span><br/>
-    <span><%if(item.description){%><%=item.description%><%}%></span>
-    <br/><br/>
+    <%if(item.description){%><span><%=item.description%></span>
+    <br/>
+    <%}%>
+    <br/>
 
-<!--
-    <div style="max-width: 100%; overflow: scroll"><img id="scale" src="<%=item.imgHybrid || item.img%>"></div>
--->
+    <!--<img src="<%=item.imgHybrid || item.img%>">-->
 
-    <div style="max-width: 100%; overflow: scroll" id="scale-container">
-        <span class="ion-android-add-circle img-scale" scale="true" type="plus"></span>
-        <span class="ion-android-remove-circle img-scale minus" scale="true" type="minus"></span>
-        <img id="scale" style="max-width: 100%;" src="<%=item.imgHybrid || item.img%>">
+    <%if(item.img){%>
+    <div style="overflow: scroll; position: relative">
+        <img class="ion-android-add-circle img-scale" scale="true" type="plus" src="./img/makebigger.png">
+        <img class='item-img' src="<%=item.imgHybrid || item.img%>">
     </div>
+    <%}%>
+
 </div>
 
+<!--<div style="min-height: <%=Dom.height%>px"><img id="scale" style="
+        transform: rotate(90deg);
+        transform-origin: <%=Dom.halfWidth%>px <%=Dom.halfWidth%>px;
+        max-height: <%=Dom.width%>px";
+    " src="<%=item.imgHybrid || item.img%>"></div>-->
 
 

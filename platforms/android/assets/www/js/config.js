@@ -7,7 +7,6 @@ window.timestampsId = "IqU4KZlnDU";
 window.isHybrid = window.location.protocol == "file:" ? true : false;
 window.defaultScroll = true;
 window.isAndroid = (navigator.userAgent.indexOf('Android') !== -1);
-window.scaleInterval = 1.1;
 
 window.onhashchange = function (event) {
     var oldState = event.oldURL.slice(event.oldURL.indexOf('#')),
