@@ -6,17 +6,18 @@ var StateController = {
             componentsLength = components.length;
         switch (to) {
             case '#select-category':
-                var action = PEMenu.selectedMenu;
+                var action = PEMenu.selectedCategory,
+                    category;
                 if (!action) {
                     SideMenu.toggleMenu();
                     return;
                 }
-                html = Router.getCache();
-                if (!html) {
                     var childCategories = [];
-                    for (var index in PEMenu.menu[action]) {
-                        if (index !== 'items' && Object.keys(PEMenu.menu[action][index].items).length)
-                            childCategories.push(PEMenu.categories[PEMenu.categoryList[index]]);
+                    if (action === 'parent') {
+                        childCategories = PEMenu.parentCategories;
+                    } else {
+                        category = PEMenu.categories[PEMenu.categoryList[action]];
+                        childCategories = category.childCategories;
                     }
                     for (var i = 0, l = childCategories.length; i < l; i++) {
                         items.push({
@@ -26,8 +27,6 @@ var StateController = {
                         });
                     }
                     html = Dom.generateCategories(items);
-                    Router.cacheData(html);
-                }
                 Dom.showItems.style.display = 'none';
                 Dom.categoryList.style.display = 'block';
                 Dom.itemInfo.style.display = 'none';

@@ -72,34 +72,31 @@ var UpdateData = (function () {
         PEMenu.menu = {};
         sortByPriority(PEMenu.categories);
 
-        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
-            PEMenu.categoryList[PEMenu.categories[i].objectId] = i;
-        }
 
         for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
+            //create a list of categories to easily find them in array by objectId
+            PEMenu.categoryList[PEMenu.categories[i].objectId] = i;
+            //delete unnecessary fields
             delete(PEMenu.categories[i].createdAt);
             delete(PEMenu.categories[i].updatedAt);
+            //create a list of parent categories
             if (!PEMenu.categories[i].parentCategory) {
-                if (!PEMenu.menu[PEMenu.categories[i].objectId]) {
-                    PEMenu.menu[PEMenu.categories[i].objectId] = {};
-                    PEMenu.menu[PEMenu.categories[i].objectId].items = {};
-                }
                 if (PEMenu.categories[i].objectId !== PEMenu.newsCategory) {
                     PEMenu.parentCategories.push(PEMenu.categories[i]);
-                }
-            } else {
-                if (!PEMenu.menu[PEMenu.categories[i].parentCategory]) {
-                    PEMenu.menu[PEMenu.categories[i].parentCategory] = {};
-                    PEMenu.menu[PEMenu.categories[i].parentCategory].items = {};
-                }
-                if (!PEMenu.menu[PEMenu.categories[i].parentCategory][PEMenu.categories[i].objectId]) {
-                    PEMenu.menu[PEMenu.categories[i].parentCategory][PEMenu.categories[i].objectId] = {};
-                    PEMenu.menu[PEMenu.categories[i].parentCategory][PEMenu.categories[i].objectId].items = {};
                 }
             }
         }
 
-        for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
+        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
+            if (PEMenu.categories[i].parentCategory) {
+                var parentIndex = PEMenu.categoryList[PEMenu.categories[i].parentCategory],
+                    parentCategory = PEMenu.categories[parentIndex];
+                parentCategory.childCategories = parentCategory.childCategories || [];
+                parentCategory.childCategories.push(PEMenu.categories[i]);
+            }
+        }
+
+        /*for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
             var categoryId = PEMenu.itemList[i].category,
                 category = PEMenu.categories[PEMenu.categoryList[categoryId]];
             PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
@@ -121,7 +118,7 @@ var UpdateData = (function () {
                     PEMenu.categories[i].imgUrl = item.imgHybrid || item.img
                 }
             }
-        }
+        }*/
 
         saveToLocalStorage();
     }

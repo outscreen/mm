@@ -47,18 +47,29 @@ var PEMenu = (function () {
                 console.log(err);
             }
         },
-        showItems: function (e) {
+        selectCategory: function (e) {
             var self = this,
-                action = findAction(e.target).action;
+                action = findAction(e.target).action,
+                category;
             if (!action) {
                 return;
             }
+            self.showCategory(action);
+
+        },
+        showCategory: function (action) {
+            var self = this,
+                category = self.categories[self.categoryList[action]];
             self.selectedCategory = action;
-            switch (action) {
-                default:
-                    Router.go('show-items');
+            if (category.items) {
+                Router.go('show-items');
+                return;
             }
-            return;
+            if (category.childCategories) {
+                Router.go('select-category');
+                return;
+            }
+            Router.go('category-description');
         },
         showItemInfo: function (e) {
             var self = this,
@@ -95,6 +106,11 @@ var PEMenu = (function () {
             }
             self.selectedItem = self.previousItem;
             Router.go('item-info');
+        },
+        openMenu: function () {
+            var self = this;
+            self.selectedCategory = 'parent';
+            Router.go('select-category');
         }
     }
 })();

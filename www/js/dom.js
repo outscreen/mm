@@ -26,6 +26,7 @@ var Dom = (function () {
             self.body = document.body;
             self.wrapper = document.getElementById('wrapper');
             self.cartInfo = document.getElementById('cart-info');
+            self.categoryDescription = document.getElementById('category-description');
 
             if (window.defaultScroll) {
                 self.scroller.classList.add('default-scroll');
@@ -36,7 +37,7 @@ var Dom = (function () {
             }, false);
 
             self.categoryList.addEventListener(clickEvent, function (e) {
-                PEMenu.showItems(e);
+                PEMenu.selectCategory(e);
             }, false);
 
             self.showItems.addEventListener(clickEvent, function (e) {
@@ -81,6 +82,11 @@ var Dom = (function () {
                 Dom.categoryTemplate = _.template(html);
             });
         })(),
+/*        categoryInfoTemplate: (function () {
+            jQuery.get('templates/category-info.html', function (html) {
+                Dom.categoryInfoTemplate = _.template(html);
+            });
+        })(),*/
         menuItemTemplate: (function () {
             var item = document.createElement('div'),
                 icon = document.createElement('i'),
