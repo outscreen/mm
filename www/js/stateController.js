@@ -29,28 +29,27 @@ var StateController = (function () {
                 html;
             switch (to) {
                 case '#select-category':
-                    var action = PEMenu.selectedMenu;
+                    var action = PEMenu.selectedMenu,
+                        category;
                     if (!action) {
                         SideMenu.toggleMenu();
                         return;
                     }
-                    html = Router.getCache();
-                    if (!html) {
-                        var childCategories = [];
-                        for (var index in PEMenu.menu[action]) {
-                            if (index !== 'items' && Object.keys(PEMenu.menu[action][index].items).length)
-                                childCategories.push(PEMenu.categories[PEMenu.categoryList[index]]);
-                        }
-                        for (var i = 0, l = childCategories.length; i < l; i++) {
-                            items.push({
-                                string: childCategories[i].name,
-                                action: childCategories[i].objectId,
-                                imgUrl: childCategories[i].imgUrl
-                            });
-                        }
-                        html = Dom.generateCategories(items);
-                        Router.cacheData(html);
+                    var childCategories = [];
+                    if (action === 'parent') {
+                        childCategories = PEMenu.parentCategories;
+                    } else {
+                        category = PEMenu.categories[PEMenu.categoryList[action]];
+                        childCategories = category.childCategories;
                     }
+                    for (var i = 0, l = childCategories.length; i < l; i++) {
+                        items.push({
+                            string: childCategories[i].name,
+                            action: childCategories[i].objectId,
+                            imgUrl: childCategories[i].imgUrl
+                        });
+                    }
+                    html = Dom.generateCategories(items);
                     hideAll();
                     Dom.categoryList.style.display = 'block';
                     Dom.showBackButton();
