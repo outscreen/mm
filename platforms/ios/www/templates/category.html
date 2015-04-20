@@ -1,0 +1,16 @@
+<!--<%_.forEach(items, function (item) {%>
+<div class="course-small course-list categories" action="<%=item.action%>" id="category-<%=item.action%>">
+    <div class="img-container" style="background-image: url(<%=item.imgUrl%>)"></div>
+    <div class="name"><div><%=item.string%></div></div>
+    <div class="right-container">
+        <div class="ion-chevron-right"></div>
+    </div>
+</div>
+<%})%>-->
+
+
+<%_.forEach(items, function (item) { if (!item.isHidden) {%>
+<div class="select-category-item" action="<%=item.action%>" id="category-<%=item.action%>">
+    <div><%=item.string%></div>
+</div>
+<%}})%>
