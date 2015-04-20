@@ -276,8 +276,10 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/defaultcbus.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/defaultcbusopacity.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/fb.png \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/makebigger.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/menubg.jpg \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/menubgcbus.jpg \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/plus.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/vk.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/account.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/cart.js \
@@ -331,5 +333,6 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/category.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-icons.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-list.html \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/item-img.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/item-info.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/AndroidManifest.xml \
