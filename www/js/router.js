@@ -13,9 +13,8 @@ var Router = (function () {
             //if state is the same, handle it forcefully
             if (window.location.hash === ('#' + where)) {
                 StateController.handleCurrentState(window.location.hash, window.location.hash);
-                return;
             }
-            window.location.hash = where;
+            Router.state = window.location.hash = where;
         },
         getCache: function () {
             if (window.updateInProgress) {
@@ -62,6 +61,9 @@ var Router = (function () {
                     } else {
                         self.go('show-items', true);
                     }
+                    break;
+                case '#item-img':
+                    self.go('item-info', true);
                     break;
                 case '#cart':
                     self.go('show-items', true);

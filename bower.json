@@ -6,6 +6,7 @@
     "jquery": "latest",
     "ionicons": "latest",
     "iscroll": "latest",
-    "underscore": "latest"
+    "underscore": "latest",
+    "hammerjs": "~2.0.4"
   }
 }

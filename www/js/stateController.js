@@ -1,134 +1,165 @@
-var StateController = {
-    handleCurrentState: function (from, to, isBack) {
-        var items = [],
-            html;
-        switch (to) {
-            case '#select-category':
-                var action = PEMenu.selectedMenu;
-                if (!action) {
-                    SideMenu.toggleMenu();
-                    return;
+var StateController = (function () {
+    var components,
+        componentsLength,
+        hideAll = function () {
+            for (var i = 0; i < componentsLength; i++) {
+                components[i].style.display = 'none';
+            }
+        },
+        arrows = ['#item-info', '#item-img'],
+        findPreviousAndNextItems = function (action) {
+            for (var i = 0, l = PEMenu.showItemsArr.length; i < l; i++) {
+                if (PEMenu.showItemsArr[i].objectId === action) {
+                    //previous item in the list or the last one
+                    PEMenu.previousItem = PEMenu.showItemsArr[i - 1] || PEMenu.showItemsArr[l - 1];
+                    PEMenu.previousItem = PEMenu.previousItem.objectId;
+                    //next item in the list or the first one
+                    PEMenu.nextItem = PEMenu.showItemsArr[i + 1] || PEMenu.showItemsArr[0];
+                    PEMenu.nextItem = PEMenu.nextItem.objectId;
                 }
-                html = Router.getCache();
-                if (!html) {
-                    var childCategories = [];
-                    for (var index in PEMenu.menu[action]) {
-                        if (index !== 'items' && Object.keys(PEMenu.menu[action][index].items).length)
-                            childCategories.push(PEMenu.categories[PEMenu.categoryList[index]]);
+            }
+        };
+    return {
+        init: function () {
+            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg];
+            componentsLength = components.length;
+        },
+        handleCurrentState: function (from, to, isBack) {
+            var items = [],
+                html;
+            switch (to) {
+                case '#select-category':
+                    var action = PEMenu.selectedMenu;
+                    if (!action) {
+                        SideMenu.toggleMenu();
+                        return;
                     }
-                    for (var i = 0, l = childCategories.length; i < l; i++) {
-                        items.push({
-                            string: childCategories[i].name,
-                            action: childCategories[i].objectId,
-                            imgUrl: childCategories[i].imgUrl
-                        });
-                    }
-                    html = Dom.generateCategories(items);
-                    Router.cacheData(html);
-                }
-                Dom.showItems.style.display = 'none';
-                Dom.categoryList.style.display = 'block';
-                Dom.itemInfo.style.display = 'none';
-                Dom.homeContent.style.display = 'none';
-                Dom.cartInfo.style.display = 'none';
-                Dom.account.style.display = 'none';
-                Dom.showBackButton();
-                Dom.reloadCategories(html);
-
-                if (window.isBack && PEMenu.selectedCategory) {
-                    var activeEl = document.getElementById('category-' + PEMenu.selectedCategory);
-                    if (activeEl) {
-                        activeEl.scrollIntoView();
-                    }
-                }
-                break;
-
-            case '#show-items':
-            case '#cart':
-                var action = window.location.hash === '#cart' ? 'cart' : PEMenu.selectedCategory,
-                    buildHtml = function (showItems) {
-                        for (var i in showItems) {
-                            items.push(showItems[i]);
-                        }
-                        html = Dom.generateItems(items);
-                    };
-
-                if (!action) {
-                    Router.go('home');
-                    return;
-                }
-
-                if (action === 'cart') {
-                    buildHtml(Cart.getCart());
-                    Dom.cartInfo.style.display = 'block';
-                } else {
                     html = Router.getCache();
                     if (!html) {
-                        var showItems,
-                            parentCatId;
+                        var childCategories = [];
+                        for (var index in PEMenu.menu[action]) {
+                            if (index !== 'items' && Object.keys(PEMenu.menu[action][index].items).length)
+                                childCategories.push(PEMenu.categories[PEMenu.categoryList[index]]);
+                        }
+                        for (var i = 0, l = childCategories.length; i < l; i++) {
+                            items.push({
+                                string: childCategories[i].name,
+                                action: childCategories[i].objectId,
+                                imgUrl: childCategories[i].imgUrl
+                            });
+                        }
+                        html = Dom.generateCategories(items);
+                        Router.cacheData(html);
+                    }
+                    hideAll();
+                    Dom.categoryList.style.display = 'block';
+                    Dom.showBackButton();
+                    Dom.reloadCategories(html);
+
+                    if (window.isBack && PEMenu.selectedCategory) {
+                        var activeEl = document.getElementById('category-' + PEMenu.selectedCategory);
+                        if (activeEl) {
+                            activeEl.scrollIntoView();
+                        }
+                    }
+                    break;
+
+                case '#show-items':
+                case '#cart':
+                    var action = window.location.hash === '#cart' ? 'cart' : PEMenu.selectedCategory,
+                        showItems,
+                        buildHtml = function (items) {
+                            html = Dom.generateItems(items);
+                        };
+
+                    if (!action) {
+                        Router.go('home');
+                        return;
+                    }
+
+                    hideAll();
+
+                    if (action === 'cart') {
+                        buildHtml(Cart.getCart());
+                        Dom.cartInfo.style.display = 'block';
+                    } else {
+                        var parentCatId;
                         if (PEMenu.menu[action]) {
                             showItems = PEMenu.menu[action].items;
                         } else {
                             parentCatId = PEMenu.categories[PEMenu.categoryList[action]].parentCategory;
                             showItems = PEMenu.menu[parentCatId][action].items;
                         }
-                        buildHtml(showItems);
+                        PEMenu.showItemsArr = [];
+                        for (var i in showItems) {
+                            PEMenu.showItemsArr.push(showItems[i]);
+                        }
+                        buildHtml(PEMenu.showItemsArr);
                         Router.cacheData(html);
                     }
-                    Dom.cartInfo.style.display = 'none';
-                }
 
-                Dom.showItems.style.display = 'block';
-                Dom.categoryList.style.display = 'none';
-                Dom.itemInfo.style.display = 'none';
-                Dom.homeContent.style.display = 'none';
-                Dom.account.style.display = 'none';
-                Dom.showBackButton();
-                Dom.reloadItems(html);
+                    Dom.showItems.style.display = 'block';
+                    Dom.showBackButton();
+                    Dom.reloadItems(html);
 
-                if (window.isBack && PEMenu.selectedItem) {
-                    var activeEl = document.getElementById('course-' + PEMenu.selectedItem);
-                    if (activeEl) {
-                        activeEl.scrollIntoView();
+                    if (window.isBack && PEMenu.selectedItem) {
+                        var activeEl = document.getElementById('course-' + PEMenu.selectedItem);
+                        if (activeEl) {
+                            activeEl.scrollIntoView();
+                        }
                     }
-                }
 
-                setTimeout(Dom.drawImages, 100);
+                    setTimeout(Dom.drawImages, 100);
 
-                break;
+                    break;
 
-            case '#item-info':
-                var action = PEMenu.selectedItem;
-                if (!action) {
+                case '#item-info':
+                    var action = PEMenu.selectedItem;
+                    if (!action) {
+                        Router.go('home');
+                        return;
+                    }
+                    var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
+
+                    findPreviousAndNextItems(action);
+
+                    hideAll();
+                    Dom.itemInfo.style.display = 'block';
+                    Dom.showBackButton();
+                    Dom.reloadItemInfo(item);
+                    break;
+
+                case '#item-img':
+                    var action = PEMenu.selectedItem;
+                    if (!action) {
+                        Router.go('home');
+                        return;
+                    }
+                    var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
+                    findPreviousAndNextItems(action);
+                    hideAll();
+                    Dom.itemImg.style.display = 'block';
+                    Dom.showBackButton();
+                    Dom.reloadItemImg(item);
+                    break;
+
+                case '#home':
+                    hideAll();
+                    Dom.homeContent.style.display = 'block';
+                    Dom.hideBackButton();
+                    break;
+
+                default:
                     Router.go('home');
-                    return;
-                }
-                var item = PEMenu.itemList[PEMenu.itemObjectIds[action]];
-                Dom.showItems.style.display = 'none';
-                Dom.categoryList.style.display = 'none';
-                Dom.itemInfo.style.display = 'block';
-                Dom.homeContent.style.display = 'none';
-                Dom.cartInfo.style.display = 'none';
-                Dom.account.style.display = 'none';
-                Dom.showBackButton();
-                Dom.reloadItemInfo(item);
-                break;
-
-            case '#home':
-                Dom.showItems.style.display = 'none';
-                Dom.categoryList.style.display = 'none';
-                Dom.itemInfo.style.display = 'none';
-                Dom.homeContent.style.display = 'block';
-                Dom.cartInfo.style.display = 'none';
-                Dom.account.style.display = 'none';
-                Dom.hideBackButton();
-                break;
-
-            default:
-                Router.go('home');
+            }
+            if (!window.isBack) {
+                myScroll.reload();
+            }
+            if (~arrows.indexOf(to)) {
+                Dom.showArrows();
+            } else {
+                Dom.hideArrows();
+            }
         }
-        if (!window.isBack) {
-            myScroll.reload();
-        }
-    }
-};
+    };
+})();

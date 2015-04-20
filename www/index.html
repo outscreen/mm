@@ -17,6 +17,7 @@
     <script src="js/stateController.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/gestures.js"></script>
 
 </head>
 <body>
@@ -101,6 +102,7 @@
                 <div id="select-category" style="display: none;"></div>
                 <div id="show-items-container" style="display: none;"></div>
                 <div id="item-info" style="display: none;"></div>
+                <div id="item-img" style="display: none;"></div>
             </div>
         </div>
 
@@ -113,6 +115,9 @@
                 <div class="cart-info" onclick="Cart.goTo()">Корзина: <br/><span id="cart-sum">0</span> грн.</div>
             </div>
         </div>
+
+        <span class="ion-android-arrow-dropleft-circle arrow" name="arrow" onclick="PEMenu.showPreviousItem()"></span>
+        <span class="ion-android-arrow-dropright-circle arrow right" name="arrow" onclick="PEMenu.showNextItem()"></span>
     </div>
     <div id="side-menu-container">
     </div>

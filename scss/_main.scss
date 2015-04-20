@@ -375,9 +375,32 @@ body {
 }
 
 #item-info {
-  img {
+  .item-img {
     max-width: 100%;
+    min-width: 100%;
   }
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 50px;
+  z-index: 10;
+  padding: 0 5px;
+  &.right{
+    right: 0px;
+  }
+}
+
+.img-scale {
+  position: absolute;
+  z-index: 10;
+  margin: 5px 5px;
+  font-size: 40px;
+  opacity: 0.7;
+  bottom: 0;
+  right: 0;
+  height: 60px;
 }
 
 #show-items-container, #select-category {
@@ -494,12 +517,19 @@ body {
 
 .manage-cart {
   color: $cart-icons;
-  position: absolute;
-  right: 0;
-  div {
+  &.in-course-list {
+    position: absolute;
+    right: 0;
+  }
+  div, span {
     font-size: 39px;
     line-height: 30px;
+  }
+  div {
     padding: 0px 10px;
+  }
+  span {
+    padding: 0px 10px 0px 15px;
   }
 }
 
@@ -517,4 +547,8 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
 }
