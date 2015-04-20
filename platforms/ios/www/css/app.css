@@ -7143,8 +7143,28 @@ body {
 #item-info, #home-content, #show-items-container, #select-category {
   padding: 10px 10px 45px 10px; }
 
-#item-info img {
-  max-width: 100%; }
+#item-info .item-img {
+  max-width: 100%;
+  min-width: 100%; }
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 50px;
+  z-index: 10;
+  padding: 0 5px; }
+  .arrow.right {
+    right: 0px; }
+
+.img-scale {
+  position: absolute;
+  z-index: 10;
+  margin: 5px 5px;
+  font-size: 40px;
+  opacity: 0.7;
+  bottom: 0;
+  right: 0;
+  height: 60px; }
 
 #show-items-container, #select-category {
   text-align: center; }
@@ -7239,13 +7259,17 @@ body {
     text-align: center; }
 
 .manage-cart {
-  color: #A89C78;
-  position: absolute;
-  right: 0; }
-  .manage-cart div {
+  color: #A89C78; }
+  .manage-cart.in-course-list {
+    position: absolute;
+    right: 0; }
+  .manage-cart div, .manage-cart span {
     font-size: 39px;
-    line-height: 30px;
+    line-height: 30px; }
+  .manage-cart div {
     padding: 0px 10px; }
+  .manage-cart span {
+    padding: 0px 10px 0px 15px; }
 
 .margin {
   margin: 5px; }
@@ -7258,5 +7282,8 @@ body {
 
 .text-center {
   text-align: center; }
+
+.inline-block {
+  display: inline-block; }
 
 /*# sourceMappingURL=app.css.map */

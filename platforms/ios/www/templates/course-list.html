@@ -15,11 +15,11 @@
     <%if(item.price){%>
     <div class="cart">
         <span class="cart-icon dark <%if(Cart.getItemAmount(item.objectId)){%>ion-ios-cart <%} else {%>ion-ios-cart-outline<%}%>"
-              iscart="true" type="toggle" id="cart-<%=item.objectId%>"></span>
+              iscart="true" type="toggle" name="cart-<%=item.objectId%>"></span>
         <br>
-        <span id="cart-amount-<%=item.objectId%>"><%if(Cart.getItemAmount(item.objectId)){%><%=Cart.getItemAmount(item.objectId)%><%}%></span>
+        <span name="cart-amount-<%=item.objectId%>"><%if(Cart.getItemAmount(item.objectId)){%><%=Cart.getItemAmount(item.objectId)%><%}%></span>
     </div>
-    <div class="manage-cart">
+    <div class="manage-cart in-course-list">
         <div class="ion-android-add-circle" iscart="true" type="plus"></div>
         <div class="ion-android-remove-circle" iscart="true" type="minus"></div>
     </div>
