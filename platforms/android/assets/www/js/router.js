@@ -8,14 +8,11 @@ var Router = (function () {
     return {
         state: null,
         go: function (where, isBack) {
-            PEMenu.startScale = 1;
-            PEMenu.startX = PEMenu.startY = 0;
             history.push(window.location.hash);
             window.isBack = isBack;
             //if state is the same, handle it forcefully
             if (window.location.hash === ('#' + where)) {
                 StateController.handleCurrentState(window.location.hash, window.location.hash);
-                return;
             }
             Router.state = window.location.hash = where;
         },
@@ -64,6 +61,9 @@ var Router = (function () {
                     } else {
                         self.go('show-items', true);
                     }
+                    break;
+                case '#item-img':
+                    self.go('item-info', true);
                     break;
                 case '#cart':
                     self.go('show-items', true);

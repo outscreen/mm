@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cafenaamabaykh" version="0.4.8" versionCode="0.4.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.cafenaamabaykh" version="0.5.2" versionCode="0.5.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
@@ -13,10 +13,6 @@
     </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="StatusBar">
-        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
-        <param name="onload" value="true" />
     </feature>
     <name>Меню Наама Бэй</name>
     <description>
@@ -50,4 +46,8 @@
     <access launch-external="yes" origin="tel:*" />
     <access origin="*" />
     <content src="index.html" />
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

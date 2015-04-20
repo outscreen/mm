@@ -1,19 +1,25 @@
 var Dom = (function () {
-    var imgEls = {},
+    var clickEvent,
+        imgEls = {},
         ctx = {};
 
     return {
         init: function () {
             var self = this;
 
+            clickEvent = isHybrid ? 'click' : 'click';
+
             self.sideMenu = document.getElementById('side-menu-container');
             self.contentWindow = document.getElementById('content-window');
             self.categoryList = document.getElementById('select-category');
             self.showItems = document.getElementById('show-items-container');
             self.itemInfo = document.getElementById('item-info');
+            self.itemImg = document.getElementById('item-img');
             self.homeContent = document.getElementById('home-content');
             self.account = document.getElementById('account');
             self.width = document.body.clientWidth;
+            self.height = document.body.clientHeight - 88;
+            self.halfWidth = Math.floor(document.body.clientWidth / 2);
             self.dataUpdateLoader = document.getElementById('data-update-loader');
             self.scroller = document.getElementById('scroller');
             self.backButton = document.getElementById('back-button');
@@ -25,20 +31,24 @@ var Dom = (function () {
                 self.scroller.classList.add('default-scroll');
             }
 
-            self.sideMenu.addEventListener('click', function (e) {
+            self.sideMenu.addEventListener(clickEvent, function (e) {
                     PEMenu.menuAction(e);
             }, false);
 
-            self.categoryList.addEventListener('click', function (e) {
+            self.categoryList.addEventListener(clickEvent, function (e) {
                 PEMenu.showItems(e);
             }, false);
 
-            self.showItems.addEventListener('click', function (e) {
+            self.showItems.addEventListener(clickEvent, function (e) {
                 PEMenu.showItemInfo(e);
             }, false);
 
-            self.backButton.addEventListener('click', function (e) {
+            self.backButton.addEventListener(clickEvent, function (e) {
                 Router.goBack();
+            }, false);
+
+            self.itemInfo.addEventListener(clickEvent, function (e) {
+                PEMenu.clickOnItemInfo(e);
             }, false);
         },
         hideSplash: function () {
@@ -48,12 +58,23 @@ var Dom = (function () {
         showBackButton: function () {
             Dom.backButton.style.visibility = 'visible';
         },
+        hideArrows: function () {
+            $("[name = arrow]").css('display', 'none');
+        },
+        showArrows: function () {
+            $("[name = arrow]").css('display', 'block');
+        },
         hideBackButton: function () {
             Dom.backButton.style.visibility = 'hidden';
         },
         itemInfoTemplate: (function () {
             jQuery.get('templates/item-info.html', function (html) {
                 Dom.itemInfoTemplate = _.template(html);
+            });
+        })(),
+        itemImgTemplate: (function () {
+            jQuery.get('templates/item-img.html', function (html) {
+                Dom.itemImgTemplate = _.template(html);
             });
         })(),
         courseTemplate: (function () {
@@ -144,6 +165,15 @@ var Dom = (function () {
             }
             container.innerHTML = self.itemInfoTemplate({item: params});
             self.itemInfo.appendChild(container);
+        },
+        reloadItemImg: function (params) {
+            var self = this,
+                container = document.createElement('div');
+            if (self.itemImg.firstChild) {
+                self.itemImg.removeChild(self.itemImg.firstChild);
+            }
+            container.innerHTML = self.itemImgTemplate({item: params});
+            self.itemImg.appendChild(container);
         },
         drawImages: function () {
             /*var canvasEls = document.getElementsByTagName('canvas'),

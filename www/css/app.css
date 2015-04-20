@@ -7147,6 +7147,15 @@ body {
   max-width: 100%;
   min-width: 100%; }
 
+.arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 50px;
+  z-index: 10;
+  padding: 0 5px; }
+  .arrow.right {
+    right: 0px; }
+
 .img-scale {
   position: absolute;
   z-index: 10;
