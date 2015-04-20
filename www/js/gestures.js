@@ -10,8 +10,8 @@ var Gestures = (function () {
                 scale = 1;
 
             Gesture.on('swipe', function (event) {
-                console.log(event);
-                if (event.target && event.target.attributes && event.target.attributes.id &&
+                //enabled swipe on image, testing
+                if (false && event.target && event.target.attributes && event.target.attributes.id &&
                     event.target.attributes.id.nodeValue === 'scale') {
                     return;
                 }
@@ -30,6 +30,10 @@ var Gestures = (function () {
                         case 'item-info':
                             PEMenu.showPreviousItem();
                             break;
+                        case 'item-img':
+                            PEMenu.showNextItem();
+                            Router.go('item-img');
+                            break;
                     }
                 }
 
@@ -38,6 +42,10 @@ var Gestures = (function () {
                         //show info about next item
                         case 'item-info':
                             PEMenu.showNextItem();
+                            break;
+                        case 'item-img':
+                            PEMenu.showNextItem();
+                            Router.go('item-img');
                             break;
                     }
                 }

@@ -17,7 +17,8 @@ var PEMenu = (function () {
     return {
         init: function () {
             Dom.init();
-            Gestures.init();
+            //Gestures.init();
+            StateController.init();
             StateController.handleCurrentState();
             UpdateData();
         },
@@ -86,7 +87,7 @@ var PEMenu = (function () {
                 return;
             }
             self.selectedItem = self.nextItem;
-            Router.go('item-info');
+            Router.go(Router.state);
         },
         showPreviousItem: function () {
             var self = this;
@@ -94,7 +95,7 @@ var PEMenu = (function () {
                 return;
             }
             self.selectedItem = self.previousItem;
-            Router.go('item-info');
+            Router.go(Router.state);
         }
     }
 })();

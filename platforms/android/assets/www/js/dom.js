@@ -7,13 +7,14 @@ var Dom = (function () {
         init: function () {
             var self = this;
 
-            clickEvent = isHybrid ? 'touchend' : 'click';
+            clickEvent = isHybrid ? 'click' : 'click';
 
             self.sideMenu = document.getElementById('side-menu-container');
             self.contentWindow = document.getElementById('content-window');
             self.categoryList = document.getElementById('select-category');
             self.showItems = document.getElementById('show-items-container');
             self.itemInfo = document.getElementById('item-info');
+            self.itemImg = document.getElementById('item-img');
             self.homeContent = document.getElementById('home-content');
             self.account = document.getElementById('account');
             self.width = document.body.clientWidth;
@@ -57,12 +58,23 @@ var Dom = (function () {
         showBackButton: function () {
             Dom.backButton.style.visibility = 'visible';
         },
+        hideArrows: function () {
+            $("[name = arrow]").css('display', 'none');
+        },
+        showArrows: function () {
+            $("[name = arrow]").css('display', 'block');
+        },
         hideBackButton: function () {
             Dom.backButton.style.visibility = 'hidden';
         },
         itemInfoTemplate: (function () {
             jQuery.get('templates/item-info.html', function (html) {
                 Dom.itemInfoTemplate = _.template(html);
+            });
+        })(),
+        itemImgTemplate: (function () {
+            jQuery.get('templates/item-img.html', function (html) {
+                Dom.itemImgTemplate = _.template(html);
             });
         })(),
         courseTemplate: (function () {
@@ -153,6 +165,15 @@ var Dom = (function () {
             }
             container.innerHTML = self.itemInfoTemplate({item: params});
             self.itemInfo.appendChild(container);
+        },
+        reloadItemImg: function (params) {
+            var self = this,
+                container = document.createElement('div');
+            if (self.itemImg.firstChild) {
+                self.itemImg.removeChild(self.itemImg.firstChild);
+            }
+            container.innerHTML = self.itemImgTemplate({item: params});
+            self.itemImg.appendChild(container);
         },
         drawImages: function () {
             /*var canvasEls = document.getElementsByTagName('canvas'),

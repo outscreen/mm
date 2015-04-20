@@ -7,7 +7,7 @@ var Dom = (function () {
         init: function () {
             var self = this;
 
-            clickEvent = isHybrid ? 'touchend' : 'click';
+            clickEvent = isHybrid ? 'click' : 'click';
 
             self.sideMenu = document.getElementById('side-menu-container');
             self.contentWindow = document.getElementById('content-window');
@@ -57,6 +57,12 @@ var Dom = (function () {
         },
         showBackButton: function () {
             Dom.backButton.style.visibility = 'visible';
+        },
+        hideArrows: function () {
+            $("[name = arrow]").css('display', 'none');
+        },
+        showArrows: function () {
+            $("[name = arrow]").css('display', 'block');
         },
         hideBackButton: function () {
             Dom.backButton.style.visibility = 'hidden';
