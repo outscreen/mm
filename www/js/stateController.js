@@ -24,12 +24,12 @@ var StateController = (function () {
             components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg];
             componentsLength = components.length;
         },
-        handleCurrentState: function (from, to, isBack) {
+        handleCurrentState: function (from, to) {
             var items = [],
                 html;
             switch (to) {
                 case '#select-category':
-                    var action = PEMenu.selectedMenu,
+                    var action = PEMenu.selectedCategory,
                         category;
                     if (!action) {
                         SideMenu.toggleMenu();
@@ -82,19 +82,9 @@ var StateController = (function () {
                         buildHtml(Cart.getCart());
                         Dom.cartInfo.style.display = 'block';
                     } else {
-                        var parentCatId;
-                        if (PEMenu.menu[action]) {
-                            showItems = PEMenu.menu[action].items;
-                        } else {
-                            parentCatId = PEMenu.categories[PEMenu.categoryList[action]].parentCategory;
-                            showItems = PEMenu.menu[parentCatId][action].items;
-                        }
-                        PEMenu.showItemsArr = [];
-                        for (var i in showItems) {
-                            PEMenu.showItemsArr.push(showItems[i]);
-                        }
+                        var category = PEMenu.categories[PEMenu.categoryList[PEMenu.selectedCategory]];
+                        PEMenu.showItemsArr = category.items;
                         buildHtml(PEMenu.showItemsArr);
-                        Router.cacheData(html);
                     }
 
                     Dom.showItems.style.display = 'block';

@@ -54,20 +54,20 @@ var Router = (function () {
                     SideMenu.toggleMenu();
                     break;
                 case '#show-items':
-                    self.go('select-category', true);
+                    self.go('select-category');
                     break;
                 case '#item-info':
                     if (history[history.length - 1] === '#cart') {
-                        self.go('cart', true);
+                        self.go('cart');
                     } else {
-                        self.go('show-items', true);
+                        self.go('show-items');
                     }
                     break;
                 case '#item-img':
-                    self.go('item-info', true);
+                    self.go('item-info');
                     break;
                 case '#cart':
-                    self.go('show-items', true);
+                    self.go('show-items');
                     break;
                 case '#home':
                     exitApp();

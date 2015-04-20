@@ -70,7 +70,9 @@ var PEMenu = (function () {
                 Router.go('select-category');
                 return;
             }
-            Router.go('category-description');
+            if (category.description) {
+                Router.go('category-description');
+            }
         },
         showItemInfo: function (e) {
             var self = this,

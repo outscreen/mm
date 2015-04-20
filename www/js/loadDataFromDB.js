@@ -79,6 +79,8 @@ var UpdateData = (function () {
             //delete unnecessary fields
             delete(PEMenu.categories[i].createdAt);
             delete(PEMenu.categories[i].updatedAt);
+            //reset child categories list, they will be pushed later
+            PEMenu.categories[i].childCategories = null;
             //create a list of parent categories
             if (!PEMenu.categories[i].parentCategory) {
                 if (PEMenu.categories[i].objectId !== PEMenu.newsCategory) {
@@ -87,12 +89,34 @@ var UpdateData = (function () {
             }
         }
 
+        //add array of child categories to each category
         for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
             if (PEMenu.categories[i].parentCategory) {
                 var parentIndex = PEMenu.categoryList[PEMenu.categories[i].parentCategory],
                     parentCategory = PEMenu.categories[parentIndex];
                 parentCategory.childCategories = parentCategory.childCategories || [];
                 parentCategory.childCategories.push(PEMenu.categories[i]);
+            }
+        }
+
+        for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
+            PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
+            //push item to category if it is available
+            if (PEMenu.itemList[i].isAvailable) {
+                var categoryId = PEMenu.itemList[i].category,
+                    category = PEMenu.categories[PEMenu.categoryList[categoryId]];
+                category.items = category.items || [];
+                category.items.push(PEMenu.itemList[i]);
+            }
+        }
+
+        //add images to categories
+        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
+            if (PEMenu.categories[i].img) {
+                var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
+                if (item) {
+                    PEMenu.categories[i].imgUrl = item.imgHybrid || item.img
+                }
             }
         }
 
