@@ -6,7 +6,6 @@ var UpdateData = (function () {
         PEMenu.itemObjectIds = window.localStorage.itemObjectIds ? JSON.parse(window.localStorage.itemObjectIds) : {};
         PEMenu.categories = window.localStorage.categories ? JSON.parse(window.localStorage.categories) : [];
         PEMenu.parentCategories = window.localStorage.parentCategories ? JSON.parse(window.localStorage.parentCategories) : [];
-        PEMenu.menu = window.localStorage.menu ? JSON.parse(window.localStorage.menu) : {};
         PEMenu.categoryList = window.localStorage.categoryList ? JSON.parse(window.localStorage.categoryList) : {};
         if (PEMenu.parentCategories && PEMenu.parentCategories.length) {
             SideMenu.init();
@@ -79,8 +78,9 @@ var UpdateData = (function () {
             //delete unnecessary fields
             delete(PEMenu.categories[i].createdAt);
             delete(PEMenu.categories[i].updatedAt);
-            //reset child categories list, they will be pushed later
+            //reset child categories list and list of items, they will be pushed later
             PEMenu.categories[i].childCategories = null;
+            PEMenu.categories[i].items = null;
             //create a list of parent categories
             if (!PEMenu.categories[i].parentCategory) {
                 if (PEMenu.categories[i].objectId !== PEMenu.newsCategory) {

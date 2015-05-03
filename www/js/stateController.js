@@ -24,13 +24,12 @@ var StateController = (function () {
             components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg];
             componentsLength = components.length;
         },
-        handleCurrentState: function (from, to) {
+        handleCurrentState: function (from, to, action) {
             var items = [],
                 html;
             switch (to) {
-                case '#select-category':
-                    var action = PEMenu.selectedCategory,
-                        category;
+                case 'select-category':
+                    var category;
                     if (!action) {
                         SideMenu.toggleMenu();
                         return;
@@ -63,11 +62,23 @@ var StateController = (function () {
                     }
                     break;
 
-                case '#show-items':
-                case '#cart':
-                    var action = window.location.hash === '#cart' ? 'cart' : PEMenu.selectedCategory,
-                        showItems,
-                        buildHtml = function (items) {
+                case 'category-description':
+                    if (!action) {
+                        Router.go('home');
+                        return;
+                    }
+                    var category = PEMenu.categories[PEMenu.categoryList[action]];
+
+                    hideAll();
+                    Dom.categoryInfo.style.display = 'block';
+                    Dom.showBackButton();
+                    Dom.reloadCategoryInfo(category);
+                    break;
+                    break;
+
+                case 'show-items':
+                case 'cart':
+                    var buildHtml = function (items) {
                             html = Dom.generateItems(items);
                         };
 
@@ -82,7 +93,7 @@ var StateController = (function () {
                         buildHtml(Cart.getCart());
                         Dom.cartInfo.style.display = 'block';
                     } else {
-                        var category = PEMenu.categories[PEMenu.categoryList[PEMenu.selectedCategory]];
+                        var category = PEMenu.categories[PEMenu.categoryList[action]];
                         PEMenu.showItemsArr = category.items;
                         buildHtml(PEMenu.showItemsArr);
                     }
@@ -91,18 +102,16 @@ var StateController = (function () {
                     Dom.showBackButton();
                     Dom.reloadItems(html);
 
-                    if (window.isBack && PEMenu.selectedItem) {
+                    /*if (window.isBack && PEMenu.selectedItem) {
                         var activeEl = document.getElementById('course-' + PEMenu.selectedItem);
                         if (activeEl) {
                             activeEl.scrollIntoView();
                         }
-                    }
-
-                    setTimeout(Dom.drawImages, 100);
+                    }*/
 
                     break;
 
-                case '#item-info':
+                case 'item-info':
                     var action = PEMenu.selectedItem;
                     if (!action) {
                         Router.go('home');
@@ -118,7 +127,7 @@ var StateController = (function () {
                     Dom.reloadItemInfo(item);
                     break;
 
-                case '#item-img':
+                case 'item-img':
                     var action = PEMenu.selectedItem;
                     if (!action) {
                         Router.go('home');
@@ -132,7 +141,7 @@ var StateController = (function () {
                     Dom.reloadItemImg(item);
                     break;
 
-                case '#home':
+                case 'home':
                     hideAll();
                     Dom.homeContent.style.display = 'block';
                     Dom.hideBackButton();
