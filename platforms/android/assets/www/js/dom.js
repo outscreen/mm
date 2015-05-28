@@ -1,7 +1,5 @@
 var Dom = (function () {
-    var clickEvent,
-        imgEls = {},
-        ctx = {};
+    var clickEvent;
 
     return {
         init: function () {
@@ -26,17 +24,18 @@ var Dom = (function () {
             self.body = document.body;
             self.wrapper = document.getElementById('wrapper');
             self.cartInfo = document.getElementById('cart-info');
+            self.categoryInfo = document.getElementById('category-description');
 
             if (window.defaultScroll) {
                 self.scroller.classList.add('default-scroll');
             }
 
             self.sideMenu.addEventListener(clickEvent, function (e) {
-                    PEMenu.menuAction(e);
+                PEMenu.menuAction(e);
             }, false);
 
             self.categoryList.addEventListener(clickEvent, function (e) {
-                PEMenu.showItems(e);
+                PEMenu.selectCategory(e);
             }, false);
 
             self.showItems.addEventListener(clickEvent, function (e) {
@@ -87,48 +86,11 @@ var Dom = (function () {
                 Dom.categoryTemplate = _.template(html);
             });
         })(),
-        menuItemTemplate: (function () {
-            var item = document.createElement('div'),
-                icon = document.createElement('i'),
-                name = document.createElement('span');
-            item.classList.add('menu-item');
-            icon.classList.add('menu-icon');
-            item.appendChild(icon);
-            item.appendChild(name);
-            return item;
+        categoryInfoTemplate: (function () {
+            jQuery.get('templates/category-info.html', function (html) {
+                Dom.categoryInfoTemplate = _.template(html);
+            });
         })(),
-        clone: function (el, type, params) {
-            var newEl = el.cloneNode(el),
-                nodes = newEl.childNodes;
-            switch (type) {
-                case 'menu-item':
-                    if (typeof params.close === 'undefined') {
-                        params.close = true;
-                    }
-                    newEl.setAttribute('close', params.close);
-                    newEl.setAttribute('action', params.action);
-                    nodes[0].classList.add(params.i);
-                    nodes[1].innerHTML = params.string;
-                    break;
-            }
-            return newEl;
-        },
-        loadMenu: function (items) {
-            var self = this;
-            var container = document.createElement('div');
-            for (var i = 0, l = items.length; i < l; i++) {
-                container.appendChild(self.clone(self.menuItemTemplate, 'menu-item', items[i]));
-            }
-            if (self.sideMenu.firstChild) {
-                self.sideMenu.removeChild(self.sideMenu.firstChild);
-            }
-            self.sideMenu.appendChild(container);
-
-            if (!isAndroid) {
-                SideMenu.toggleMenu();
-                SideMenu.toggleMenu();
-            }
-        },
         generateCategories: function (items) {
             var self = this,
                 container = document.createElement('div');
@@ -166,6 +128,15 @@ var Dom = (function () {
             container.innerHTML = self.itemInfoTemplate({item: params});
             self.itemInfo.appendChild(container);
         },
+        reloadCategoryInfo: function (params) {
+            var self = this,
+                container = document.createElement('div');
+            if (self.categoryInfo.firstChild) {
+                self.categoryInfo.removeChild(self.categoryInfo.firstChild);
+            }
+            container.innerHTML = self.categoryInfoTemplate({item: params});
+            self.categoryInfo.appendChild(container);
+        },
         reloadItemImg: function (params) {
             var self = this,
                 container = document.createElement('div');
@@ -174,55 +145,6 @@ var Dom = (function () {
             }
             container.innerHTML = self.itemImgTemplate({item: params});
             self.itemImg.appendChild(container);
-        },
-        drawImages: function () {
-            /*var canvasEls = document.getElementsByTagName('canvas'),
-                canvasId,
-                course,
-                draw = function (course) {
-                    var height,
-                        width,
-                        x,
-                        y;
-                    if (imgEls[course].width > imgEls[course].height) {
-                        height = 70;
-                        y = 0;
-                        width = 70 / imgEls[course].height * imgEls[course].width;
-                        width = width - width % 1;
-                        x = (width - 70) / 2;
-                        x = x - x % 1;
-                    } else {
-                        width = 70;
-                        x = 0;
-                        height = 70 / imgEls[course].width * imgEls[course].height;
-                        height = height - height % 1;
-                        y = (width - 70) / 2;
-                        y = y - y % 1;
-                    }
-                    ctx[course].drawImage(imgEls[course], -x, -y, width, height);
-                };
-            for (var i = 0, l = canvasEls.length; i < l; i++) {
-                canvasId = canvasEls[i].attributes.id.value;
-                canvasEls[i].width = 70;
-                canvasEls[i].height = 70;
-                course = canvasId.replace('canvas-', '');
-                if (PEMenu.itemList[PEMenu.itemObjectIds[course]].img) {
-                    if (!imgEls[course]) {
-                        imgEls[course] = imgEls[course] || new Image();
-                        imgEls[course].src = PEMenu.itemList[PEMenu.itemObjectIds[course]].imgHybrid || PEMenu.itemList[PEMenu.itemObjectIds[course]].img;
-                        ctx[course] = canvasEls[i].getContext('2d');
-                        (function (course) {
-                            imgEls[course].onload = function () {
-                                draw(course);
-                            }
-                        })(course);
-                    } else {
-                        ctx[course] = canvasEls[i].getContext('2d');
-                        draw(course);
-                    }
-
-                }
-            }*/
         }
     }
 })();

@@ -7,18 +7,15 @@ var UpdateData = (function () {
         PEMenu.categories = window.localStorage.categories ? JSON.parse(window.localStorage.categories) : [];
         PEMenu.parentCategories = window.localStorage.parentCategories ? JSON.parse(window.localStorage.parentCategories) : [];
         PEMenu.categoryList = window.localStorage.categoryList ? JSON.parse(window.localStorage.categoryList) : {};
-        if (PEMenu.parentCategories && PEMenu.parentCategories.length) {
-            SideMenu.init();
-        }
     }
 
     function finishLoad() {
         processResults();
-        SideMenu.init();
         Dom.hideSplash();
+        PEMenu.openMenu();
     }
 
-    function handleSuccess(def) {
+    function handleSuccess() {
         console.log('data update completed')
         finishLoad();
         if (!window.localStorage.imagesLoaded || window.localStorage.imagesLoaded === 'false') {
@@ -33,7 +30,7 @@ var UpdateData = (function () {
         }
     }
 
-    function handleError(def, err) {
+    function handleError() {
         finishLoad();
         Dom.dataUpdateLoader.classList.remove('spinner');
         window.updateInProgress = false;
@@ -66,7 +63,6 @@ var UpdateData = (function () {
     }
 
     function processResults() {
-        Router.clearCache();
         PEMenu.parentCategories = [];
         PEMenu.menu = {};
         sortByPriority(PEMenu.categories);

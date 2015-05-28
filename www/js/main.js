@@ -60,6 +60,9 @@ var PEMenu = (function () {
         showCategory: function (action) {
             var self = this,
                 category = self.categories[self.categoryList[action]];
+            if (!category.parentCategory) {
+                self.selectedRestaurant = action;
+            }
             if (category.items) {
                 Router.go('show-items', action);
                 return;
@@ -83,7 +86,7 @@ var PEMenu = (function () {
             if (tryToToggleCart(e, action)) {
                 return;
             }
-            Router.go('item-info');
+            Router.go('item-info', action);
         },
         clickOnItemInfo: function (e) {
             var self = this;
@@ -98,7 +101,7 @@ var PEMenu = (function () {
                 return;
             }
             self.selectedItem = self.nextItem;
-            Router.go(Router.state);
+            Router.go(Router.state.where, self.selectedItem);
         },
         showPreviousItem: function () {
             var self = this;
@@ -106,7 +109,7 @@ var PEMenu = (function () {
                 return;
             }
             self.selectedItem = self.previousItem;
-            Router.go(Router.state);
+            Router.go(Router.state.where, self.selectedItem);
         },
         openMenu: function () {
             Router.go('select-category', 'parent');

@@ -6,7 +6,7 @@ var StateController = (function () {
                 components[i].style.display = 'none';
             }
         },
-        arrows = ['#item-info', '#item-img'],
+        arrows = ['item-info', 'item-img'],
         findPreviousAndNextItems = function (action) {
             for (var i = 0, l = PEMenu.showItemsArr.length; i < l; i++) {
                 if (PEMenu.showItemsArr[i].objectId === action) {
@@ -21,7 +21,7 @@ var StateController = (function () {
         };
     return {
         init: function () {
-            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg];
+            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.cartInfo, Dom.account, Dom.itemImg, Dom.categoryInfo];
             componentsLength = components.length;
         },
         handleCurrentState: function (from, to, action) {
@@ -31,15 +31,17 @@ var StateController = (function () {
                 case 'select-category':
                     var category;
                     if (!action) {
-                        SideMenu.toggleMenu();
+                        PEMenu.openMenu();
                         return;
                     }
                     var childCategories = [];
                     if (action === 'parent') {
                         childCategories = PEMenu.parentCategories;
+                        Dom.hideBackButton();
                     } else {
                         category = PEMenu.categories[PEMenu.categoryList[action]];
                         childCategories = category.childCategories;
+                        Dom.showBackButton();
                     }
                     for (var i = 0, l = childCategories.length; i < l; i++) {
                         items.push({
@@ -51,7 +53,6 @@ var StateController = (function () {
                     html = Dom.generateCategories(items);
                     hideAll();
                     Dom.categoryList.style.display = 'block';
-                    Dom.showBackButton();
                     Dom.reloadCategories(html);
 
                     if (window.isBack && PEMenu.selectedCategory) {
@@ -140,15 +141,6 @@ var StateController = (function () {
                     Dom.showBackButton();
                     Dom.reloadItemImg(item);
                     break;
-
-                case 'home':
-                    hideAll();
-                    Dom.homeContent.style.display = 'block';
-                    Dom.hideBackButton();
-                    break;
-
-                default:
-                    Router.go('home');
             }
             if (!window.isBack) {
                 myScroll.reload();

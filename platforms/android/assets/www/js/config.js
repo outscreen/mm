@@ -1,19 +1,26 @@
-Parse.initialize("FqOlrZGAz1ROccpgUrALGtbHoPvkcovTWYW3hDWC", "VROXvuSjjSvQdBO6ccOT0UpTr1oKzZ2hJ9cTBI0p");
+Parse.initialize('Pa9jQDlvIQZKkdfSDowBnCqjyjjf7vCYgnjP7VAe', 'z47dKch45QMyTZWsHofqTY2ndcnAvYKc67GkiBM1');
 
 window.ItemListDB = Parse.Object.extend("ItemList");
 window.CategoryListDB = Parse.Object.extend("CategoryList");
 window.TimeStampsDB = Parse.Object.extend("TimeStamps");
-window.timestampsId = "IqU4KZlnDU";
+window.timestampsId = 'sv4vfqVA9J';
 window.isHybrid = window.location.protocol == "file:" ? true : false;
 window.defaultScroll = true;
 window.isAndroid = (navigator.userAgent.indexOf('Android') !== -1);
 
 window.onhashchange = function (event) {
-    var oldState = event.oldURL.slice(event.oldURL.indexOf('#')),
-        newState = event.newURL.slice(event.newURL.indexOf('#'));
+    var oldState = getHashParams(event.oldURL),
+        newState = getHashParams(event.newURL);
 
-    StateController.handleCurrentState(oldState, newState);
+    StateController.handleCurrentState(oldState.state, newState.state, newState.action);
 };
+
+function getHashParams (s) {
+    return {
+        state: s.slice(s.indexOf('#') + 1, s.indexOf('?action=')),
+        action: s.slice(s.indexOf('?action=') + '?action='.length)
+    }
+}
 
 function findAction(el) {
     if (!el) {

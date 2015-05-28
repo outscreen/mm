@@ -14,6 +14,10 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
     <name>Меню Наама Бэй</name>
     <description>
     </description>
@@ -46,8 +50,4 @@
     <access launch-external="yes" origin="tel:*" />
     <access origin="*" />
     <content src="index.html" />
-    <feature name="StatusBar">
-        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
-        <param name="onload" value="true" />
-    </feature>
 </widget>

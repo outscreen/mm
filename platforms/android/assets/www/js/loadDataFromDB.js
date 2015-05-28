@@ -6,20 +6,16 @@ var UpdateData = (function () {
         PEMenu.itemObjectIds = window.localStorage.itemObjectIds ? JSON.parse(window.localStorage.itemObjectIds) : {};
         PEMenu.categories = window.localStorage.categories ? JSON.parse(window.localStorage.categories) : [];
         PEMenu.parentCategories = window.localStorage.parentCategories ? JSON.parse(window.localStorage.parentCategories) : [];
-        PEMenu.menu = window.localStorage.menu ? JSON.parse(window.localStorage.menu) : {};
         PEMenu.categoryList = window.localStorage.categoryList ? JSON.parse(window.localStorage.categoryList) : {};
-        if (PEMenu.parentCategories && PEMenu.parentCategories.length) {
-            SideMenu.init();
-        }
     }
 
     function finishLoad() {
         processResults();
-        SideMenu.init();
         Dom.hideSplash();
+        PEMenu.openMenu();
     }
 
-    function handleSuccess(def) {
+    function handleSuccess() {
         console.log('data update completed')
         finishLoad();
         if (!window.localStorage.imagesLoaded || window.localStorage.imagesLoaded === 'false') {
@@ -34,7 +30,7 @@ var UpdateData = (function () {
         }
     }
 
-    function handleError(def, err) {
+    function handleError() {
         finishLoad();
         Dom.dataUpdateLoader.classList.remove('spinner');
         window.updateInProgress = false;
@@ -67,39 +63,60 @@ var UpdateData = (function () {
     }
 
     function processResults() {
-        Router.clearCache();
         PEMenu.parentCategories = [];
         PEMenu.menu = {};
         sortByPriority(PEMenu.categories);
 
-        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
-            PEMenu.categoryList[PEMenu.categories[i].objectId] = i;
-        }
 
         for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
+            //create a list of categories to easily find them in array by objectId
+            PEMenu.categoryList[PEMenu.categories[i].objectId] = i;
+            //delete unnecessary fields
             delete(PEMenu.categories[i].createdAt);
             delete(PEMenu.categories[i].updatedAt);
+            //reset child categories list and list of items, they will be pushed later
+            PEMenu.categories[i].childCategories = null;
+            PEMenu.categories[i].items = null;
+            //create a list of parent categories
             if (!PEMenu.categories[i].parentCategory) {
-                if (!PEMenu.menu[PEMenu.categories[i].objectId]) {
-                    PEMenu.menu[PEMenu.categories[i].objectId] = {};
-                    PEMenu.menu[PEMenu.categories[i].objectId].items = {};
-                }
                 if (PEMenu.categories[i].objectId !== PEMenu.newsCategory) {
                     PEMenu.parentCategories.push(PEMenu.categories[i]);
-                }
-            } else {
-                if (!PEMenu.menu[PEMenu.categories[i].parentCategory]) {
-                    PEMenu.menu[PEMenu.categories[i].parentCategory] = {};
-                    PEMenu.menu[PEMenu.categories[i].parentCategory].items = {};
-                }
-                if (!PEMenu.menu[PEMenu.categories[i].parentCategory][PEMenu.categories[i].objectId]) {
-                    PEMenu.menu[PEMenu.categories[i].parentCategory][PEMenu.categories[i].objectId] = {};
-                    PEMenu.menu[PEMenu.categories[i].parentCategory][PEMenu.categories[i].objectId].items = {};
                 }
             }
         }
 
+        //add array of child categories to each category
+        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
+            if (PEMenu.categories[i].parentCategory) {
+                var parentIndex = PEMenu.categoryList[PEMenu.categories[i].parentCategory],
+                    parentCategory = PEMenu.categories[parentIndex];
+                parentCategory.childCategories = parentCategory.childCategories || [];
+                parentCategory.childCategories.push(PEMenu.categories[i]);
+            }
+        }
+
         for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
+            PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
+            //push item to category if it is available
+            if (PEMenu.itemList[i].isAvailable) {
+                var categoryId = PEMenu.itemList[i].category,
+                    category = PEMenu.categories[PEMenu.categoryList[categoryId]];
+                category.items = category.items || [];
+                category.items.push(PEMenu.itemList[i]);
+            }
+        }
+
+        //add images to categories
+        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
+            if (PEMenu.categories[i].img) {
+                var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
+                if (item) {
+                    PEMenu.categories[i].imgUrl = item.imgHybrid || item.img
+                }
+            }
+        }
+
+        /*for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
             var categoryId = PEMenu.itemList[i].category,
                 category = PEMenu.categories[PEMenu.categoryList[categoryId]];
             PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
@@ -121,7 +138,7 @@ var UpdateData = (function () {
                     PEMenu.categories[i].imgUrl = item.imgHybrid || item.img
                 }
             }
-        }
+        }*/
 
         saveToLocalStorage();
     }

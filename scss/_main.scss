@@ -15,8 +15,8 @@ $menu-font: antiquewhite;
 $font-on-main-background: #222;
 $course-bg: rgba(255, 253, 250, 0.8);
 $description-bg: rgba(255, 253, 250, 0.8);
-$cart-icons: #A89C78;
-$cart-icons-active: #706850;
+$cart-icons: #333;
+$cart-icons-active: #222;
 
 ::-webkit-scrollbar {
   display: none;
@@ -53,11 +53,11 @@ body {
   min-width: 100%;
   overflow: hidden; /* this is important to prevent the whole page to bounce */
   left: 0;
-  background: url("../img/bg2.png");
+  background: url("../img/bg.jpg");
 }
 
 #splash {
-  background: url("../img/bg2.png");
+  background: url("../img/bg2.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -452,6 +452,12 @@ body {
   }
 }
 
+.big-icon {
+  i {
+    font-size: 30px;
+  }
+}
+
 .pull-right {
   float: right;
 }
@@ -484,15 +490,17 @@ body {
   color: $bright-font;
   height: 44px;
   width: 100%;
-  .back-btn {
-    font-size: 20px;
-    height: 100%;
-    padding: 10px 5px;
-  }
+  display: table;
+  table-layout: fixed;
   .cart-info {
     width: 80px;
     padding: 5px;
     text-align: center;
+  }
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 5px
   }
 }
 

@@ -6,7 +6,7 @@ var StateController = (function () {
                 components[i].style.display = 'none';
             }
         },
-        arrows = ['#item-info', '#item-img'],
+        arrows = ['item-info', 'item-img'],
         findPreviousAndNextItems = function (action) {
             for (var i = 0, l = PEMenu.showItemsArr.length; i < l; i++) {
                 if (PEMenu.showItemsArr[i].objectId === action) {
@@ -21,39 +21,38 @@ var StateController = (function () {
         };
     return {
         init: function () {
-            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.homeContent, Dom.cartInfo, Dom.account, Dom.itemImg];
+            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.cartInfo, Dom.account, Dom.itemImg, Dom.categoryInfo];
             componentsLength = components.length;
         },
-        handleCurrentState: function (from, to, isBack) {
+        handleCurrentState: function (from, to, action) {
             var items = [],
                 html;
             switch (to) {
-                case '#select-category':
-                    var action = PEMenu.selectedMenu;
+                case 'select-category':
+                    var category;
                     if (!action) {
-                        SideMenu.toggleMenu();
+                        PEMenu.openMenu();
                         return;
                     }
-                    html = Router.getCache();
-                    if (!html) {
-                        var childCategories = [];
-                        for (var index in PEMenu.menu[action]) {
-                            if (index !== 'items' && Object.keys(PEMenu.menu[action][index].items).length)
-                                childCategories.push(PEMenu.categories[PEMenu.categoryList[index]]);
-                        }
-                        for (var i = 0, l = childCategories.length; i < l; i++) {
-                            items.push({
-                                string: childCategories[i].name,
-                                action: childCategories[i].objectId,
-                                imgUrl: childCategories[i].imgUrl
-                            });
-                        }
-                        html = Dom.generateCategories(items);
-                        Router.cacheData(html);
+                    var childCategories = [];
+                    if (action === 'parent') {
+                        childCategories = PEMenu.parentCategories;
+                        Dom.hideBackButton();
+                    } else {
+                        category = PEMenu.categories[PEMenu.categoryList[action]];
+                        childCategories = category.childCategories;
+                        Dom.showBackButton();
                     }
+                    for (var i = 0, l = childCategories.length; i < l; i++) {
+                        items.push({
+                            string: childCategories[i].name,
+                            action: childCategories[i].objectId,
+                            imgUrl: childCategories[i].imgUrl
+                        });
+                    }
+                    html = Dom.generateCategories(items);
                     hideAll();
                     Dom.categoryList.style.display = 'block';
-                    Dom.showBackButton();
                     Dom.reloadCategories(html);
 
                     if (window.isBack && PEMenu.selectedCategory) {
@@ -64,11 +63,23 @@ var StateController = (function () {
                     }
                     break;
 
-                case '#show-items':
-                case '#cart':
-                    var action = window.location.hash === '#cart' ? 'cart' : PEMenu.selectedCategory,
-                        showItems,
-                        buildHtml = function (items) {
+                case 'category-description':
+                    if (!action) {
+                        Router.go('home');
+                        return;
+                    }
+                    var category = PEMenu.categories[PEMenu.categoryList[action]];
+
+                    hideAll();
+                    Dom.categoryInfo.style.display = 'block';
+                    Dom.showBackButton();
+                    Dom.reloadCategoryInfo(category);
+                    break;
+                    break;
+
+                case 'show-items':
+                case 'cart':
+                    var buildHtml = function (items) {
                             html = Dom.generateItems(items);
                         };
 
@@ -83,37 +94,25 @@ var StateController = (function () {
                         buildHtml(Cart.getCart());
                         Dom.cartInfo.style.display = 'block';
                     } else {
-                        var parentCatId;
-                        if (PEMenu.menu[action]) {
-                            showItems = PEMenu.menu[action].items;
-                        } else {
-                            parentCatId = PEMenu.categories[PEMenu.categoryList[action]].parentCategory;
-                            showItems = PEMenu.menu[parentCatId][action].items;
-                        }
-                        PEMenu.showItemsArr = [];
-                        for (var i in showItems) {
-                            PEMenu.showItemsArr.push(showItems[i]);
-                        }
+                        var category = PEMenu.categories[PEMenu.categoryList[action]];
+                        PEMenu.showItemsArr = category.items;
                         buildHtml(PEMenu.showItemsArr);
-                        Router.cacheData(html);
                     }
 
                     Dom.showItems.style.display = 'block';
                     Dom.showBackButton();
                     Dom.reloadItems(html);
 
-                    if (window.isBack && PEMenu.selectedItem) {
+                    /*if (window.isBack && PEMenu.selectedItem) {
                         var activeEl = document.getElementById('course-' + PEMenu.selectedItem);
                         if (activeEl) {
                             activeEl.scrollIntoView();
                         }
-                    }
-
-                    setTimeout(Dom.drawImages, 100);
+                    }*/
 
                     break;
 
-                case '#item-info':
+                case 'item-info':
                     var action = PEMenu.selectedItem;
                     if (!action) {
                         Router.go('home');
@@ -129,7 +128,7 @@ var StateController = (function () {
                     Dom.reloadItemInfo(item);
                     break;
 
-                case '#item-img':
+                case 'item-img':
                     var action = PEMenu.selectedItem;
                     if (!action) {
                         Router.go('home');
@@ -142,15 +141,6 @@ var StateController = (function () {
                     Dom.showBackButton();
                     Dom.reloadItemImg(item);
                     break;
-
-                case '#home':
-                    hideAll();
-                    Dom.homeContent.style.display = 'block';
-                    Dom.hideBackButton();
-                    break;
-
-                default:
-                    Router.go('home');
             }
             if (!window.isBack) {
                 myScroll.reload();

@@ -1,7 +1,5 @@
 var Dom = (function () {
-    var clickEvent,
-        imgEls = {},
-        ctx = {};
+    var clickEvent;
 
     return {
         init: function () {
@@ -147,55 +145,6 @@ var Dom = (function () {
             }
             container.innerHTML = self.itemImgTemplate({item: params});
             self.itemImg.appendChild(container);
-        },
-        drawImages: function () {
-            /*var canvasEls = document.getElementsByTagName('canvas'),
-             canvasId,
-             course,
-             draw = function (course) {
-             var height,
-             width,
-             x,
-             y;
-             if (imgEls[course].width > imgEls[course].height) {
-             height = 70;
-             y = 0;
-             width = 70 / imgEls[course].height * imgEls[course].width;
-             width = width - width % 1;
-             x = (width - 70) / 2;
-             x = x - x % 1;
-             } else {
-             width = 70;
-             x = 0;
-             height = 70 / imgEls[course].width * imgEls[course].height;
-             height = height - height % 1;
-             y = (width - 70) / 2;
-             y = y - y % 1;
-             }
-             ctx[course].drawImage(imgEls[course], -x, -y, width, height);
-             };
-             for (var i = 0, l = canvasEls.length; i < l; i++) {
-             canvasId = canvasEls[i].attributes.id.value;
-             canvasEls[i].width = 70;
-             canvasEls[i].height = 70;
-             course = canvasId.replace('canvas-', '');
-             if (PEMenu.itemList[PEMenu.itemObjectIds[course]].img) {
-             if (!imgEls[course]) {
-             imgEls[course] = imgEls[course] || new Image();
-             imgEls[course].src = PEMenu.itemList[PEMenu.itemObjectIds[course]].imgHybrid || PEMenu.itemList[PEMenu.itemObjectIds[course]].img;
-             ctx[course] = canvasEls[i].getContext('2d');
-             (function (course) {
-             imgEls[course].onload = function () {
-             draw(course);
-             }
-             })(course);
-             } else {
-             ctx[course] = canvasEls[i].getContext('2d');
-             draw(course);
-             }
-
-             }
-             }*/
         }
     }
 })();

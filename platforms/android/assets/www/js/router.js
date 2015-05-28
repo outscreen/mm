@@ -1,78 +1,55 @@
 var Router = (function () {
-    var cache = {
-            categories: {},
-            items: {}
-        },
-        history = [];
+    var history = [],
+        displayedCategory;
 
     return {
         state: null,
-        go: function (where, isBack) {
-            history.push(window.location.hash);
+        go: function (where, action, isBack) {
+            if (!isBack && !~['item-info', 'item-img'].indexOf(where)) {
+                history.push({where: where, action: action});
+            }
+
             window.isBack = isBack;
             //if state is the same, handle it forcefully
-            if (window.location.hash === ('#' + where)) {
-                StateController.handleCurrentState(window.location.hash, window.location.hash);
+            if (window.location.hash === ('#' + where + '?action=' + action)) {
+                StateController.handleCurrentState(null, where, action);
             }
-            Router.state = window.location.hash = where;
-        },
-        getCache: function () {
-            if (window.updateInProgress) {
-                return;
+            Router.state = {where: where, action: action};
+
+            if (where === 'show-items') {
+                displayedCategory = action;
             }
-            switch (window.location.hash) {
-                case '#select-category':
-                    return cache.categories[PEMenu.selectedMenu];
-                case '#show-items':
-                    return cache.items[PEMenu.selectedCategory];
-            }
-        },
-        cacheData: function (data) {
-            if (window.updateInProgress) {
-                return;
-            }
-            switch (window.location.hash) {
-                case '#select-category':
-                    cache.categories[PEMenu.selectedMenu] = data;
-                    break;
-                case '#show-items':
-                    cache.items[PEMenu.selectedCategory] = data;
-                    break;
-            }
-        },
-        clearCache: function () {
-            cache = {
-                categories: {},
-                items: {}
-            }
+            window.location.hash = '#' + where + '?action=' + action;
         },
         goBack: function () {
-            var self = this;
-            switch (window.location.hash) {
-                case '#select-category':
-                    SideMenu.toggleMenu();
+            var self = this,
+                previousState = history[history.length - 2],
+                latestState = history[history.length - 1];
+            switch (self.state.where) {
+                case 'select-category':
+                case 'category-description':
+                case 'show-items':
+                case 'cart':
+                    self.go(previousState.where, previousState.action, true);
+                    history.pop();
                     break;
-                case '#show-items':
-                    self.go('select-category', true);
+                case 'item-info':
+                    self.go(latestState.where, latestState.action, true);
                     break;
-                case '#item-info':
-                    if (history[history.length - 1] === '#cart') {
-                        self.go('cart', true);
-                    } else {
-                        self.go('show-items', true);
-                    }
+                case 'item-img':
+                    self.go('item-info', self.state.action, true);
                     break;
-                case '#item-img':
-                    self.go('item-info', true);
-                    break;
-                case '#cart':
-                    self.go('show-items', true);
-                    break;
-                case '#home':
+                /*case '#cart':
+                    self.go('show-items');
+                    break;*/
+                case 'home':
                     exitApp();
                     break;
             }
-            history.pop();
+
+        },
+        goToRestaurant: function () {
+            this.go('select-category', PEMenu.selectedRestaurant);
         }
     }
 })();

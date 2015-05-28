@@ -6877,10 +6877,10 @@ body {
   overflow: hidden;
   /* this is important to prevent the whole page to bounce */
   left: 0;
-  background: url("../img/bg2.png"); }
+  background: url("../img/bg.jpg"); }
 
 #splash {
-  background: url("../img/bg2.png");
+  background: url("../img/bg2.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -7207,6 +7207,9 @@ body {
     left: 0;
     font-size: 11px; }
 
+.big-icon i {
+  font-size: 30px; }
+
 .pull-right {
   float: right; }
 
@@ -7234,15 +7237,17 @@ body {
   background: rgba(2, 2, 2, 0.8);
   color: antiquewhite;
   height: 44px;
-  width: 100%; }
-  .bottom-bar .back-btn {
-    font-size: 20px;
-    height: 100%;
-    padding: 10px 5px; }
+  width: 100%;
+  display: table;
+  table-layout: fixed; }
   .bottom-bar .cart-info {
     width: 80px;
     padding: 5px;
     text-align: center; }
+  .bottom-bar div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 5px; }
 
 .cart-icon {
   line-height: 30px;
@@ -7251,15 +7256,15 @@ body {
   .cart-icon.active {
     color: antiquewhite; }
   .cart-icon.dark {
-    color: #A89C78; }
+    color: #333; }
     .cart-icon.dark.active {
-      color: #706850; }
+      color: #222; }
   .cart-icon.item-info {
     font-size: 60px;
     text-align: center; }
 
 .manage-cart {
-  color: #A89C78; }
+  color: #333; }
   .manage-cart.in-course-list {
     position: absolute;
     right: 0; }
