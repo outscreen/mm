@@ -84,7 +84,7 @@ body {
   width: 100%;
   overflow: hidden;
   &.with-back-button {
-    bottom: 44px;
+    bottom: 47px;
   }
 }
 
@@ -493,14 +493,17 @@ body {
   display: table;
   table-layout: fixed;
   .cart-info {
-    width: 80px;
     padding: 5px;
     text-align: center;
   }
   div {
     display: table-cell;
     vertical-align: middle;
-    padding: 0px 5px
+    padding: 0px 5px;
+    text-align: center;
+    &.lasts {
+      width: 80px;
+    }
   }
 }
 
@@ -555,6 +558,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 .inline-block {

@@ -61,7 +61,7 @@ var Dom = (function () {
             $("[name = arrow]").css('display', 'none');
         },
         showArrows: function () {
-            $("[name = arrow]").css('display', 'block');
+            $("[name = arrow]").css('display', 'table-cell');
         },
         hideBackButton: function () {
             Dom.backButton.style.visibility = 'hidden';

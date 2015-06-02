@@ -53,7 +53,7 @@ var Cart = (function () {
             Router.cacheData();
         },
         goTo: function () {
-            Router.go('cart');
+            Router.go('cart', 'cart');
         },
         getCart: function () {
             return cart;
@@ -71,7 +71,6 @@ var Cart = (function () {
             }
             price = 0;
             document.getElementById('cart-sum').innerHTML = 0;
-            Router.clearCache();
             if (window.location.hash === '#cart') {
                 Router.go('cart');
                 return;

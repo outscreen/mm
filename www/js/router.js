@@ -49,7 +49,7 @@ var Router = (function () {
 
         },
         goToRestaurant: function () {
-            this.go('select-category', PEMenu.selectedRestaurant);
+            this.go('select-category', PEMenu.selectedRestaurant || 'parent');
         }
     }
 })();
