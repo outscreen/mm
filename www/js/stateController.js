@@ -26,7 +26,8 @@ var StateController = (function () {
         },
         handleCurrentState: function (from, to, action) {
             var items = [],
-                html;
+                html,
+                isParent;
             switch (to) {
                 case 'select-category':
                     var category;
@@ -36,6 +37,7 @@ var StateController = (function () {
                     }
                     var childCategories = [];
                     if (action === 'parent') {
+                        isParent = true;
                         childCategories = PEMenu.parentCategories;
                         Dom.hideBackButton();
                     } else {
@@ -50,7 +52,7 @@ var StateController = (function () {
                             imgUrl: childCategories[i].imgUrl
                         });
                     }
-                    html = Dom.generateCategories(items);
+                    html = Dom.generateCategories(items, isParent);
                     hideAll();
                     Dom.categoryList.style.display = 'block';
                     Dom.reloadCategories(html);

@@ -284,7 +284,6 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/main.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/router.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/selectCategory.js \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/sideMenu.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/stateController.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/lib/bundle.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.device \
@@ -324,6 +323,7 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/category-info.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/category.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-icons.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-list.html \
