@@ -23,12 +23,12 @@ $cart-icons-active: #222;
 }
 
 @-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
 
 * {
@@ -496,7 +496,7 @@ body {
     padding: 5px;
     text-align: center;
   }
-  div {
+  .bottom-section {
     display: table-cell;
     vertical-align: middle;
     padding: 0px 5px;

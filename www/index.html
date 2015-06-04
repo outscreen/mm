@@ -66,19 +66,19 @@
         </div>
 
         <div class="bottom-bar">
-            <div class="big-icon lasts text-left" onclick="PEMenu.openMenu()">
+            <div class="big-icon lasts text-left bottom-section" onclick="PEMenu.openMenu()">
                 <i class="menu-icon ion-ios-home"></i>
             </div>
-            <div class="big-icon" name="arrow" onclick="PEMenu.showPreviousItem()">
+            <div class="big-icon bottom-section" name="arrow" onclick="PEMenu.showPreviousItem()">
                 <i class="menu-icon ion-android-arrow-dropleft-circle"></i>
             </div>
-            <div class="big-icon text-center" onclick="UpdateData()">
-                <span id="data-update-loader"><i class="menu-icon ion-refresh"></i></span>
+            <div class="big-icon text-center bottom-section" onclick="UpdateData()">
+                <div id="data-update-loader"><i class="menu-icon ion-refresh"></i></div>
             </div>
-            <div class="big-icon" name="arrow" onclick="PEMenu.showNextItem()">
+            <div class="big-icon bottom-section" name="arrow" onclick="PEMenu.showNextItem()">
                 <i class="menu-icon ion-android-arrow-dropright-circle"></i>
             </div>
-            <div class="cart-info lasts" onclick="Cart.goTo()">Корзина: <br/><span id="cart-sum">0</span> грн.</div>
+            <div class="cart-info lasts bottom-section" onclick="Cart.goTo()">Корзина: <br/><span id="cart-sum">0</span> грн.</div>
         </div>
     </div>
     <div id="side-menu-container">

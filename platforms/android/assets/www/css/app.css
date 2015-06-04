@@ -6857,6 +6857,11 @@ button.close {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -7243,12 +7248,12 @@ body {
   .bottom-bar .cart-info {
     padding: 5px;
     text-align: center; }
-  .bottom-bar div {
+  .bottom-bar .bottom-section {
     display: table-cell;
     vertical-align: middle;
     padding: 0px 5px;
     text-align: center; }
-    .bottom-bar div.lasts {
+    .bottom-bar .bottom-section.lasts {
       width: 80px; }
 
 .cart-icon {
