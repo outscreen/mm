@@ -60,14 +60,15 @@ var PEMenu = (function () {
         showCategory: function (action) {
             var self = this,
                 category = self.categories[self.categoryList[action]];
-            if (!category.parentCategory) {
-                self.selectedRestaurant = action;
-            }
+
             if (category.items) {
                 Router.go('show-items', action);
                 return;
             }
             if (category.childCategories) {
+                if (!category.parentCategory) {
+                    self.selectedRestaurant = action;
+                }
                 Router.go('select-category', action || 'parent');
                 return;
             }

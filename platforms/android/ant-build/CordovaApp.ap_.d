@@ -329,4 +329,5 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/course-list.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/item-img.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/item-info.html \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/templates/parent-category.html \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/AndroidManifest.xml \
