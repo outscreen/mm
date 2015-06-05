@@ -64,6 +64,9 @@ var StateController = (function () {
                             activeEl.scrollIntoView();
                         }
                     }
+
+                    PEMenu.selectedCategory = action;
+
                     break;
 
                 case 'category-description':
@@ -106,12 +109,16 @@ var StateController = (function () {
                     Dom.showBackButton();
                     Dom.reloadItems(html);
 
-                    /*if (window.isBack && PEMenu.selectedItem) {
+                    if (window.isBack && PEMenu.selectedItem) {
                         var activeEl = document.getElementById('course-' + PEMenu.selectedItem);
                         if (activeEl) {
                             activeEl.scrollIntoView();
                         }
-                    }*/
+                    }
+
+                    if (action !== 'cart') {
+                        PEMenu.selectedCategory = action;
+                    }
 
                     break;
 
@@ -129,6 +136,9 @@ var StateController = (function () {
                     Dom.itemInfo.style.display = 'block';
                     Dom.showBackButton();
                     Dom.reloadItemInfo(item);
+
+                    PEMenu.selectedItem = action;
+
                     break;
 
                 case 'item-img':
