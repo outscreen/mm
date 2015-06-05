@@ -49,7 +49,8 @@ var StateController = (function () {
                         items.push({
                             string: childCategories[i].name,
                             action: childCategories[i].objectId,
-                            imgUrl: childCategories[i].imgUrl
+                            imgUrl: childCategories[i].imgUrl,
+                            isHidden: childCategories[i].isHidden
                         });
                     }
                     html = Dom.generateCategories(items, isParent);

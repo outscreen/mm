@@ -71,8 +71,8 @@ var Cart = (function () {
             }
             price = 0;
             document.getElementById('cart-sum').innerHTML = 0;
-            if (window.location.hash === '#cart') {
-                Router.go('cart');
+            if (window.location.hash.indexOf('#cart') !== -1) {
+                Router.go('cart', 'cart');
                 return;
             }
         }

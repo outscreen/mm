@@ -1,4 +1,4 @@
-<%_.forEach(items, function (item) {%>
+<%_.forEach(items, function (item) { if (!item.isHidden) {%>
 <%if(item.imgUrl){%>
 <img action="<%=item.action%>" id="category-<%=item.action%>"
      src="<%=item.imgUrl%>"
@@ -13,4 +13,4 @@
     </div>
 </div>
 <%}%>
-<%})%>
+<%}})%>
