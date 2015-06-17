@@ -7,6 +7,7 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafebarkoffkh/R$xml.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafebarkoffkh/R.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/BuildConfig.class \
+/Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/CordovaApp.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$attr.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$drawable.class \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/ant-build/classes/com/cafecbaskh/R$string.class \
