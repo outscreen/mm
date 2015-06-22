@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>484486F2-0A9E-449E-97A2-0402F73BDC9E</string>
+	<string>696792B4-4727-448B-AC00-99414A77C74D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Меню Наама Бэй</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A9C3245B07EA4C2BF1A57C9BB551B04FC34B1B81</key>
 		<string>https://github.com/outscreen/mm.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>platforms/ios/Меню Наама Бэй.xcodeproj</string>
+	<string>platforms/ios/Меню Наама Бэй.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A9C3245B07EA4C2BF1A57C9BB551B04FC34B1B81</key>
