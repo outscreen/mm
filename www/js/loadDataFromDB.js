@@ -34,7 +34,7 @@ var UpdateData = (function () {
         finishLoad();
         Dom.dataUpdateLoader.classList.remove('spinner');
         window.updateInProgress = false;
-        alert("Данные не обновлены. Для обновления данных нажмите кнопку в правом верхнем углу.");
+        alert("Данные не обновлены. Для обновления данных нажмите кнопку Обновить.");
     }
 
     function saveToLocalStorage() {
