@@ -318,7 +318,7 @@ body {
     .below-info {
       position: absolute;
       left: 80px;
-      margin: 5px;
+      margin: 0 5px;
       bottom: 0;
       .weight {
         display: inline-block;
@@ -329,7 +329,8 @@ body {
       }
       .price {
         right: 170px;
-        display: inline
+        display: inline;
+        font-size: 18px;
       }
     }
     .cart {

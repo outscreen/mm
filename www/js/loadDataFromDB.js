@@ -111,7 +111,7 @@ var UpdateData = (function () {
             if (PEMenu.categories[i].img) {
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
                 if (item) {
-                    PEMenu.categories[i].imgUrl = item.imgHybrid || item.img
+                    PEMenu.categories[i].imgUrl = isHybrid ? item.imgHybrid : item.img;
                 }
             }
         }
@@ -377,22 +377,39 @@ var UpdateData = (function () {
             needUpdate.categories = !window.localStorage.categories || !window.localStorage.timestampsCategories || window.localStorage.timestampsCategories < data.timestamps.categories;
             //download categories
             if (needUpdate.categories) {
-                categories.fetch().then(function (response) {
-                    window.localStorage.timestampsCategories = data.timestamps.categories;
-                    PEMenu.categories = response._serverData.results;
-                    categoriesUpdated = true;
-                    if (itemsUpdated) {
-                        handleSuccess(def);
-                    }
-                }, function (response) {
-                    handleError(def, response);
-                });
+                var callsCat = 0,
+                    limitCat = 1000;
+
+                PEMenu.categories = [];
+
+                (function getCategories() {
+                    new Parse.Query(CategoryListDB).limit(limitCat).skip(callsCat * limitCat).find(function (response) {
+                        if (response.length) {
+                            PEMenu.itemList = PEMenu.itemList || [];
+                            for (var i = 0, l = response.length; i < l; i++) {
+                                response[i]._serverData.objectId = response[i].id;
+                                PEMenu.categories.push(response[i]._serverData);
+                            }
+                            callsCat++;
+                            getCategories();
+                        } else {
+                            categoriesUpdated = true;
+                            window.localStorage.timestampsCategories = data.timestamps.categories;
+                            if (itemsUpdated) {
+                                handleSuccess(def);
+                            }
+                        }
+                    }, function (response) {
+                        handleError(def, response);
+                    });
+                })();
             } else {
                 categoriesUpdated = true;
                 if (itemsUpdated) {
                     handleSuccess(def);
                 }
             }
+
             //download items
             if (needUpdate.items) {
                 var calls = 0,

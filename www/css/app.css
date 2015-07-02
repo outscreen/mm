@@ -7103,7 +7103,7 @@ body {
   .course-small.course-list .below-info {
     position: absolute;
     left: 80px;
-    margin: 5px;
+    margin: 0 5px;
     bottom: 0; }
     .course-small.course-list .below-info .weight {
       display: inline-block;
@@ -7113,7 +7113,8 @@ body {
       text-align: left; }
     .course-small.course-list .below-info .price {
       right: 170px;
-      display: inline; }
+      display: inline;
+      font-size: 18px; }
   .course-small.course-list .cart {
     position: absolute;
     right: 40px;
