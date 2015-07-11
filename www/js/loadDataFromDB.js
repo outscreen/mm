@@ -111,7 +111,7 @@ var UpdateData = (function () {
             if (PEMenu.categories[i].img) {
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
                 if (item) {
-                    PEMenu.categories[i].imgUrl = isHybrid ? item.imgHybrid : item.img;
+                    PEMenu.categories[i].imgUrl = isHybrid ? item.imgHybrid || PEMenu.categories[i].imgUrl : item.img;
                 }
             }
         }
@@ -149,9 +149,14 @@ var UpdateData = (function () {
             quota = 20 * 1024 * 1024;
 
         if (!isHybrid) {
-            Dom.dataUpdateLoader.classList.remove('spinner');
-            window.updateInProgress = false;
-            return;
+            window.cordova = {};
+            window.cordova.file = {};
+            window.FileTransfer = function () {
+                this.download = function (src, a, func) {
+                    func({nativeURL: src});
+                };
+                return this;
+            }
         }
 
         window.localStorage.imagesLoaded = false;
