@@ -27,6 +27,10 @@ var Router = (function () {
                 latestState = history[history.length - 1];
             switch (self.state.where) {
                 case 'select-category':
+                    if (PEMenu.selectedCategory === 'parent') {
+                        exitApp();
+                        return;
+                    }
                 case 'category-description':
                 case 'show-items':
                 case 'cart':

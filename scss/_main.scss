@@ -13,8 +13,8 @@ $selected-background: #666;
 $invalid-dirty-background: maroon;
 $menu-font: antiquewhite;
 $font-on-main-background: #222;
-$course-bg: rgba(255, 253, 250, 0.8);
-$description-bg: rgba(255, 253, 250, 0.8);
+$course-bg: rgba(255, 253, 236, 0.8);
+$description-bg: rgba(255, 253, 236, 0.8);
 $cart-icons: #333;
 $cart-icons-active: #222;
 
@@ -199,7 +199,7 @@ body {
       color: $bright-font;
       font-size: 18px;
       padding: 2px;
-      font-weight: bold;
+      font-weight: 600;
       z-index: 5;
       position: absolute;
       background: $box-background-opacity;
@@ -260,6 +260,10 @@ body {
   }
 
   &.course-list {
+    &.items
+    .name {
+      font-weight: bold;
+    }
     &.categories {
       .right-container {
         position: absolute;
