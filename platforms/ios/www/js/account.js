@@ -1,5 +1,0 @@
-var Account = (function () {
-    return {
-
-    }
-})();

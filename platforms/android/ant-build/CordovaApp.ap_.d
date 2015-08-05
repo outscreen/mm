@@ -267,13 +267,10 @@
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/fonts/ionicons.ttf \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/fonts/ionicons.woff \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/bg.jpg \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/bg2.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/categorybg.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/default.jpg \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/fb.png \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/makebigger.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/menubg.jpg \
-/Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/plus.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/img/vk.png \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/account.js \
 /Users/noname/Documents/dev_apps/pemenu/platforms/android/assets/www/js/cart.js \

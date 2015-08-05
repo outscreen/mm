@@ -1,5 +1,5 @@
 <%_.forEach(items, function (item) { if (item.isAvailable) {%>
-<div class="course-small course-list" action="<%=item.objectId%>" id="course-<%=item.objectId%>">
+<div class="course-small course-list items" action="<%=item.objectId%>" id="course-<%=item.objectId%>">
     <div class="img-container" style="background-image: url(<%=(item.imgHybrid || item.img)%>)"></div>
     <!--
         <canvas class="img-container" id='canvas-<%=item.objectId%>'></canvas>

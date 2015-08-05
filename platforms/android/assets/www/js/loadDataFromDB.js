@@ -16,7 +16,7 @@ var UpdateData = (function () {
     }
 
     function handleSuccess() {
-        console.log('data update completed')
+        console.log('data update completed');
         finishLoad();
         if (!window.localStorage.imagesLoaded || window.localStorage.imagesLoaded === 'false') {
             try {
@@ -97,6 +97,10 @@ var UpdateData = (function () {
 
         for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
             PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
+            //if up-to-date image has been loaded, assign fs url before load of all images completed
+            if (PEMenu.itemList[i].img === downloadedFiles[PEMenu.itemList[i].objectId][0]) {
+                PEMenu.itemList[i].imgHybrid = downloadedFiles[PEMenu.itemList[i].objectId][1];
+            }
             //push item to category if it is available
             if (PEMenu.itemList[i].isAvailable) {
                 var categoryId = PEMenu.itemList[i].category,
@@ -111,34 +115,10 @@ var UpdateData = (function () {
             if (PEMenu.categories[i].img) {
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
                 if (item) {
-                    PEMenu.categories[i].imgUrl = isHybrid ? item.imgHybrid : item.img;
+                    PEMenu.categories[i].imgUrl = isHybrid ? item.imgHybrid || PEMenu.categories[i].imgUrl : item.img;
                 }
             }
         }
-
-        /*for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
-            var categoryId = PEMenu.itemList[i].category,
-                category = PEMenu.categories[PEMenu.categoryList[categoryId]];
-            PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
-            if (!category.parentCategory) {
-                PEMenu.menu[categoryId].items[PEMenu.itemList[i].objectId] = PEMenu.itemList[i];
-            } else {
-                if (!PEMenu.menu[category.parentCategory][categoryId]) {
-                    PEMenu.menu[category.parentCategory][categoryId] = {};
-                    PEMenu.menu[category.parentCategory][categoryId].items = {};
-                }
-                PEMenu.menu[category.parentCategory][categoryId].items[PEMenu.itemList[i].objectId] = PEMenu.itemList[i];
-            }
-        }
-
-        for (var i = 0, l = PEMenu.categories.length; i < l; i++) {
-            if (PEMenu.categories[i].img) {
-                var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
-                if (item) {
-                    PEMenu.categories[i].imgUrl = item.imgHybrid || item.img
-                }
-            }
-        }*/
 
         saveToLocalStorage();
     }
@@ -149,9 +129,14 @@ var UpdateData = (function () {
             quota = 20 * 1024 * 1024;
 
         if (!isHybrid) {
-            Dom.dataUpdateLoader.classList.remove('spinner');
-            window.updateInProgress = false;
-            return;
+            window.cordova = {};
+            window.cordova.file = {};
+            window.FileTransfer = function () {
+                this.download = function (src, a, func) {
+                    func({nativeURL: src});
+                };
+                return this;
+            }
         }
 
         window.localStorage.imagesLoaded = false;
@@ -355,7 +340,6 @@ var UpdateData = (function () {
         }
 
         var data = {},
-            categories = new CategoryListDB(),
             timestamps = new TimeStampsDB(),
             categoriesUpdated = false,
             itemsUpdated = false,
@@ -374,7 +358,7 @@ var UpdateData = (function () {
             //window.timestampsId = data.timestamps.objectId;
             window.lastUid = data.timestamps.itemId;
             needUpdate.items = !PEMenu.itemList || !window.localStorage.menu || !window.localStorage.timestampsItems || window.localStorage.timestampsItems < data.timestamps.items;
-            needUpdate.categories = !window.localStorage.categories || !window.localStorage.timestampsCategories || window.localStorage.timestampsCategories < data.timestamps.categories;
+            needUpdate.categories = !PEMenu.categories || !window.localStorage.categories || !window.localStorage.timestampsCategories || window.localStorage.timestampsCategories < data.timestamps.categories;
             //download categories
             if (needUpdate.categories) {
                 var callsCat = 0,
