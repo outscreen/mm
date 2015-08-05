@@ -13,8 +13,8 @@ $selected-background: #666;
 $invalid-dirty-background: maroon;
 $menu-font: antiquewhite;
 $font-on-main-background: #222;
-$course-bg: rgba(255, 253, 236, 0.8);
-$description-bg: rgba(255, 253, 236, 0.8);
+$course-bg: rgba(255, 255, 255, 0.8);
+$description-bg: rgba(255, 255, 255, 0.8);
 $cart-icons: #333;
 $cart-icons-active: #222;
 
@@ -57,7 +57,7 @@ body {
 }
 
 #splash {
-  background: url("../img/bg2.jpg");
+  background: url("../img/bg.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -68,7 +68,7 @@ body {
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    background: url('../img/default.jpg');
+    background: url('../img/default.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
