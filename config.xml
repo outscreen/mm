@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cafebarkoffkh" version="0.0.3" versionCode="0.0.3" xmlns="http://www.w3.org/ns/widgets"
+<widget id="com.cafenebokh" version="0.0.4" versionCode="0.0.4" xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Меню Баркофф</name>
+    <name>Меню NEBO</name>
     <description>
 
     </description>
