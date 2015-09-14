@@ -98,7 +98,8 @@ var UpdateData = (function () {
         for (var i = 0, l = PEMenu.itemList.length; i < l; i++) {
             PEMenu.itemObjectIds[PEMenu.itemList[i].objectId] = i;
             //if up-to-date image has been loaded, assign fs url before load of all images completed
-            if (PEMenu.itemList[i].img === downloadedFiles[PEMenu.itemList[i].objectId][0]) {
+            if (downloadedFiles[PEMenu.itemList[i].objectId] &&
+                PEMenu.itemList[i].img === downloadedFiles[PEMenu.itemList[i].objectId][0]) {
                 PEMenu.itemList[i].imgHybrid = downloadedFiles[PEMenu.itemList[i].objectId][1];
             }
             //push item to category if it is available
