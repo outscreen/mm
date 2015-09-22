@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.cafenebokh" version="0.0.4" versionCode="0.0.4" xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Меню NEBO</name>
+    <name>Меню Nebo</name>
     <description>
 
     </description>
@@ -22,22 +22,24 @@
     <preference name="show-splash-screen-spinner" value="true"/>
     <preference name="auto-hide-splash-screen" value="true"/>
     <preference name="disable-cursor" value="false"/>
-    <preference name="android-minSdkVersion" value="7"/>
     <preference name="android-installLocation" value="auto"/>
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarStyle" value="default" />
 
-    <icon src="res/icon.png" width="72" height="72" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="iosPersistentFileLocation" value="Compatibility" />
 
-    <gap:plugin name="org.apache.cordova.file"/>
-    <gap:plugin name="org.apache.cordova.file-transfer"/>
+
+    <gap:plugin name="cordova-plugin-file"/>
+    <gap:plugin name="cordova-plugin-file-transfer"/>
     <gap:plugin name="org.apache.cordova.device"/>
     <gap:plugin name="org.apache.cordova.inappbrowser"/>
     <gap:plugin name="org.apache.cordova.statusbar" />
+    <gap:plugin name="cordova-plugin-whitelist" />
 
     <access origin="tel:*" launch-external="yes" />
-
+    <allow-navigation href="*"/>
     <access origin="*"/>
     <content src="index.html"/>
 </widget>

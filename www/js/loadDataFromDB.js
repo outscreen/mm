@@ -189,6 +189,7 @@ var UpdateData = (function () {
                     if (ii < itemListLength) {
                         if (PEMenu.itemList[ii].img && (!downloadedFiles[PEMenu.itemList[ii].objectId] ||
                             (downloadedFiles[PEMenu.itemList[ii].objectId][0] != PEMenu.itemList[ii].img))) {
+                            PEMenu.itemList[ii].img = PEMenu.itemList[ii].img.replace('http:', 'https:');
                             currentQue++;
                             needToLoad++;
                             setTimeout(function (j) {

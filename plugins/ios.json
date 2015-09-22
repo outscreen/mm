@@ -5,11 +5,33 @@
     },
     "config_munge": {
         "files": {
+            "framework": {
+                "parents": {
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ]
+                }
+            },
             "config.xml": {
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "xml": "<preference name=\"AndroidPersistentFileLocation\" value=\"Internal\" />",
                             "count": 1
                         },
                         {
@@ -18,6 +40,10 @@
                         },
                         {
                             "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         },
                         {
@@ -38,46 +64,27 @@
                         }
                     ]
                 }
-            },
-            "framework": {
-                "parents": {
-                    "AssetsLibrary.framework": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "MobileCoreServices.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "CoreGraphics.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ]
-                }
             }
         }
     },
     "installed_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.cafenebokh"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.cafenebokh"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.cafenebokh"
+        },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
-        },
-        "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
-        },
-        "org.apache.cordova.file-transfer": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+            "PACKAGE_NAME": "com.cafenebokh"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+            "PACKAGE_NAME": "com.cafenebokh"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+            "PACKAGE_NAME": "com.cafenebokh"
         }
     },
     "dependent_plugins": {}
