@@ -1,9 +1,9 @@
-Parse.initialize('Pa9jQDlvIQZKkdfSDowBnCqjyjjf7vCYgnjP7VAe', 'z47dKch45QMyTZWsHofqTY2ndcnAvYKc67GkiBM1');
+Parse.initialize('rl0WTQSSKw1quqaGjEPEfP7Tirfbt8Cy4MoHaYMj', 'w3TmeiRTZ0uqvbRgG9hYGOPlqBTLbfnN6YB22t6I');
+window.timestampsId = 'GOrp7Tokmc';
 
 window.ItemListDB = Parse.Object.extend("ItemList");
 window.CategoryListDB = Parse.Object.extend("CategoryList");
 window.TimeStampsDB = Parse.Object.extend("TimeStamps");
-window.timestampsId = 'sv4vfqVA9J';
 window.isHybrid = window.location.protocol == "file:" ? true : false;
 window.defaultScroll = true;
 window.isAndroid = (navigator.userAgent.indexOf('Android') !== -1);

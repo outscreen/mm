@@ -5,6 +5,16 @@
     },
     "config_munge": {
         "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<preference name=\"AndroidPersistentFileLocation\" value=\"Internal\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
             "res/xml/config.xml": {
                 "parents": {
                     "/*": [
@@ -27,6 +37,10 @@
                         {
                             "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -44,20 +58,23 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.cafedemo"
         },
-        "org.apache.cordova.file-transfer": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.cafedemo"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+            "PACKAGE_NAME": "com.cafedemo"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+            "PACKAGE_NAME": "com.cafedemo"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.cafenaamabaykh"
+            "PACKAGE_NAME": "com.cafedemo"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.cafedemo"
         }
     },
     "dependent_plugins": {}
