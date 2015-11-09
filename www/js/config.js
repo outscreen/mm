@@ -7,6 +7,7 @@ window.TimeStampsDB = Parse.Object.extend("TimeStamps");
 window.isHybrid = window.location.protocol == "file:" ? true : false;
 window.defaultScroll = true;
 window.isAndroid = (navigator.userAgent.indexOf('Android') !== -1);
+window.imgCategory = 'img_sys';
 
 window.onhashchange = function (event) {
     var oldState = getHashParams(event.oldURL),

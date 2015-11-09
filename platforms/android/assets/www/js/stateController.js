@@ -50,6 +50,7 @@ var StateController = (function () {
                             string: childCategories[i].name,
                             action: childCategories[i].objectId,
                             imgUrl: childCategories[i].imgUrl,
+                            isImg: childCategories[i].isImg,
                             isHidden: childCategories[i].isHidden
                         });
                     }

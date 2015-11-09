@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cafedemo" version="0.1.0" versionCode="0.1.0" xmlns="http://www.w3.org/ns/widgets"
+<widget id="com.cafeinterkaz" version="1.0.0" versionCode="1.0.0" xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Меню DEMO</name>
+    <name>Interkaz справочник Астаны</name>
     <description>
 
     </description>
@@ -40,6 +40,7 @@
     <gap:plugin name="cordova-plugin-whitelist" />
 
     <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes"/>
     <allow-navigation href="*"/>
     <access origin="*"/>
     <content src="index.html"/>

@@ -86,25 +86,15 @@ var Dom = (function () {
                 Dom.categoryTemplate = _.template(html);
             });
         })(),
-        parentCategoryTemplate: (function () {
-            jQuery.get('templates/parent-category.html', function (html) {
-                Dom.parentCategoryTemplate = _.template(html);
-            });
-        })(),
         categoryInfoTemplate: (function () {
             jQuery.get('templates/category-info.html', function (html) {
                 Dom.categoryInfoTemplate = _.template(html);
             });
         })(),
-        generateCategories: function (items, isParent) {
+        generateCategories: function (items) {
             var self = this,
                 container = document.createElement('div');
-
-            if (isParent) {
-                container.innerHTML = self.parentCategoryTemplate({'items': items});
-            } else {
-                container.innerHTML = self.categoryTemplate({'items': items});
-            }
+            container.innerHTML = self.categoryTemplate({'items': items});
 
             return container;
         },

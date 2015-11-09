@@ -83,6 +83,9 @@ var UpdateData = (function () {
                     PEMenu.parentCategories.push(PEMenu.categories[i]);
                 }
             }
+            if (PEMenu.categories[i].name === window.imgCategory) {
+                PEMenu.imgCat = PEMenu.categories[i].objectId;
+            }
         }
 
         //add array of child categories to each category
@@ -116,7 +119,7 @@ var UpdateData = (function () {
             if (PEMenu.categories[i].img) {
                 var item = PEMenu.itemList[PEMenu.itemObjectIds[PEMenu.categories[i].img]];
                 if (item) {
-                    PEMenu.categories[i].imgUrl = isHybrid ? item.imgHybrid || PEMenu.categories[i].imgUrl : item.img;
+                    PEMenu.categories[i].imgUrl = item.imgHybrid || PEMenu.categories[i].imgUrl || item.img;
                 }
             }
         }
@@ -187,8 +190,10 @@ var UpdateData = (function () {
                 var ii = 0;
                 (function processItem() {
                     if (ii < itemListLength) {
-                        if (PEMenu.itemList[ii].img && (!downloadedFiles[PEMenu.itemList[ii].objectId] ||
+                        if (PEMenu.imgCat === PEMenu.itemList[ii].category &&
+                            PEMenu.itemList[ii].img && (!downloadedFiles[PEMenu.itemList[ii].objectId] ||
                             (downloadedFiles[PEMenu.itemList[ii].objectId][0] != PEMenu.itemList[ii].img))) {
+
                             PEMenu.itemList[ii].img = PEMenu.itemList[ii].img.replace('http:', 'https:');
                             currentQue++;
                             needToLoad++;
