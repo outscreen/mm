@@ -38,16 +38,19 @@
                             <div class="header-button-label">Меню</div>
                         </div>-->
 
-            <div class="menu-button pull-right big-icon" onclick="Router.goToRestaurant()">
+           <!-- <div class="menu-button pull-right big-icon" onclick="Router.goToRestaurant()">
                 <div><i class="menu-icon ion-android-restaurant"></i></div>
+            </div>-->
+            <div class="menu-button pull-right big-icon">
+                <img src="img/icon.png" style="width: 32px; margin: 5px auto;">
             </div>
         </div>
 
         <div id="wrapper" class="with-back-button">
             <div id="scroller">
-                <div id="cart-info" style="display: none;">
+                <!--<div id="cart-info" style="display: none;">
                     <div id="clear-cart-btn" class="big-btn" onclick="Cart.clear()">Очистить корзину</div>
-                </div>
+                </div>-->
 
                 <div id="account" style="display: none;">
                     <div id="qrcode"></div>
@@ -78,7 +81,7 @@
             <div class="big-icon bottom-section" name="arrow" onclick="PEMenu.showNextItem()">
                 <i class="menu-icon ion-android-arrow-dropright-circle"></i>
             </div>
-            <div class="cart-info lasts bottom-section" onclick="Cart.goTo()">Корзина: <br/><span id="cart-sum">0</span> Тг.</div>
+            <div style="visibility: hidden;" class="cart-info lasts bottom-section" onclick="Cart.goTo()">Корзина: <br/><span id="cart-sum">0</span> Тг.</div>
         </div>
     </div>
     <div id="side-menu-container">

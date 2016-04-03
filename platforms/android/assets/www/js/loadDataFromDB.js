@@ -190,11 +190,11 @@ var UpdateData = (function () {
                 var ii = 0;
                 (function processItem() {
                     if (ii < itemListLength) {
+                        PEMenu.itemList[ii].img = PEMenu.itemList[ii].img.replace('http:', 'https:');
                         if (PEMenu.imgCat === PEMenu.itemList[ii].category &&
                             PEMenu.itemList[ii].img && (!downloadedFiles[PEMenu.itemList[ii].objectId] ||
                             (downloadedFiles[PEMenu.itemList[ii].objectId][0] != PEMenu.itemList[ii].img))) {
 
-                            PEMenu.itemList[ii].img = PEMenu.itemList[ii].img.replace('http:', 'https:');
                             currentQue++;
                             needToLoad++;
                             setTimeout(function (j) {
@@ -316,9 +316,13 @@ var UpdateData = (function () {
                 };
 
                 // retrieve a file and truncate it
-                window.resolveLocalFileSystemURL(file, remove_file, function (err) {
-                    console.log(file, err)
-                });
+                if (window.resolveLocalFileSystemURL) {
+                    window.resolveLocalFileSystemURL(file, remove_file, function (err) {
+                        console.log(file, err)
+                    });
+                } else {
+                    console.log('remove file: ' + file);
+                }
             }
         }
     }

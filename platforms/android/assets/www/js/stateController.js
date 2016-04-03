@@ -21,7 +21,7 @@ var StateController = (function () {
         };
     return {
         init: function () {
-            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.cartInfo, Dom.account, Dom.itemImg, Dom.categoryInfo];
+            components = [Dom.showItems, Dom.categoryList, Dom.itemInfo, Dom.account, Dom.itemImg, Dom.categoryInfo];
             componentsLength = components.length;
         },
         handleCurrentState: function (from, to, action) {
